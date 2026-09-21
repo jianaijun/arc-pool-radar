@@ -1,0 +1,9 @@
+__pycache__/
+*.pyc
+.venv/
+cache/
+snapshot/
+.ruff_cache/
+out/
+# NOTE: docs/data/snapshot.json is deliberately NOT ignored -- GitHub Pages serves
+# what is committed, so ignoring it would publish a page with no data in it.

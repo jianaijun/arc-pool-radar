@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Arc Pool Radar</title>
+<!--
+  One file, no build step, no dependencies, no server.
+
+  The live strip at the top talks to Arc's public RPC directly from the browser. That is not a
+  shortcut around hosting; it is the reason hosting is not needed. A static page that can reach the
+  chain is live, and it cannot be down in a way a server can. CORS was verified against
+  rpc.mainnet.arc.io before this was built rather than hoped for afterwards.
+
+  The table below is a snapshot, because censusing 179,521 pools is not something to do on page
+  load. Both facts are labelled on screen: the strip says "live", the table says when it was taken.
+-->
+<style>
+  :root {
+    color-scheme: light dark;
+    --bg: #fbfaf8; --panel: #ffffff; --ink: #14151a; --muted: #6b7180;
+    --line: #e4e2dd; --accent: #2f6df6;
+    --ok: #0f7b4f; --ok-bg: #e3f5ec;
+    --warn: #8a6100; --warn-bg: #fdf3da;
+    --bad: #a3271f; --bad-bg: #fdeae8;
+    --mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #101216; --panel: #171a20; --ink: #e9eaee; --muted: #949ba9;
+      --line: #262b34; --accent: #7aa2ff;
+      --ok: #6ddba4; --ok-bg: #123024;
+      --warn: #f0c469; --warn-bg: #33280f;
+      --bad: #ff9d92; --bad-bg: #381916;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--ink);
+    font: 15px/1.55 ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    padding: 0 16px calc(48px + env(safe-area-inset-bottom, 0px));
+  }
+  .wrap { max-width: 1080px; margin: 0 auto; }
+  header { padding-block: 36px 20px; }
+  h1 { font-size: clamp(26px, 5vw, 38px); margin: 0 0 6px; letter-spacing: -0.02em; }
+  .sub { color: var(--muted); font-size: 16px; max-width: 62ch; margin: 0; }
+  .strip {
+    display: flex; flex-wrap: wrap; gap: 8px 20px; align-items: center;
+    background: var(--panel); border: 1px solid var(--line); border-radius: 10px;
+    padding: 12px 16px; margin: 20px 0; font-family: var(--mono); font-size: 13px;
+  }
+  .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--ok); display: inline-block; }
+  .dot.stale { background: var(--warn); }
+  .dot.dead { background: var(--bad); }
+  .strip b { font-weight: 600; }
+  .strip .lbl { color: var(--muted); }
+  .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; margin: 20px 0; }
+  .card { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px; }
+  .card .n { font-size: 24px; font-weight: 650; font-variant-numeric: tabular-nums; }
+  .card .k { color: var(--muted); font-size: 12.5px; margin-top: 2px; }
+  .alert { border-radius: 10px; padding: 16px 18px; margin: 20px 0; border: 1px solid; }
+  .alert.bad { background: var(--bad-bg); border-color: color-mix(in srgb, var(--bad) 35%, transparent); }
+  .alert h2 { margin: 0 0 6px; font-size: 16px; }
+  .alert p { margin: 0 0 10px; font-size: 14px; }
+  .alert ul { margin: 0; padding-left: 0; list-style: none; font-family: var(--mono); font-size: 12.5px; }
+  .alert li { padding: 3px 0; overflow-wrap: anywhere; }
+  h2.sec { font-size: 18px; margin: 32px 0 4px; }
+  .note { color: var(--muted); font-size: 13.5px; margin: 0 0 14px; max-width: 76ch; }
+  input[type=search], input[type=text] {
+    width: 100%; padding: 10px 13px; border-radius: 9px; border: 1px solid var(--line);
+    background: var(--panel); color: var(--ink); font-size: 15px; font-family: inherit;
+  }
+  input:focus { outline: 2px solid var(--accent); outline-offset: 1px; }
+  .tablewrap { overflow-x: auto; border: 1px solid var(--line); border-radius: 10px; background: var(--panel); }
+  table { border-collapse: collapse; width: 100%; font-size: 13.5px; }
+  th, td { padding: 9px 12px; text-align: left; border-bottom: 1px solid var(--line); white-space: nowrap; }
+  th { font-weight: 600; color: var(--muted); font-size: 12px; text-transform: uppercase; letter-spacing: .04em; }
+  tbody tr:last-child td { border-bottom: none; }
+  td.num { text-align: right; font-variant-numeric: tabular-nums; font-family: var(--mono); }
+  .pair { font-weight: 600; }
+  .addr { font-family: var(--mono); font-size: 11.5px; color: var(--muted); }
+  .badge { display: inline-block; padding: 2px 8px; border-radius: 999px; font-size: 11.5px; font-weight: 600; }
+  .badge.tradeable { background: var(--ok-bg); color: var(--ok); }
+  .badge.thin { background: var(--warn-bg); color: var(--warn); }
+  .badge.dust { background: var(--bad-bg); color: var(--bad); }
+  .badge.fake { background: var(--bad-bg); color: var(--bad); margin-left: 6px; }
+  .badge.cex { background: color-mix(in srgb, var(--accent) 14%, transparent); color: var(--accent); }
+  .why { color: var(--muted); font-size: 12px; white-space: normal; max-width: 34ch; }
+  footer { margin-top: 44px; padding-top: 18px; border-top: 1px solid var(--line); color: var(--muted); font-size: 13px; }
+  footer a { color: var(--accent); }
+  code { font-family: var(--mono); font-size: .92em; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <h1>Arc Pool Radar</h1>
+  <p class="sub">
+    Arc mainnet is days old and has 179,521 initialised Uniswap&nbsp;v4 pools. This answers the two
+    things nothing on the chain will tell you about one: <b>is this pair what the symbols say it
+    is</b>, and <b>is this price a price</b>.
+  </p>
+</header>
+
+<div class="strip" id="strip">
+  <span><span class="dot dead" id="dot"></span> <b id="live-state">connecting…</b></span>
+  <span class="lbl">chain</span><b>Arc · 5042</b>
+  <span class="lbl">block</span><b id="live-block">—</b>
+  <span class="lbl">gas</span><b id="live-gas">—</b>
+  <span class="lbl" id="live-note">read straight from the public RPC, in your browser</span>
+</div>
+
+<div class="cards" id="cards"></div>
+
+<div id="impostor-slot"></div>
+
+<h2 class="sec">Every pool that traded, judged</h2>
+<p class="note" id="snapshot-note">loading…</p>
+<p style="margin:0 0 12px"><input type="search" id="q" placeholder="filter by symbol, token address or pool id — e.g. USDC, cirBTC, 0x8e98…"></p>
+<div class="tablewrap">
+  <table>
+    <thead><tr>
+      <th>pair</th><th>ver</th><th class="num">fee</th><th class="num">volume</th>
+      <th class="num">trades</th><th class="num">refresh</th><th class="num">price</th>
+      <th>verdict</th><th>why</th>
+    </tr></thead>
+    <tbody id="rows"><tr><td colspan="9" class="why">loading snapshot…</td></tr></tbody>
+  </table>
+</div>
+
+<footer>
+  <p><b>Two facts on this page are of different kinds, and they are labelled.</b> The strip at the
+  top is <b>live</b>: your browser is talking to <code>rpc.mainnet.arc.io</code> directly, which is
+  why this page needs no server and cannot be down in the way a server can. The table is a
+  <b>snapshot</b>, because censusing 179,521 pools is not a thing to do on page load.</p>
+  <p><b>Absence is not a verdict.</b> A pool missing from this table is unjudged, never safe.</p>
+  <p id="foot-links"></p>
+</footer>
+
+</div>
+<script>
+const RPC = "https://rpc.mainnet.arc.io";
+const $ = id => document.getElementById(id);
+const fmtUsd = n => n >= 1e6 ? "$" + (n/1e6).toFixed(2) + "M" : n >= 1e3 ? "$" + (n/1e3).toFixed(1) + "k" : "$" + n.toFixed(0);
+const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+
+async function rpc(method, params) {
+  const r = await fetch(RPC, {
+    method: "POST", headers: {"Content-Type": "application/json"},
+    body: JSON.stringify({jsonrpc: "2.0", id: 1, method, params})
+  });
+  const j = await r.json();
+  if (j.error) throw new Error(j.error.message);
+  return j.result;
+}
+
+// The live strip. It fails loudly rather than showing a stale number as if it were current: a page
+// that quietly keeps displaying the last block it managed to fetch is doing exactly what the dust
+// pools below do.
+let lastOk = 0;
+async function beat() {
+  try {
+    const [block, gas] = await Promise.all([rpc("eth_blockNumber", []), rpc("eth_gasPrice", [])]);
+    $("live-block").textContent = parseInt(block, 16).toLocaleString();
+    $("live-gas").textContent = (parseInt(gas, 16) / 1e9).toFixed(2) + " gwei";
+    $("live-state").textContent = "live";
+    $("dot").className = "dot";
+    lastOk = Date.now();
+  } catch (e) {
+    const age = lastOk ? Math.round((Date.now() - lastOk) / 1000) : null;
+    $("live-state").textContent = age === null ? "cannot reach Arc" : `stale ${age}s`;
+    $("dot").className = age === null ? "dot dead" : "dot stale";
+    $("live-note").textContent = "the numbers above are not current — " + e.message;
+  }
+}
+beat(); setInterval(beat, 10000);
+
+let POOLS = [];
+function render(filter) {
+  const f = filter.trim().toLowerCase();
+  const rows = POOLS.filter(p => !f ||
+    [p.pool_id, p.token0.address, p.token1.address, p.token0.symbol, p.token1.symbol]
+      .some(v => String(v ?? "").toLowerCase().includes(f)));
+  $("rows").innerHTML = rows.length === 0
+    ? '<tr><td colspan="9" class="why">nothing matches — and an absent pool is unjudged, not safe.</td></tr>'
+    : rows.map(p => {
+      const sym = t => esc(t.symbol || "?") + (t.impersonating
+        ? ` <span class="badge fake">NOT ${esc(t.impersonating)}</span>` : "");
+      return `<tr>
+        <td><span class="pair">${sym(p.token0)} / ${sym(p.token1)}</span>
+            ${p.cex_market ? `<span class="badge cex">${esc(p.cex_market)}</span>` : ""}
+            <div class="addr">${esc(p.pool_id.slice(0, 22))}…</div></td>
+        <td>${esc(p.version)}</td>
+        <td class="num">${p.fee_bps.toFixed(2)}bp</td>
+        <td class="num">${fmtUsd(p.volume_usd)}</td>
+        <td class="num">${p.swaps.toLocaleString()}</td>
+        <td class="num">${p.mean_interval_s === null ? "—" : p.mean_interval_s + "s"}</td>
+        <td class="num">${p.price_usd === null ? "—" : "$" + Number(p.price_usd).toLocaleString(undefined, {maximumSignificantDigits: 6})}</td>
+        <td><span class="badge ${esc(p.depth)}">${esc(p.depth)}</span></td>
+        <td class="why">${esc(p.reason)}</td>
+      </tr>`;
+    }).join("");
+}
+
+fetch("data/snapshot.json").then(r => r.json()).then(s => {
+  POOLS = s.pools;
+  const t = s.totals, c = s.coverage;
+  $("cards").innerHTML = [
+    [t.pools_initialised.toLocaleString(), "pools ever initialised"],
+    [t.pools_traded.toLocaleString(), `pools that traded in ${s.window.hours}h`],
+    [t.tradeable.toLocaleString(), "whose price is evidence"],
+    [t.with_cex_leg.toLocaleString(), "with a CEX reference price"],
+    [t.impostor_pools.toLocaleString(), "holding a symbol impostor"],
+  ].map(([n, k]) => `<div class="card"><div class="n">${n}</div><div class="k">${k}</div></div>`).join("");
+
+  if (s.impostors.length) {
+    $("impostor-slot").innerHTML = `<div class="alert bad">
+      <h2>${s.impostors.length} different contracts on Arc return the symbol <code>USDC</code></h2>
+      <p>The real one is a <b>precompile</b> at <code>0x3600…0000</code> with <b>6</b> decimals.
+      Every impostor below declares <b>18</b>. Anything that identifies USDC by its symbol and then
+      divides by six decimals is not just trading the wrong token — it is computing a price
+      10<sup>12</sup> out, and getting a number back rather than an error.<br>
+      <b>Identity is the address.</b> And note the defence that does not work: “check the address has
+      bytecode” rejects the one token here that is certainly real, because a precompile has none.</p>
+      <ul>${s.impostors.map(i => `<li>${esc(i.address)} — claims <b>${esc(i.claims)}</b>, ${i.decimals} decimals</li>`).join("")}</ul>
+    </div>`;
+  }
+
+  const taken = new Date(s.generated_at).toUTCString();
+  $("snapshot-note").innerHTML =
+    `Snapshot taken ${esc(taken)} over blocks ${s.window.from_block.toLocaleString()}–${s.window.to_block.toLocaleString()}. ` +
+    (c.lost > 0
+      ? `<b>Coverage ${(c.share * 100).toFixed(1)}%</b> — ${c.lost} of ${c.windows} windows could not be read, so counts here are floors, not totals.`
+      : `Coverage <b>100%</b> of ${c.windows} windows: nothing was skipped.`);
+
+  $("foot-links").innerHTML = s.registry.address
+    ? `Registry <code>${esc(s.registry.address)}</code> on Arc — call <code>isTradeable(poolId)</code> from your own contract.`
+    : `The on-chain registry is not deployed yet; when it is, its address appears here and any contract can call <code>isTradeable(poolId)</code> in the same transaction it is about to swap in.`;
+
+  render("");
+}).catch(e => {
+  $("rows").innerHTML = `<tr><td colspan="9" class="why">could not load the snapshot: ${esc(e.message)}</td></tr>`;
+  $("snapshot-note").textContent = "snapshot unavailable — the live strip above is unaffected.";
+});
+
+$("q").addEventListener("input", e => render(e.target.value));
+</script>
+</body>
+</html>
