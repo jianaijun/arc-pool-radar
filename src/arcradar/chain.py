@@ -24,8 +24,15 @@ GENESIS_DATE: Final[str] = "2026-05-15"
 #: The block public mainnet opened, 2026-09-16 01:09:33 UTC.
 #:
 #: 📛 **This is NOT where v4 pools begin**, and an earlier version of this comment said it was. That
-#: was an inference, never a measurement, and it cost 16% of live v4 swap flow: pools initialised
-#: during the private-mainnet months still trade, and a pair map scanned from here cannot see them.
+#: was an inference, never a measurement. 2,842 pools were initialised during the private-mainnet
+#: months and some still trade -- about 1% of v4 swaps and 2-3% of USDC volume in two 6-hour
+#: windows on 2026-09-24, measured by each pool's own Initialize block. A pair map scanned from here
+#: cannot see them.
+#:
+#: ⚠️ This comment first said 16%. That figure came from subtracting two pair maps that stopped at
+#: different blocks, over a swap window that ran past the later one: pools created in the gap were
+#: counted as "pre-mainnet". On a chain where most v4 volume is in pools hours old, that contamination
+#: dominates. Classify a pool by its own Initialize block, never by which cache happens to lack it.
 #: Use `UNISWAP_V4_DEPLOY_BLOCK` as the floor for anything about v4 pools.
 PUBLIC_MAINNET_BLOCK: Final[int] = 21_076_890
 
