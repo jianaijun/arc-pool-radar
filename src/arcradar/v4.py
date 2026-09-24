@@ -65,27 +65,85 @@ class Swap:
     notional_usd: float | None
 
 
-def pair_map(rpc: ArcRpc, head: int, cache: Path) -> dict[str, Pair]:
-    """Every v4 pool ever initialised, keyed by `PoolId`, cached to disk.
+def _meta_path(cache: Path) -> Path:
+    return cache.with_suffix(".meta.json")
 
-    The cache is keyed on nothing but its own existence, which is safe for exactly one reason: pools
-    are only ever added. A stale file is incomplete, never wrong, and deleting it is how you
-    refresh. ⚠️ Incomplete still hurts -- see the module docstring on what a partial map looks like
-    in the output -- so callers should report how many pools the map holds.
+
+def pair_map(
+    rpc: ArcRpc,
+    head: int,
+    cache: Path,
+    *,
+    fallback_from: int | None = None,
+    on_window: Any = None,
+) -> dict[str, Pair]:
+    """Every v4 pool ever initialised, keyed by `PoolId`, cached to disk and EXTENDED on each call.
+
+    Pools are only ever added, so an old cache is incomplete rather than wrong -- and incomplete is
+    the dangerous kind here: a swap in a pool the map has never seen has no pair, so it has no USD
+    notional, so it drops out of the ranking with no error at all. ⇒ Every call scans `Initialize`
+    from where the cache stopped up to `head`, and records where that is in a sidecar file.
+
+    📛 **Where the cache stopped is RECORDED, never inferred from the file's mtime.** The first
+    cache here was copied from another directory, so its mtime was the copy time -- seven hours
+    after the scan that produced it. Resuming from the mtime would have skipped every pool created
+    in those seven hours, permanently, and nothing downstream could have noticed.
+
+    A cache with no sidecar (one written before sidecars existed) resumes from `fallback_from`,
+    which the caller must choose to be safely EARLY. Re-scanning an overlap costs a few windows;
+    the entries are keyed by pool id, so an overlap cannot double-count.
+
+    📛 **The sidecar records BOTH ends, and the floor is where the PoolManager was deployed.** Every
+    cache before 2026-09-24 started at public mainnet on the belief that no v4 pool predates it;
+    that belief was never measured and was wrong by nineteen million blocks. A sidecar whose
+    `covered_from` is later than `UNISWAP_V4_DEPLOY_BLOCK` is therefore back-filled, so the gap
+    closes itself instead of depending on someone remembering it exists.
     """
+    stored: dict[str, list[Any]] = {}
+    # Every cache written before sidecars recorded a start began at public mainnet.
+    covered_from, covered_to = chain.PUBLIC_MAINNET_BLOCK, chain.UNISWAP_V4_DEPLOY_BLOCK - 1
     if cache.exists():
         stored = cast("dict[str, list[Any]]", json.loads(cache.read_text()))
-        return {
-            key: Pair(pool_id=key, currency0=str(v[0]), currency1=str(v[1]), fee=int(v[2])) for key, v in stored.items()
-        }
+        meta = _meta_path(cache)
+        if meta.exists():
+            recorded = json.loads(meta.read_text())
+            covered_from = int(recorded.get("covered_from", chain.PUBLIC_MAINNET_BLOCK))
+            covered_to = int(recorded["covered_to"])
+        elif fallback_from is not None:
+            covered_to = fallback_from - 1
+        else:
+            raise RuntimeError(
+                f"{cache} has no sidecar recording where it stopped; pass fallback_from, chosen "
+                "safely before the cache was built, rather than guessing from the file's mtime"
+            )
+    else:
+        covered_from = chain.UNISWAP_V4_DEPLOY_BLOCK
 
-    logs = rpc.scan_logs(
-        [chain.V4_INITIALIZE_TOPIC],
-        chain.PUBLIC_MAINNET_BLOCK,
-        head,
-        address=chain.UNISWAP_V4_POOL_MANAGER,
-    )
-    out: dict[str, Pair] = {}
+    out: dict[str, Pair] = {
+        key: Pair(pool_id=key, currency0=str(v[0]), currency1=str(v[1]), fee=int(v[2])) for key, v in stored.items()
+    }
+    ranges = []
+    if covered_from > chain.UNISWAP_V4_DEPLOY_BLOCK:
+        ranges.append((chain.UNISWAP_V4_DEPLOY_BLOCK, covered_from - 1))
+    ranges.append((max(covered_to + 1, chain.UNISWAP_V4_DEPLOY_BLOCK), head))
+    ranges = [(lo, hi) for lo, hi in ranges if lo <= hi]
+    if not ranges:
+        return out
+
+    lost_before = len(rpc.lost_windows)
+    logs = []
+    for lo, hi in ranges:
+        # ⚠️ `on_window` is not optional in spirit: the pre-mainnet back-fill is ~3,800 windows at
+        # roughly a second each, and without progress a slow scan and a hung one look identical.
+        # The first back-fill ran for over half an hour saying nothing but "alive".
+        logs += rpc.scan_logs(
+            [chain.V4_INITIALIZE_TOPIC], lo, hi, address=chain.UNISWAP_V4_POOL_MANAGER, on_window=on_window
+        )
+    # ⚠️ A window lost here is a hole in the map, so the sidecar must not claim it was covered.
+    # Recording `head` regardless would make the next run skip the hole forever.
+    lost = len(rpc.lost_windows) - lost_before
+    if lost:
+        raise RuntimeError(f"pair map extension lost {lost} windows; not recording coverage")
     for log in logs:
         topics = cast("list[str]", log["topics"])
         if len(topics) < 4:
@@ -99,6 +157,7 @@ def pair_map(rpc: ArcRpc, head: int, cache: Path) -> dict[str, Pair]:
         )
     cache.parent.mkdir(parents=True, exist_ok=True)
     cache.write_text(json.dumps({k: [v.currency0, v.currency1, v.fee] for k, v in out.items()}))
+    _meta_path(cache).write_text(json.dumps({"covered_from": chain.UNISWAP_V4_DEPLOY_BLOCK, "covered_to": head}))
     return out
 
 

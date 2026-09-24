@@ -6,7 +6,7 @@
 
 Read-only. No wallet, no credentials, no transactions.
 
-⭐ **ENTER FROM WHAT TRADED, NOT FROM WHAT EXISTS.** Arc has 179,521 initialised v4 pools. A list of
+⭐ **ENTER FROM WHAT TRADED, NOT FROM WHAT EXISTS.** Arc has over 200,000 initialised v4 pools. A list of
 pools is not a list of venues -- most of those were created for a token that traded once, at fee
 tiers including 5%, 50%, 80% and 90%. So this ranks by the volume a pool actually did inside the
 window and judges the top of that, rather than trying to describe a universe that is mostly noise.
@@ -114,7 +114,19 @@ def main() -> int:
     start = max(chain.PUBLIC_MAINNET_BLOCK, head - span)
     print(f"Arc block {head:,}; reading {args.hours:g}h back to {start:,}")
 
-    pairs = v4.pair_map(rpc, head, args.cache)
+    # Only used for a pre-sidecar cache: a point certainly BEFORE that cache was built (the first
+    # one was scanned on 2026-09-20), pushed a further ~3h earlier because converting a wall-clock
+    # time to a block through an average block time is an estimate. Too early costs a few windows;
+    # too late loses pools forever.
+    head_ts = rpc.block_timestamp(head)
+    safe_ts = dt.datetime(2026, 9, 20, tzinfo=dt.UTC).timestamp()
+    fallback = max(chain.PUBLIC_MAINNET_BLOCK, head - int((head_ts - safe_ts) / chain.SECONDS_PER_BLOCK) - 20_000)
+
+    def map_tick(done: int, total: int, found: int) -> None:
+        if done % 100 == 0 or done == total:
+            print(f"  pair map window {done:,}/{total:,}  {found:,} Initialize so far")
+
+    pairs = v4.pair_map(rpc, head, args.cache, fallback_from=fallback, on_window=map_tick)
     print(f"pair map: {len(pairs):,} v4 pools ever initialised")
 
     def tick(done: int, total: int, found: int) -> None:
@@ -133,6 +145,12 @@ def main() -> int:
     print(f"\ncoverage {coverage:.2%}  ({len(rpc.lost_windows)} of {windows_attempted} windows lost)")
 
     swaps = v4.decode_swaps(v4_logs, pairs, v4_anchors)
+    # ⭐ The reading that separates "the map is complete" from "the map is stale": swaps in pools the
+    # map has never heard of. They cannot be priced, so without this line they would simply vanish
+    # from the ranking and the census would look smaller, not broken.
+    unmapped_pools = {s.pool_id for s in swaps if s.pool_id not in pairs}
+    unmapped_swaps = sum(1 for s in swaps if s.pool_id not in pairs)
+    print(f"v4 swaps in pools missing from the pair map: {unmapped_swaps:,} across {len(unmapped_pools):,} pools")
 
     # v3 lives in per-pool contracts, so its "pool id" is the emitting address, and its pair costs
     # three `eth_call`s rather than one map lookup. ⚠️ Against a rate-limited node that is the most
@@ -238,6 +256,8 @@ def main() -> int:
             "windows": windows_attempted,
             "lost": len(rpc.lost_windows),
             "share": round(coverage, 4),
+            "unmapped_v4_swaps": unmapped_swaps,
+            "unmapped_v4_pools": len(unmapped_pools),
         },
         "totals": {
             "pools_initialised": v4_pool_count,

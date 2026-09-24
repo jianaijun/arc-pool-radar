@@ -21,8 +21,17 @@ CHAIN_ID: Final[int] = 5042
 #: Genesis. Note the gap to the line below: the chain is months older than its public mainnet, and
 #: conflating the two makes a four-day-old pool look like it has a four-month history.
 GENESIS_DATE: Final[str] = "2026-05-15"
-#: The block public mainnet opened, 2026-09-16 01:09:33 UTC. No v4 pool predates it.
+#: The block public mainnet opened, 2026-09-16 01:09:33 UTC.
+#:
+#: 📛 **This is NOT where v4 pools begin**, and an earlier version of this comment said it was. That
+#: was an inference, never a measurement, and it cost 16% of live v4 swap flow: pools initialised
+#: during the private-mainnet months still trade, and a pair map scanned from here cannot see them.
+#: Use `UNISWAP_V4_DEPLOY_BLOCK` as the floor for anything about v4 pools.
 PUBLIC_MAINNET_BLOCK: Final[int] = 21_076_890
+
+#: MEASURED 2026-09-24 by binary search on `eth_getCode` at the PoolManager: first block with code.
+#: 2026-05-27 00:02 UTC -- nineteen million blocks before public mainnet.
+UNISWAP_V4_DEPLOY_BLOCK: Final[int] = 1_948_056
 
 #: Measured across the chain's whole history; it held between 0.5044 and 0.5079 the entire time.
 #: Used only to interpolate a timestamp inside one `eth_getLogs` window, never across the chain.

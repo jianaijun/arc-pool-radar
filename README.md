@@ -3,7 +3,7 @@
 **Is this Arc pool what it claims to be, and is its price worth believing?**
 
 Arc's public mainnet is days old. It has no established token list, no settled set of venues, and
-179,521 initialised Uniswap v4 pools. In that situation the two things a trader, a router or an
+more than 200,000 initialised Uniswap v4 pools (209,300 on 2026-09-24). In that situation the two things a trader, a router or an
 agent most needs to know about a pool are the two things nothing on the chain will tell them:
 
 1. **Is this pair what the symbols say it is?** A symbol is a string the token returns about itself.
@@ -110,7 +110,7 @@ one pool, refresh                    12,518 gas   $  0.0003
            every pool ever initialised      898  8,405,648,270       $177.90        $47.96
 ```
 
-⭐ That last row is the design decision, priced. Publishing all 179,521 pools costs **$187** for a
+⭐ That last row is the design decision, priced. Publishing all 179,521 pools in that row costs **$177.90** for a
 registry in which almost every entry would say "dust, ignore". Only the size-gated subset goes on
 chain; `published` and `total` are both exposed so a caller sees the difference rather than
 mistaking an absent pool for a judged one.
@@ -148,8 +148,8 @@ python -m http.server -d docs 8777                # then open http://localhost:8
 
 The page is one HTML file with no build step. Its top strip is **live** — your browser talks to
 `rpc.mainnet.arc.io` directly, which is why the whole thing hosts as a static page and has no server
-to be down. The table below it is a snapshot, because censusing 179,521 pools is not a thing to do
-on page load. Both are labelled on screen as what they are.
+to be down. The table below it is a snapshot, because censusing every pool on the chain is not a
+thing to do on page load. Both are labelled on screen as what they are.
 
 Everything in `src/arcradar` is read-only against public endpoints. There is no key material, no
 signing, and no order flow anywhere in this repository.

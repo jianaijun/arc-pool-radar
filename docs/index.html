@@ -12,7 +12,7 @@
   chain is live, and it cannot be down in a way a server can. CORS was verified against
   rpc.mainnet.arc.io before this was built rather than hoped for afterwards.
 
-  The table below is a snapshot, because censusing 179,521 pools is not something to do on page
+  The table below is a snapshot, because censusing every pool on the chain is not something to do on page
   load. Both facts are labelled on screen: the strip says "live", the table says when it was taken.
 -->
 <style>
@@ -97,7 +97,8 @@
 <header>
   <h1>Arc Pool Radar</h1>
   <p class="sub">
-    Arc mainnet is days old and has 179,521 initialised Uniswap&nbsp;v4 pools. This answers the two
+    Arc's public mainnet opened on 16 September 2026 and already has
+    <span id="pool-count">hundreds of thousands of</span> initialised Uniswap&nbsp;v4 pools. This answers the two
     things nothing on the chain will tell you about one: <b>is this pair what the symbols say it
     is</b>, and <b>is this price a price</b>.
   </p>
@@ -133,7 +134,7 @@
   <p><b>Two facts on this page are of different kinds, and they are labelled.</b> The strip at the
   top is <b>live</b>: your browser is talking to <code>rpc.mainnet.arc.io</code> directly, which is
   why this page needs no server and cannot be down in the way a server can. The table is a
-  <b>snapshot</b>, because censusing 179,521 pools is not a thing to do on page load.</p>
+  <b>snapshot</b>, because censusing every pool on the chain is not a thing to do on page load.</p>
   <p><b>Absence is not a verdict.</b> A pool missing from this table is unjudged, never safe.</p>
   <p id="foot-links"></p>
 </footer>
@@ -205,6 +206,9 @@ function render(filter) {
 
 fetch("data/snapshot.json").then(r => r.json()).then(s => {
   POOLS = s.pools;
+  // The count comes from the snapshot, never from the markup: a number written into the HTML
+  // went stale the first time the census re-ran and contradicted the card below it.
+  $("pool-count").textContent = s.totals.pools_initialised.toLocaleString();
   const t = s.totals, c = s.coverage;
   $("cards").innerHTML = [
     [t.pools_initialised.toLocaleString(), "pools ever initialised"],

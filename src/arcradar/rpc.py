@@ -12,6 +12,7 @@ top to bottom without resolving anything.
 
 from __future__ import annotations
 
+import http.client
 import json
 import re
 import time
@@ -71,7 +72,11 @@ class ArcRpc:
                     time.sleep(min(2.0**attempt, 16.0))
                     continue
                 raise
-            except (urllib.error.URLError, TimeoutError):
+            # ⚠️ `RemoteDisconnected` (the node closing the socket without answering) is neither a
+            # URLError nor a TimeoutError -- it is a ConnectionError and an HTTPException -- so an
+            # earlier version let one transient drop crash a twelve-minute scan. All four are the
+            # same situation from here: the request did not complete, ask again.
+            except (urllib.error.URLError, TimeoutError, ConnectionError, http.client.HTTPException):
                 time.sleep(min(2.0**attempt, 16.0))
                 continue
             if "error" in payload:

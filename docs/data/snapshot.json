@@ -1,37 +1,34 @@
 {
- "generated_at": "2026-09-20T15:00:07+00:00",
+ "generated_at": "2026-09-24T15:44:30+00:00",
  "chain_id": 5042,
  "rpc_url": "https://rpc.mainnet.arc.io",
- "head_block": 21856205,
+ "head_block": 22538972,
  "window": {
-  "from_block": 21841982,
-  "to_block": 21856205,
-  "hours": 2.0
+  "from_block": 22496302,
+  "to_block": 22538972,
+  "hours": 6.0
  },
  "coverage": {
-  "windows": 6,
+  "windows": 18,
   "lost": 0,
-  "share": 1.0
+  "share": 1.0,
+  "unmapped_v4_swaps": 0,
+  "unmapped_v4_pools": 0
  },
  "totals": {
-  "pools_initialised": 179521,
-  "v3_pools_resolved": 60,
-  "pools_traded": 477,
-  "pools_judged": 120,
-  "tradeable": 8,
-  "with_cex_leg": 7,
-  "impostor_pools": 8
+  "pools_initialised": 209300,
+  "v3_pools_resolved": 58,
+  "pools_traded": 1249,
+  "pools_judged": 200,
+  "tradeable": 24,
+  "with_cex_leg": 12,
+  "impostor_pools": 5
  },
  "registry": {
   "address": null,
   "census_block": null
  },
  "impostors": [
-  {
-   "address": "0x7366d2ffaf98b6621fa3791d760de2c942dbc95d",
-   "claims": "USDC",
-   "decimals": 18
-  },
   {
    "address": "0x8e98a62a995a50eca9979bfa016f91bf36a8f9d9",
    "claims": "USDC",
@@ -60,44 +57,19 @@
     "decimals": 6,
     "impersonating": null
    },
-   "volume_usd": 475583.5,
-   "swaps": 1443,
-   "mean_interval_s": 5.4,
+   "volume_usd": 2492393.73,
+   "swaps": 5720,
+   "mean_interval_s": 4.4,
    "depth": "tradeable",
-   "reason": "$475,584 across 1,443 trades, 5.4s apart",
-   "price_usd": 80712.6677194441,
+   "reason": "$2,492,394 across 5,720 trades, 4.4s apart",
+   "price_usd": 84096.05918513979,
    "cex_market": "BTCUSDT",
    "flags": 41
   },
   {
-   "pool_id": "0x6f302decb49fb30b2d2c609bdd16e04e7dd096fc",
-   "version": "v3",
-   "fee_bps": 5.2,
-   "token0": {
-    "address": "0x128cc466b61f542da60c70e3aa11c10e19b84edb",
-    "symbol": "WETH",
-    "decimals": 18,
-    "impersonating": null
-   },
-   "token1": {
-    "address": "0x3600000000000000000000000000000000000000",
-    "symbol": "USDC",
-    "decimals": 6,
-    "impersonating": null
-   },
-   "volume_usd": 105510.96,
-   "swaps": 143,
-   "mean_interval_s": 52.7,
-   "depth": "thin",
-   "reason": "quote refreshes every 53s, so any gap to a live venue is mostly age",
-   "price_usd": 2585.7982252709157,
-   "cex_market": "ETHUSDT",
-   "flags": 37
-  },
-  {
    "pool_id": "0xd945caee4635bcd7fb8a9fa74dc1d0c4c1472782",
    "version": "v3",
-   "fee_bps": 4.7,
+   "fee_bps": 4.4,
    "token0": {
     "address": "0x171a4217b86a807a64eb94757db6849fb4bdbaa0",
     "symbol": "cirBTC",
@@ -110,47 +82,22 @@
     "decimals": 6,
     "impersonating": null
    },
-   "volume_usd": 77272.01,
-   "swaps": 147,
-   "mean_interval_s": 49.2,
-   "depth": "thin",
-   "reason": "quote refreshes every 49s, so any gap to a live venue is mostly age",
-   "price_usd": 80691.3087912152,
+   "volume_usd": 641990.37,
+   "swaps": 985,
+   "mean_interval_s": 24.0,
+   "depth": "tradeable",
+   "reason": "$641,990 across 985 trades, 24.0s apart",
+   "price_usd": 84108.57798075446,
    "cex_market": "BTCUSDT",
-   "flags": 37
+   "flags": 41
   },
   {
-   "pool_id": "0x6a3bacaa6493734c1ac221ebf42cf530a96c1e02",
+   "pool_id": "0x6f302decb49fb30b2d2c609bdd16e04e7dd096fc",
    "version": "v3",
-   "fee_bps": 100.0,
+   "fee_bps": 4.2,
    "token0": {
-    "address": "0x3600000000000000000000000000000000000000",
-    "symbol": "USDC",
-    "decimals": 6,
-    "impersonating": null
-   },
-   "token1": {
-    "address": "0xece5ca8bf9220718e5727754026757512212cb3c",
-    "symbol": "ARGUS",
-    "decimals": 18,
-    "impersonating": null
-   },
-   "volume_usd": 73511.66,
-   "swaps": 406,
-   "mean_interval_s": 18.1,
-   "depth": "tradeable",
-   "reason": "$73,512 across 406 trades, 18.1s apart",
-   "price_usd": 0.017531595805634907,
-   "cex_market": null,
-   "flags": 9
-  },
-  {
-   "pool_id": "0x2f3df55cebac40884077cef1e06448e1d6e6ad1a",
-   "version": "v3",
-   "fee_bps": 100.0,
-   "token0": {
-    "address": "0x258bbb25fb1bc34c87212f8dab34838854ef2d5d",
-    "symbol": "BCAT",
+    "address": "0x128cc466b61f542da60c70e3aa11c10e19b84edb",
+    "symbol": "WETH",
     "decimals": 18,
     "impersonating": null
    },
@@ -160,42 +107,17 @@
     "decimals": 6,
     "impersonating": null
    },
-   "volume_usd": 67506.73,
-   "swaps": 744,
-   "mean_interval_s": 9.9,
+   "volume_usd": 515816.58,
+   "swaps": 1626,
+   "mean_interval_s": 14.1,
    "depth": "tradeable",
-   "reason": "$67,507 across 744 trades, 9.9s apart",
-   "price_usd": 0.0018115633371745443,
-   "cex_market": null,
-   "flags": 9
+   "reason": "$515,817 across 1,626 trades, 14.1s apart",
+   "price_usd": 2670.0826470959887,
+   "cex_market": "ETHUSDT",
+   "flags": 41
   },
   {
-   "pool_id": "0xb3f441e8871840ecfcb284e5cbb5b9c21a50e961e1c50109bdced25e429f00cc",
-   "version": "v4",
-   "fee_bps": 98.5,
-   "token0": {
-    "address": "0x3600000000000000000000000000000000000000",
-    "symbol": "USDC",
-    "decimals": 6,
-    "impersonating": null
-   },
-   "token1": {
-    "address": "0xece5ca8bf9220718e5727754026757512212cb3c",
-    "symbol": "ARGUS",
-    "decimals": 18,
-    "impersonating": null
-   },
-   "volume_usd": 62816.24,
-   "swaps": 392,
-   "mean_interval_s": 19.2,
-   "depth": "tradeable",
-   "reason": "$62,816 across 392 trades, 19.2s apart",
-   "price_usd": 0.017639891816627052,
-   "cex_market": null,
-   "flags": 9
-  },
-  {
-   "pool_id": "0x54d5fe8ee7a9546ce74ebe06c1d040defb7757410a627d4793d62a77eaaae4bf",
+   "pool_id": "0x7f03a7ce670c2eb6f49638b2e434ae114eb9c15206308ce93c5ec6a2129b95c8",
    "version": "v4",
    "fee_bps": 100.0,
    "token0": {
@@ -205,49 +127,24 @@
     "impersonating": null
    },
    "token1": {
-    "address": "0x8e98a62a995a50eca9979bfa016f91bf36a8f9d9",
-    "symbol": "USDC",
-    "decimals": 18,
-    "impersonating": "USDC"
-   },
-   "volume_usd": 59947.29,
-   "swaps": 185,
-   "mean_interval_s": 40.6,
-   "depth": "thin",
-   "reason": "quote refreshes every 41s, so any gap to a live venue is mostly age",
-   "price_usd": 0.003218245449963054,
-   "cex_market": null,
-   "flags": 21
-  },
-  {
-   "pool_id": "0x40732e01ba7a829dea44f51a10e7c58cd9f37765",
-   "version": "v3",
-   "fee_bps": 100.0,
-   "token0": {
-    "address": "0x3600000000000000000000000000000000000000",
-    "symbol": "USDC",
-    "decimals": 6,
-    "impersonating": null
-   },
-   "token1": {
-    "address": "0xeb64987643db71c76b2a2be7e723decc995e5b37",
-    "symbol": "COOL",
+    "address": "0x36408b924123dcae158257dda6ea6722447db98f",
+    "symbol": "CATZ",
     "decimals": 18,
     "impersonating": null
    },
-   "volume_usd": 45491.8,
-   "swaps": 360,
-   "mean_interval_s": 22.4,
+   "volume_usd": 360833.22,
+   "swaps": 5755,
+   "mean_interval_s": 1.6,
    "depth": "tradeable",
-   "reason": "$45,492 across 360 trades, 22.4s apart",
-   "price_usd": 0.0021587749790008847,
+   "reason": "$360,833 across 5,755 trades, 1.6s apart",
+   "price_usd": 0.00021129396873584185,
    "cex_market": null,
    "flags": 9
   },
   {
-   "pool_id": "0x5e794e5d3d01c045ddfb2448c4afd557ec297d1dee49b28923dc0ada3425f780",
+   "pool_id": "0xd0d47fdbaa3ef76cfd22ef718d4b39d1a7c058f9cf3af9e17f77c09f99385637",
    "version": "v4",
-   "fee_bps": 100.0,
+   "fee_bps": 83886.08,
    "token0": {
     "address": "0x3600000000000000000000000000000000000000",
     "symbol": "USDC",
@@ -255,17 +152,17 @@
     "impersonating": null
    },
    "token1": {
-    "address": "0xb7c934ff18730c24e6113bb4bc5a68feef16fd29",
-    "symbol": "ARCUS",
+    "address": "0xbc43953b1ee55766dcff47a2bcdc508f98dc0b67",
+    "symbol": "TOLLY",
     "decimals": 18,
     "impersonating": null
    },
-   "volume_usd": 38833.69,
-   "swaps": 322,
-   "mean_interval_s": 25.7,
+   "volume_usd": 296169.55,
+   "swaps": 2678,
+   "mean_interval_s": 15.1,
    "depth": "tradeable",
-   "reason": "$38,834 across 322 trades, 25.7s apart",
-   "price_usd": 0.0003496219614782978,
+   "reason": "$296,170 across 2,678 trades, 15.1s apart",
+   "price_usd": 0.006663939895123753,
    "cex_market": null,
    "flags": 9
   },
@@ -285,19 +182,19 @@
     "decimals": 18,
     "impersonating": null
    },
-   "volume_usd": 37101.16,
-   "swaps": 248,
-   "mean_interval_s": 29.5,
+   "volume_usd": 245756.91,
+   "swaps": 1425,
+   "mean_interval_s": 18.6,
    "depth": "tradeable",
-   "reason": "$37,101 across 248 trades, 29.5s apart",
-   "price_usd": 0.0044025649864642665,
+   "reason": "$245,757 across 1,425 trades, 18.6s apart",
+   "price_usd": 0.006427068369727222,
    "cex_market": null,
    "flags": 9
   },
   {
-   "pool_id": "0xba3ec01f8f72a8f9825769e3aabdeaff65f6a8d6",
-   "version": "v3",
-   "fee_bps": 1.0,
+   "pool_id": "0xed979d863d639a72771df12f12fc2c9d7e21a6cf79b2859ea07ebde1314175ab",
+   "version": "v4",
+   "fee_bps": 100.0,
    "token0": {
     "address": "0x3600000000000000000000000000000000000000",
     "symbol": "USDC",
@@ -305,199 +202,24 @@
     "impersonating": null
    },
    "token1": {
-    "address": "0x4c800128011c87e247eed6844080abc44b18c994",
-    "symbol": "SI",
+    "address": "0xca178326937dcf04157f2e6370674655c57d7a75",
+    "symbol": "https",
     "decimals": 18,
     "impersonating": null
    },
-   "volume_usd": 33622.2,
-   "swaps": 189,
-   "mean_interval_s": 22.3,
+   "volume_usd": 213346.38,
+   "swaps": 5200,
+   "mean_interval_s": 2.4,
    "depth": "tradeable",
-   "reason": "$33,622 across 189 trades, 22.3s apart",
-   "price_usd": 6.564361320165274e-05,
+   "reason": "$213,346 across 5,200 trades, 2.4s apart",
+   "price_usd": 2.543612917703832e-06,
    "cex_market": null,
    "flags": 9
-  },
-  {
-   "pool_id": "0xd86a9e58d668acc7c13bd547f9fa5cc113ae0083a9fc39f97aab857349ee343d",
-   "version": "v4",
-   "fee_bps": 100.0,
-   "token0": {
-    "address": "0x3600000000000000000000000000000000000000",
-    "symbol": "USDC",
-    "decimals": 6,
-    "impersonating": null
-   },
-   "token1": {
-    "address": "0x41358defd0dedc90528b3f1835715e907b686e6a",
-    "symbol": "DUKE",
-    "decimals": 18,
-    "impersonating": null
-   },
-   "volume_usd": 32521.13,
-   "swaps": 146,
-   "mean_interval_s": 54.1,
-   "depth": "thin",
-   "reason": "quote refreshes every 54s, so any gap to a live venue is mostly age",
-   "price_usd": 0.001246329656228757,
-   "cex_market": null,
-   "flags": 5
-  },
-  {
-   "pool_id": "0xf26ed425bae6cb71d65a14115f7af4d315e3fb70fcc0db22195d38c2c09f8295",
-   "version": "v4",
-   "fee_bps": 100.0,
-   "token0": {
-    "address": "0x3600000000000000000000000000000000000000",
-    "symbol": "USDC",
-    "decimals": 6,
-    "impersonating": null
-   },
-   "token1": {
-    "address": "0x8faae5592b9acc27a79fca745c6b872adf514a5d",
-    "symbol": "MURMUR",
-    "decimals": 18,
-    "impersonating": null
-   },
-   "volume_usd": 28247.95,
-   "swaps": 233,
-   "mean_interval_s": 36.0,
-   "depth": "thin",
-   "reason": "quote refreshes every 36s, so any gap to a live venue is mostly age",
-   "price_usd": 0.0005225982321044283,
-   "cex_market": null,
-   "flags": 5
-  },
-  {
-   "pool_id": "0x2f4040d563fc000f9d0ee449f21c6d551e471ecdce0e618a14507af43b18101f",
-   "version": "v4",
-   "fee_bps": 299.9,
-   "token0": {
-    "address": "0x3600000000000000000000000000000000000000",
-    "symbol": "USDC",
-    "decimals": 6,
-    "impersonating": null
-   },
-   "token1": {
-    "address": "0x8e98a62a995a50eca9979bfa016f91bf36a8f9d9",
-    "symbol": "USDC",
-    "decimals": 18,
-    "impersonating": "USDC"
-   },
-   "volume_usd": 25743.64,
-   "swaps": 69,
-   "mean_interval_s": 93.6,
-   "depth": "thin",
-   "reason": "quote refreshes every 94s, so any gap to a live venue is mostly age",
-   "price_usd": 0.003184869763003191,
-   "cex_market": null,
-   "flags": 21
-  },
-  {
-   "pool_id": "0xc362f08b2d304500e7299eaaf6184492ba3653d831615fe521d0791147f5a0f2",
-   "version": "v4",
-   "fee_bps": 100.0,
-   "token0": {
-    "address": "0x3600000000000000000000000000000000000000",
-    "symbol": "USDC",
-    "decimals": 6,
-    "impersonating": null
-   },
-   "token1": {
-    "address": "0xa39c8e2ceb2a0f9d6e9d059f5e470edfda691c15",
-    "symbol": "AI",
-    "decimals": 18,
-    "impersonating": null
-   },
-   "volume_usd": 21480.33,
-   "swaps": 218,
-   "mean_interval_s": 33.8,
-   "depth": "thin",
-   "reason": "quote refreshes every 34s, so any gap to a live venue is mostly age",
-   "price_usd": 0.00040215881223335746,
-   "cex_market": null,
-   "flags": 5
-  },
-  {
-   "pool_id": "0x085c2b626c6440e84e000267af157537be469b11",
-   "version": "v3",
-   "fee_bps": 100.0,
-   "token0": {
-    "address": "0x3600000000000000000000000000000000000000",
-    "symbol": "USDC",
-    "decimals": 6,
-    "impersonating": null
-   },
-   "token1": {
-    "address": "0x4f7dc89dc44ad08c20d9680d2ee9cfad69bfda55",
-    "symbol": "MALA",
-    "decimals": 18,
-    "impersonating": null
-   },
-   "volume_usd": 21428.87,
-   "swaps": 228,
-   "mean_interval_s": 32.1,
-   "depth": "thin",
-   "reason": "quote refreshes every 32s, so any gap to a live venue is mostly age",
-   "price_usd": 0.00047845476218424276,
-   "cex_market": null,
-   "flags": 5
-  },
-  {
-   "pool_id": "0xe59c7fada87c866cffc9261c4e7cb19848f0f3db",
-   "version": "v3",
-   "fee_bps": 100.0,
-   "token0": {
-    "address": "0x3600000000000000000000000000000000000000",
-    "symbol": "USDC",
-    "decimals": 6,
-    "impersonating": null
-   },
-   "token1": {
-    "address": "0x3ead4e80e9e5bc0e01682d7ee74c4881b040d3ea",
-    "symbol": "KAIRO",
-    "decimals": 18,
-    "impersonating": null
-   },
-   "volume_usd": 21170.62,
-   "swaps": 96,
-   "mean_interval_s": 80.4,
-   "depth": "thin",
-   "reason": "quote refreshes every 80s, so any gap to a live venue is mostly age",
-   "price_usd": 0.0002574729803461725,
-   "cex_market": null,
-   "flags": 5
-  },
-  {
-   "pool_id": "0xdcb7418c5bd70bdfc17e5c975b5c7b2d21d9f1338e165a92db85577ddb6448ab",
-   "version": "v4",
-   "fee_bps": 100.0,
-   "token0": {
-    "address": "0x3600000000000000000000000000000000000000",
-    "symbol": "USDC",
-    "decimals": 6,
-    "impersonating": null
-   },
-   "token1": {
-    "address": "0x997caf127536de5410dc7a17a920d0a1223d866d",
-    "symbol": "barc",
-    "decimals": 18,
-    "impersonating": null
-   },
-   "volume_usd": 20558.12,
-   "swaps": 62,
-   "mean_interval_s": 121.3,
-   "depth": "thin",
-   "reason": "quote refreshes every 121s, so any gap to a live venue is mostly age",
-   "price_usd": 0.00039837928443032215,
-   "cex_market": null,
-   "flags": 5
   },
   {
    "pool_id": "0xbe080ac37ad1305dfcc9521f5e6f68cfdc41b7fa",
    "version": "v3",
-   "fee_bps": 0.8,
+   "fee_bps": 2.0,
    "token0": {
     "address": "0x3600000000000000000000000000000000000000",
     "symbol": "USDC",
@@ -510,22 +232,97 @@
     "decimals": 6,
     "impersonating": null
    },
-   "volume_usd": 18682.15,
-   "swaps": 60,
-   "mean_interval_s": 111.9,
+   "volume_usd": 179674.15,
+   "swaps": 312,
+   "mean_interval_s": 71.1,
    "depth": "thin",
-   "reason": "quote refreshes every 112s, so any gap to a live venue is mostly age",
-   "price_usd": 1.1487126183956338,
+   "reason": "quote refreshes every 71s, so any gap to a live venue is mostly age",
+   "price_usd": 1.13682579004735,
    "cex_market": null,
    "flags": 5
   },
   {
-   "pool_id": "0x5e82892d361a6c680027a97da2280064b8fc8a52",
-   "version": "v3",
-   "fee_bps": 5.0,
+   "pool_id": "0xb3f441e8871840ecfcb284e5cbb5b9c21a50e961e1c50109bdced25e429f00cc",
+   "version": "v4",
+   "fee_bps": 98.5,
    "token0": {
-    "address": "0x178b01f61cbea1d2a5581fe1621be607835ec349",
-    "symbol": "XAUM",
+    "address": "0x3600000000000000000000000000000000000000",
+    "symbol": "USDC",
+    "decimals": 6,
+    "impersonating": null
+   },
+   "token1": {
+    "address": "0xece5ca8bf9220718e5727754026757512212cb3c",
+    "symbol": "ARGUS",
+    "decimals": 18,
+    "impersonating": null
+   },
+   "volume_usd": 178690.13,
+   "swaps": 641,
+   "mean_interval_s": 35.8,
+   "depth": "thin",
+   "reason": "quote refreshes every 36s, so any gap to a live venue is mostly age",
+   "price_usd": 0.018316073176630247,
+   "cex_market": null,
+   "flags": 5
+  },
+  {
+   "pool_id": "0x948523143f6610a64ee8f17667818fe1d8c9f562",
+   "version": "v3",
+   "fee_bps": 3.04,
+   "token0": {
+    "address": "0x171a4217b86a807a64eb94757db6849fb4bdbaa0",
+    "symbol": "cirBTC",
+    "decimals": 8,
+    "impersonating": null
+   },
+   "token1": {
+    "address": "0x3600000000000000000000000000000000000000",
+    "symbol": "USDC",
+    "decimals": 6,
+    "impersonating": null
+   },
+   "volume_usd": 131102.97,
+   "swaps": 492,
+   "mean_interval_s": 44.7,
+   "depth": "thin",
+   "reason": "quote refreshes every 45s, so any gap to a live venue is mostly age",
+   "price_usd": 84124.67657117154,
+   "cex_market": "BTCUSDT",
+   "flags": 37
+  },
+  {
+   "pool_id": "0x54d5fe8ee7a9546ce74ebe06c1d040defb7757410a627d4793d62a77eaaae4bf",
+   "version": "v4",
+   "fee_bps": 100.0,
+   "token0": {
+    "address": "0x3600000000000000000000000000000000000000",
+    "symbol": "USDC",
+    "decimals": 6,
+    "impersonating": null
+   },
+   "token1": {
+    "address": "0x8e98a62a995a50eca9979bfa016f91bf36a8f9d9",
+    "symbol": "USDC",
+    "decimals": 18,
+    "impersonating": "USDC"
+   },
+   "volume_usd": 118798.09,
+   "swaps": 388,
+   "mean_interval_s": 57.6,
+   "depth": "thin",
+   "reason": "quote refreshes every 58s, so any gap to a live venue is mostly age",
+   "price_usd": 0.002181266701064972,
+   "cex_market": null,
+   "flags": 21
+  },
+  {
+   "pool_id": "0x072ca55acb3cc90f96b7f7807cf8de2250af4dc7",
+   "version": "v3",
+   "fee_bps": 2.02,
+   "token0": {
+    "address": "0x128cc466b61f542da60c70e3aa11c10e19b84edb",
+    "symbol": "WETH",
     "decimals": 18,
     "impersonating": null
    },
@@ -535,18 +332,468 @@
     "decimals": 6,
     "impersonating": null
    },
-   "volume_usd": 16830.05,
-   "swaps": 112,
-   "mean_interval_s": 76.0,
+   "volume_usd": 91847.62,
+   "swaps": 291,
+   "mean_interval_s": 74.6,
    "depth": "thin",
-   "reason": "quote refreshes every 76s, so any gap to a live venue is mostly age",
-   "price_usd": 4365.255874424858,
+   "reason": "quote refreshes every 75s, so any gap to a live venue is mostly age",
+   "price_usd": 2670.85202967546,
+   "cex_market": "ETHUSDT",
+   "flags": 37
+  },
+  {
+   "pool_id": "0x1bb5c22ae4560dc887164d96ebeaa756130948314ce132fee3c8d14e5b95758b",
+   "version": "v4",
+   "fee_bps": 100.0,
+   "token0": {
+    "address": "0x3600000000000000000000000000000000000000",
+    "symbol": "USDC",
+    "decimals": 6,
+    "impersonating": null
+   },
+   "token1": {
+    "address": "0x4c9b47dbd5933aa4574b2c27f82419e4dbbd0222",
+    "symbol": "ASTOCK",
+    "decimals": 18,
+    "impersonating": null
+   },
+   "volume_usd": 88241.27,
+   "swaps": 614,
+   "mean_interval_s": 37.3,
+   "depth": "thin",
+   "reason": "quote refreshes every 37s, so any gap to a live venue is mostly age",
+   "price_usd": 0.000886484748193373,
    "cex_market": null,
    "flags": 5
   },
   {
-   "pool_id": "0x23da0d44f18fe7dcaf9ae100b4b7aed8a97433f22a0a4f3f685d9f288252e127",
+   "pool_id": "0x2562c87d43dc09901704bd0e190a9001762834668fb14456a2fa3e7e52afd6bf",
    "version": "v4",
+   "fee_bps": 0.0,
+   "token0": {
+    "address": "0x3600000000000000000000000000000000000000",
+    "symbol": "USDC",
+    "decimals": 6,
+    "impersonating": null
+   },
+   "token1": {
+    "address": "0x7c7489163b1060333e71229bb7a9f8cb7094a7a9",
+    "symbol": "FOCI",
+    "decimals": 18,
+    "impersonating": null
+   },
+   "volume_usd": 80641.96,
+   "swaps": 613,
+   "mean_interval_s": 38.1,
+   "depth": "thin",
+   "reason": "quote refreshes every 38s, so any gap to a live venue is mostly age",
+   "price_usd": 0.00044761065083714994,
+   "cex_market": null,
+   "flags": 5
+  },
+  {
+   "pool_id": "0x176195b5a4b1c9cf4cecef68e701d1594451fd9c34a4e69297ee30ec78d59148",
+   "version": "v4",
+   "fee_bps": 100.0,
+   "token0": {
+    "address": "0x3600000000000000000000000000000000000000",
+    "symbol": "USDC",
+    "decimals": 6,
+    "impersonating": null
+   },
+   "token1": {
+    "address": "0xeec6fe80a004904ed2de8a0d773972321efb59c8",
+    "symbol": "ARC",
+    "decimals": 18,
+    "impersonating": null
+   },
+   "volume_usd": 78116.09,
+   "swaps": 583,
+   "mean_interval_s": 1.9,
+   "depth": "tradeable",
+   "reason": "$78,116 across 583 trades, 1.9s apart",
+   "price_usd": 2.4819890259572883e-06,
+   "cex_market": null,
+   "flags": 9
+  },
+  {
+   "pool_id": "0x0530f18eb32d732cc8b067bbd0b2ba7e5d807d4f5cf4f7d74429f2a78d3120c8",
+   "version": "v4",
+   "fee_bps": 100.0,
+   "token0": {
+    "address": "0x3600000000000000000000000000000000000000",
+    "symbol": "USDC",
+    "decimals": 6,
+    "impersonating": null
+   },
+   "token1": {
+    "address": "0x93d5b8c53ee763c2c4522bf0d958ce51af4360ae",
+    "symbol": "REGI",
+    "decimals": 18,
+    "impersonating": null
+   },
+   "volume_usd": 63634.53,
+   "swaps": 602,
+   "mean_interval_s": 36.8,
+   "depth": "thin",
+   "reason": "quote refreshes every 37s, so any gap to a live venue is mostly age",
+   "price_usd": 0.00012243007229820584,
+   "cex_market": null,
+   "flags": 5
+  },
+  {
+   "pool_id": "0xa3abdb2721cd343da530ff6fd0ad73f3caa77163ea2fb8206847249f9bba57d5",
+   "version": "v4",
+   "fee_bps": 0.0,
+   "token0": {
+    "address": "0x3600000000000000000000000000000000000000",
+    "symbol": "USDC",
+    "decimals": 6,
+    "impersonating": null
+   },
+   "token1": {
+    "address": "0x5849fd68a097b3ee7d87ce88a0fcbb76857648ff",
+    "symbol": "ARCMAN",
+    "decimals": 18,
+    "impersonating": null
+   },
+   "volume_usd": 63631.85,
+   "swaps": 2197,
+   "mean_interval_s": 9.9,
+   "depth": "tradeable",
+   "reason": "$63,632 across 2,197 trades, 9.9s apart",
+   "price_usd": 0.009582834447637623,
+   "cex_market": null,
+   "flags": 9
+  },
+  {
+   "pool_id": "0x27b37d8ba66027716bc4bccdce7b797e4ecd9d2dc7e59df3eb5c8cf473b4081b",
+   "version": "v4",
+   "fee_bps": 17.0,
+   "token0": {
+    "address": "0x2ba0f44bdfc17fba30eda9cdbecb908ca45b043b",
+    "symbol": "CRCL",
+    "decimals": 18,
+    "impersonating": null
+   },
+   "token1": {
+    "address": "0x3600000000000000000000000000000000000000",
+    "symbol": "USDC",
+    "decimals": 6,
+    "impersonating": null
+   },
+   "volume_usd": 60647.42,
+   "swaps": 280,
+   "mean_interval_s": 82.4,
+   "depth": "thin",
+   "reason": "quote refreshes every 82s, so any gap to a live venue is mostly age",
+   "price_usd": 92.49214820334146,
+   "cex_market": null,
+   "flags": 5
+  },
+  {
+   "pool_id": "0x6a3bacaa6493734c1ac221ebf42cf530a96c1e02",
+   "version": "v3",
+   "fee_bps": 100.0,
+   "token0": {
+    "address": "0x3600000000000000000000000000000000000000",
+    "symbol": "USDC",
+    "decimals": 6,
+    "impersonating": null
+   },
+   "token1": {
+    "address": "0xece5ca8bf9220718e5727754026757512212cb3c",
+    "symbol": "ARGUS",
+    "decimals": 18,
+    "impersonating": null
+   },
+   "volume_usd": 60096.75,
+   "swaps": 565,
+   "mean_interval_s": 41.1,
+   "depth": "thin",
+   "reason": "quote refreshes every 41s, so any gap to a live venue is mostly age",
+   "price_usd": 0.01823287387176841,
+   "cex_market": null,
+   "flags": 5
+  },
+  {
+   "pool_id": "0x2077eabe5552b048365871e9d498e82b7c120174de52d6d4728d0a0a1844eaab",
+   "version": "v4",
+   "fee_bps": 100.0,
+   "token0": {
+    "address": "0x311e35976c6df06a29a8d8bcd8c729ca6c3d7f07",
+    "symbol": "NPC",
+    "decimals": 18,
+    "impersonating": null
+   },
+   "token1": {
+    "address": "0x3600000000000000000000000000000000000000",
+    "symbol": "USDC",
+    "decimals": 6,
+    "impersonating": null
+   },
+   "volume_usd": 53727.48,
+   "swaps": 640,
+   "mean_interval_s": 9.4,
+   "depth": "tradeable",
+   "reason": "$53,727 across 640 trades, 9.4s apart",
+   "price_usd": 2.5048937183877706e-06,
+   "cex_market": null,
+   "flags": 9
+  },
+  {
+   "pool_id": "0x16ed29f7a34c65710caf7c063c76fff04dcd87fe520b6bafb496e0377f9d2dbc",
+   "version": "v4",
+   "fee_bps": 100.0,
+   "token0": {
+    "address": "0x3600000000000000000000000000000000000000",
+    "symbol": "USDC",
+    "decimals": 6,
+    "impersonating": null
+   },
+   "token1": {
+    "address": "0xa120e976f6302d7cb0a2bf729ba2baa90ec16053",
+    "symbol": "REGI",
+    "decimals": 18,
+    "impersonating": null
+   },
+   "volume_usd": 53507.42,
+   "swaps": 635,
+   "mean_interval_s": 3.4,
+   "depth": "tradeable",
+   "reason": "$53,507 across 635 trades, 3.4s apart",
+   "price_usd": 2.4856205626056694e-06,
+   "cex_market": null,
+   "flags": 9
+  },
+  {
+   "pool_id": "0xd0be79375ab487afd20c8a6d326e12b1d678742a81e828b2b978c8df60cc3f2a",
+   "version": "v4",
+   "fee_bps": 100.0,
+   "token0": {
+    "address": "0x3600000000000000000000000000000000000000",
+    "symbol": "USDC",
+    "decimals": 6,
+    "impersonating": null
+   },
+   "token1": {
+    "address": "0xbdc9b2cd724ba09a21408669fca95eefd9ccc6a2",
+    "symbol": "GO\uffe5\uffe5\uffe5\uffe5\uffe5",
+    "decimals": 18,
+    "impersonating": null
+   },
+   "volume_usd": 53244.55,
+   "swaps": 683,
+   "mean_interval_s": 4.3,
+   "depth": "tradeable",
+   "reason": "$53,245 across 683 trades, 4.3s apart",
+   "price_usd": 2.494341239055637e-06,
+   "cex_market": null,
+   "flags": 9
+  },
+  {
+   "pool_id": "0xc510e54d5cee9f8512280f9d3317431aa1fbf78d1a492eac7483cb0a0749b253",
+   "version": "v4",
+   "fee_bps": 100.0,
+   "token0": {
+    "address": "0x3600000000000000000000000000000000000000",
+    "symbol": "USDC",
+    "decimals": 6,
+    "impersonating": null
+   },
+   "token1": {
+    "address": "0xa3de1dda14e4b3ce2eee2f8c1e49315effc15be2",
+    "symbol": "ARCLIGHT",
+    "decimals": 18,
+    "impersonating": null
+   },
+   "volume_usd": 53165.78,
+   "swaps": 396,
+   "mean_interval_s": 56.2,
+   "depth": "thin",
+   "reason": "quote refreshes every 56s, so any gap to a live venue is mostly age",
+   "price_usd": 0.00045064579750080704,
+   "cex_market": null,
+   "flags": 5
+  },
+  {
+   "pool_id": "0x40732e01ba7a829dea44f51a10e7c58cd9f37765",
+   "version": "v3",
+   "fee_bps": 100.0,
+   "token0": {
+    "address": "0x3600000000000000000000000000000000000000",
+    "symbol": "USDC",
+    "decimals": 6,
+    "impersonating": null
+   },
+   "token1": {
+    "address": "0xeb64987643db71c76b2a2be7e723decc995e5b37",
+    "symbol": "COOL",
+    "decimals": 18,
+    "impersonating": null
+   },
+   "volume_usd": 50204.35,
+   "swaps": 510,
+   "mean_interval_s": 46.1,
+   "depth": "thin",
+   "reason": "quote refreshes every 46s, so any gap to a live venue is mostly age",
+   "price_usd": 0.0021220162428486713,
+   "cex_market": null,
+   "flags": 5
+  },
+  {
+   "pool_id": "0x5be7b4aa621c3e49cf48b133221dd002dea15d1249fa0aa1e1ee28ae7e6a8a74",
+   "version": "v4",
+   "fee_bps": 100.0,
+   "token0": {
+    "address": "0x3600000000000000000000000000000000000000",
+    "symbol": "USDC",
+    "decimals": 6,
+    "impersonating": null
+   },
+   "token1": {
+    "address": "0x934466f07585d483aa47b37a8b9dcb8ba08b4999",
+    "symbol": "Last pack",
+    "decimals": 18,
+    "impersonating": null
+   },
+   "volume_usd": 47576.13,
+   "swaps": 767,
+   "mean_interval_s": 12.4,
+   "depth": "tradeable",
+   "reason": "$47,576 across 767 trades, 12.4s apart",
+   "price_usd": 2.4833618911411425e-06,
+   "cex_market": null,
+   "flags": 9
+  },
+  {
+   "pool_id": "0xf45bf96c9be23129621eeff117020aa38bc3f9d5f423973317ef703620abe858",
+   "version": "v4",
+   "fee_bps": 100.0,
+   "token0": {
+    "address": "0x3600000000000000000000000000000000000000",
+    "symbol": "USDC",
+    "decimals": 6,
+    "impersonating": null
+   },
+   "token1": {
+    "address": "0xb569d544fe9bb4760156a8ed34c3d33986f12336",
+    "symbol": "GBT",
+    "decimals": 18,
+    "impersonating": null
+   },
+   "volume_usd": 47087.23,
+   "swaps": 554,
+   "mean_interval_s": 7.4,
+   "depth": "tradeable",
+   "reason": "$47,087 across 554 trades, 7.4s apart",
+   "price_usd": 2.482950934467452e-06,
+   "cex_market": null,
+   "flags": 9
+  },
+  {
+   "pool_id": "0x84c3fdc2678128a4fad4e16c650a7fa3c894e6efaf196c9a89e532a62a1586ea",
+   "version": "v4",
+   "fee_bps": 100.0,
+   "token0": {
+    "address": "0x3600000000000000000000000000000000000000",
+    "symbol": "USDC",
+    "decimals": 6,
+    "impersonating": null
+   },
+   "token1": {
+    "address": "0xc10579030e9183ea8366c6e1e85a20ce27eeefe8",
+    "symbol": "APECAT",
+    "decimals": 18,
+    "impersonating": null
+   },
+   "volume_usd": 47081.69,
+   "swaps": 617,
+   "mean_interval_s": 19.3,
+   "depth": "tradeable",
+   "reason": "$47,082 across 617 trades, 19.3s apart",
+   "price_usd": 2.4957923088214787e-06,
+   "cex_market": null,
+   "flags": 9
+  },
+  {
+   "pool_id": "0x4c8a108500a2db8f86af0d18ec318f1ae416eb23b614ccda1df892d8c2417190",
+   "version": "v4",
+   "fee_bps": 83886.08,
+   "token0": {
+    "address": "0x3600000000000000000000000000000000000000",
+    "symbol": "USDC",
+    "decimals": 6,
+    "impersonating": null
+   },
+   "token1": {
+    "address": "0x7bef7ce5949fefeba10be9cd1d3783e3fde632b2",
+    "symbol": "FLYLET",
+    "decimals": 18,
+    "impersonating": null
+   },
+   "volume_usd": 44211.54,
+   "swaps": 982,
+   "mean_interval_s": 23.8,
+   "depth": "tradeable",
+   "reason": "$44,212 across 982 trades, 23.8s apart",
+   "price_usd": 2.532822290374852e-05,
+   "cex_market": null,
+   "flags": 9
+  },
+  {
+   "pool_id": "0xe68ba1ac44fe2b602ae95c05df0d3b8940e81ad16d859e63449b6fb5c64f2f8f",
+   "version": "v4",
+   "fee_bps": 29.0,
+   "token0": {
+    "address": "0x128cc466b61f542da60c70e3aa11c10e19b84edb",
+    "symbol": "WETH",
+    "decimals": 18,
+    "impersonating": null
+   },
+   "token1": {
+    "address": "0x3600000000000000000000000000000000000000",
+    "symbol": "USDC",
+    "decimals": 6,
+    "impersonating": null
+   },
+   "volume_usd": 38140.98,
+   "swaps": 73,
+   "mean_interval_s": 301.5,
+   "depth": "thin",
+   "reason": "quote refreshes every 301s, so any gap to a live venue is mostly age",
+   "price_usd": 2668.839999995523,
+   "cex_market": "ETHUSDT",
+   "flags": 37
+  },
+  {
+   "pool_id": "0x2119533362f8730b1568af93f5553d45a9dc02fcd41cf5f14fc34f37d828d006",
+   "version": "v4",
+   "fee_bps": 100.0,
+   "token0": {
+    "address": "0x31b809f7cdb30474ec3e4942c44f23a0bde5992f",
+    "symbol": "PROLLY",
+    "decimals": 18,
+    "impersonating": null
+   },
+   "token1": {
+    "address": "0x3600000000000000000000000000000000000000",
+    "symbol": "USDC",
+    "decimals": 6,
+    "impersonating": null
+   },
+   "volume_usd": 37567.61,
+   "swaps": 412,
+   "mean_interval_s": 3.5,
+   "depth": "tradeable",
+   "reason": "$37,568 across 412 trades, 3.5s apart",
+   "price_usd": 2.4827864766789992e-06,
+   "cex_market": null,
+   "flags": 9
+  },
+  {
+   "pool_id": "0x154a546586173cd40fbe1ec6c452fdb5eee7b660",
+   "version": "v3",
    "fee_bps": 1.0,
    "token0": {
     "address": "0x3600000000000000000000000000000000000000",
@@ -555,17 +802,117 @@
     "impersonating": null
    },
    "token1": {
-    "address": "0x610bb65f69cc3602ed81c4d54274c7851ad103ee",
-    "symbol": "LULU",
+    "address": "0xa91d5c692a5ea03927c36eddf2b228b0f839ab4a",
+    "symbol": "BAGFI",
     "decimals": 18,
     "impersonating": null
    },
-   "volume_usd": 16371.91,
-   "swaps": 82,
-   "mean_interval_s": 104.5,
+   "volume_usd": 33866.41,
+   "swaps": 356,
+   "mean_interval_s": 11.8,
+   "depth": "tradeable",
+   "reason": "$33,866 across 356 trades, 11.8s apart",
+   "price_usd": 2.4061147604335847e-05,
+   "cex_market": null,
+   "flags": 9
+  },
+  {
+   "pool_id": "0x7dbcec05f12b14e21a79a0dc15ea9859322a4ab2",
+   "version": "v3",
+   "fee_bps": 100.0,
+   "token0": {
+    "address": "0x0bffa97f774824e9da843699aedd2835cb1b8022",
+    "symbol": "ARCASH",
+    "decimals": 18,
+    "impersonating": null
+   },
+   "token1": {
+    "address": "0x3600000000000000000000000000000000000000",
+    "symbol": "USDC",
+    "decimals": 6,
+    "impersonating": null
+   },
+   "volume_usd": 33711.56,
+   "swaps": 141,
+   "mean_interval_s": 185.2,
    "depth": "thin",
-   "reason": "quote refreshes every 104s, so any gap to a live venue is mostly age",
-   "price_usd": 4.205872456679926e-05,
+   "reason": "quote refreshes every 185s, so any gap to a live venue is mostly age",
+   "price_usd": 0.0003205713449387485,
+   "cex_market": null,
+   "flags": 5
+  },
+  {
+   "pool_id": "0x913cedb9a1d4793bf9b8760b366820e23b3a6d23dabcc997eab7ba26c267c34c",
+   "version": "v4",
+   "fee_bps": 100.0,
+   "token0": {
+    "address": "0x3600000000000000000000000000000000000000",
+    "symbol": "USDC",
+    "decimals": 6,
+    "impersonating": null
+   },
+   "token1": {
+    "address": "0x4068e64ace6f365e7bf60cb5ba3b013d657de9b8",
+    "symbol": "PURSER",
+    "decimals": 18,
+    "impersonating": null
+   },
+   "volume_usd": 32749.72,
+   "swaps": 296,
+   "mean_interval_s": 11.7,
+   "depth": "tradeable",
+   "reason": "$32,750 across 296 trades, 11.7s apart",
+   "price_usd": 2.510648599625314e-06,
+   "cex_market": null,
+   "flags": 9
+  },
+  {
+   "pool_id": "0x48d71602a193a337e0af135898b6bcda17acb151ade9b74225c0fe5397f05e6f",
+   "version": "v4",
+   "fee_bps": 100.0,
+   "token0": {
+    "address": "0x1f9f98b2d7b4ddcd93654a1e20221340cf1f241e",
+    "symbol": "BAGFI",
+    "decimals": 18,
+    "impersonating": null
+   },
+   "token1": {
+    "address": "0x3600000000000000000000000000000000000000",
+    "symbol": "USDC",
+    "decimals": 6,
+    "impersonating": null
+   },
+   "volume_usd": 32621.27,
+   "swaps": 364,
+   "mean_interval_s": 61.6,
+   "depth": "thin",
+   "reason": "quote refreshes every 62s, so any gap to a live venue is mostly age",
+   "price_usd": 0.00014008123256979308,
+   "cex_market": null,
+   "flags": 5
+  },
+  {
+   "pool_id": "0x3b058ad6b939d04432d339f01bcefdcd5bce726a213950a42df3bb06434ab889",
+   "version": "v4",
+   "fee_bps": 0.0,
+   "token0": {
+    "address": "0x0bb3befba323578dad33efb6356c69b557787777",
+    "symbol": "MEMESPAD",
+    "decimals": 18,
+    "impersonating": null
+   },
+   "token1": {
+    "address": "0x3600000000000000000000000000000000000000",
+    "symbol": "USDC",
+    "decimals": 6,
+    "impersonating": null
+   },
+   "volume_usd": 31788.95,
+   "swaps": 478,
+   "mean_interval_s": 48.6,
+   "depth": "thin",
+   "reason": "quote refreshes every 49s, so any gap to a live venue is mostly age",
+   "price_usd": 7.158098570939805e-05,
    "cex_market": null,
    "flags": 5
   },
@@ -585,362 +932,12 @@
     "decimals": 18,
     "impersonating": null
    },
-   "volume_usd": 16012.67,
-   "swaps": 137,
-   "mean_interval_s": 58.6,
+   "volume_usd": 30105.12,
+   "swaps": 263,
+   "mean_interval_s": 101.8,
    "depth": "thin",
-   "reason": "quote refreshes every 59s, so any gap to a live venue is mostly age",
-   "price_usd": 0.000565573323539164,
-   "cex_market": null,
-   "flags": 5
-  },
-  {
-   "pool_id": "0xcb884ecb09388944a1afd5e1b74c42a4dfb2f93ec38288ce20c966ec233a0d52",
-   "version": "v4",
-   "fee_bps": 0.0,
-   "token0": {
-    "address": "0x28f986a61e078795639f239675582a12b4cf7f01",
-    "symbol": "oBrain",
-    "decimals": 18,
-    "impersonating": null
-   },
-   "token1": {
-    "address": "0x3600000000000000000000000000000000000000",
-    "symbol": "USDC",
-    "decimals": 6,
-    "impersonating": null
-   },
-   "volume_usd": 13330.8,
-   "swaps": 156,
-   "mean_interval_s": 47.9,
-   "depth": "thin",
-   "reason": "quote refreshes every 48s, so any gap to a live venue is mostly age",
-   "price_usd": 0.00014516211014092446,
-   "cex_market": null,
-   "flags": 5
-  },
-  {
-   "pool_id": "0x3664e34418868c4e64c59c0e45f23c1f9361c4f4b6c23b3793d336be1d675a24",
-   "version": "v4",
-   "fee_bps": 100.0,
-   "token0": {
-    "address": "0x30ac39dec8a854c5fd03aa429e3bef32a7e4c84a",
-    "symbol": "PI",
-    "decimals": 18,
-    "impersonating": null
-   },
-   "token1": {
-    "address": "0x3600000000000000000000000000000000000000",
-    "symbol": "USDC",
-    "decimals": 6,
-    "impersonating": null
-   },
-   "volume_usd": 13082.36,
-   "swaps": 145,
-   "mean_interval_s": 51.8,
-   "depth": "thin",
-   "reason": "quote refreshes every 52s, so any gap to a live venue is mostly age",
-   "price_usd": 0.0004959892056205938,
-   "cex_market": null,
-   "flags": 5
-  },
-  {
-   "pool_id": "0xf53f02d9041d00bbd92235b4c902b9f350c554a8ed2dc64fa0a4585aac413f09",
-   "version": "v4",
-   "fee_bps": 98.8,
-   "token0": {
-    "address": "0x3600000000000000000000000000000000000000",
-    "symbol": "USDC",
-    "decimals": 6,
-    "impersonating": null
-   },
-   "token1": {
-    "address": "0x8faae5592b9acc27a79fca745c6b872adf514a5d",
-    "symbol": "MURMUR",
-    "decimals": 18,
-    "impersonating": null
-   },
-   "volume_usd": 12747.22,
-   "swaps": 194,
-   "mean_interval_s": 38.8,
-   "depth": "thin",
-   "reason": "quote refreshes every 39s, so any gap to a live venue is mostly age",
-   "price_usd": 0.0005253881515284915,
-   "cex_market": null,
-   "flags": 5
-  },
-  {
-   "pool_id": "0xcd85a7c2298d8a72c6e0aea3d83dc2f01131f0135fde68b2b502aff81492b589",
-   "version": "v4",
-   "fee_bps": 100.0,
-   "token0": {
-    "address": "0x3600000000000000000000000000000000000000",
-    "symbol": "USDC",
-    "decimals": 6,
-    "impersonating": null
-   },
-   "token1": {
-    "address": "0x648a5382bdcf286e7ff5122d01a983db314e620a",
-    "symbol": "PANCHU",
-    "decimals": 18,
-    "impersonating": null
-   },
-   "volume_usd": 12539.23,
-   "swaps": 100,
-   "mean_interval_s": 76.0,
-   "depth": "thin",
-   "reason": "quote refreshes every 76s, so any gap to a live venue is mostly age",
-   "price_usd": 0.00011153684769690743,
-   "cex_market": null,
-   "flags": 5
-  },
-  {
-   "pool_id": "0xba9840bc80d525071b6f1c36fccf13c9f1c630a1e6e6edf07ebf17df8425a66d",
-   "version": "v4",
-   "fee_bps": 98.1,
-   "token0": {
-    "address": "0x3600000000000000000000000000000000000000",
-    "symbol": "USDC",
-    "decimals": 6,
-    "impersonating": null
-   },
-   "token1": {
-    "address": "0xece5ca8bf9220718e5727754026757512212cb3c",
-    "symbol": "ARGUS",
-    "decimals": 18,
-    "impersonating": null
-   },
-   "volume_usd": 12481.37,
-   "swaps": 178,
-   "mean_interval_s": 41.1,
-   "depth": "thin",
-   "reason": "quote refreshes every 41s, so any gap to a live venue is mostly age",
-   "price_usd": 0.01763264410366568,
-   "cex_market": null,
-   "flags": 5
-  },
-  {
-   "pool_id": "0xc7cf0c94850c912a5045f2a0f2d70ca18085b829",
-   "version": "v3",
-   "fee_bps": 100.0,
-   "token0": {
-    "address": "0x3600000000000000000000000000000000000000",
-    "symbol": "USDC",
-    "decimals": 6,
-    "impersonating": null
-   },
-   "token1": {
-    "address": "0x5042419b1f2498959787bc23be1f484ed1306650",
-    "symbol": "ARCH",
-    "decimals": 18,
-    "impersonating": null
-   },
-   "volume_usd": 11447.74,
-   "swaps": 109,
-   "mean_interval_s": 57.3,
-   "depth": "thin",
-   "reason": "quote refreshes every 57s, so any gap to a live venue is mostly age",
-   "price_usd": 0.00012506921474118865,
-   "cex_market": null,
-   "flags": 5
-  },
-  {
-   "pool_id": "0x0069cb6f70e2f848405f4483f232274c720ce6f9",
-   "version": "v3",
-   "fee_bps": 100.0,
-   "token0": {
-    "address": "0x3600000000000000000000000000000000000000",
-    "symbol": "USDC",
-    "decimals": 6,
-    "impersonating": null
-   },
-   "token1": {
-    "address": "0x8bcb94279fc2c984ec34e0c1f2192df8c69ea4f0",
-    "symbol": "Architects",
-    "decimals": 18,
-    "impersonating": null
-   },
-   "volume_usd": 10670.54,
-   "swaps": 133,
-   "mean_interval_s": 54.8,
-   "depth": "thin",
-   "reason": "quote refreshes every 55s, so any gap to a live venue is mostly age",
-   "price_usd": 0.00045589489515141115,
-   "cex_market": null,
-   "flags": 5
-  },
-  {
-   "pool_id": "0x5e2efe267cdaa27c2ed7ea3f3369f9f891ca67a069e9419e1d0ba41c7f4f0e17",
-   "version": "v4",
-   "fee_bps": 100.0,
-   "token0": {
-    "address": "0x3600000000000000000000000000000000000000",
-    "symbol": "USDC",
-    "decimals": 6,
-    "impersonating": null
-   },
-   "token1": {
-    "address": "0xcc5c8d46666f107a052538b9b1c1834d1e006911",
-    "symbol": "ARCA",
-    "decimals": 18,
-    "impersonating": null
-   },
-   "volume_usd": 10481.61,
-   "swaps": 161,
-   "mean_interval_s": 47.5,
-   "depth": "thin",
-   "reason": "quote refreshes every 48s, so any gap to a live venue is mostly age",
-   "price_usd": 5.064560694562716e-05,
-   "cex_market": null,
-   "flags": 5
-  },
-  {
-   "pool_id": "0x7dbcec05f12b14e21a79a0dc15ea9859322a4ab2",
-   "version": "v3",
-   "fee_bps": 100.0,
-   "token0": {
-    "address": "0x0bffa97f774824e9da843699aedd2835cb1b8022",
-    "symbol": "ARCASH",
-    "decimals": 18,
-    "impersonating": null
-   },
-   "token1": {
-    "address": "0x3600000000000000000000000000000000000000",
-    "symbol": "USDC",
-    "decimals": 6,
-    "impersonating": null
-   },
-   "volume_usd": 10265.89,
-   "swaps": 107,
-   "mean_interval_s": 66.4,
-   "depth": "thin",
-   "reason": "quote refreshes every 66s, so any gap to a live venue is mostly age",
-   "price_usd": 0.000813544141993205,
-   "cex_market": null,
-   "flags": 5
-  },
-  {
-   "pool_id": "0xd488e2d8dd29bb23036839c9334ef1bbf6dc6c87",
-   "version": "v3",
-   "fee_bps": 100.0,
-   "token0": {
-    "address": "0x3600000000000000000000000000000000000000",
-    "symbol": "USDC",
-    "decimals": 6,
-    "impersonating": null
-   },
-   "token1": {
-    "address": "0xa37c1f9b2483b3b45ced74b10e19223aa76d18f2",
-    "symbol": "Builders",
-    "decimals": 18,
-    "impersonating": null
-   },
-   "volume_usd": 9112.75,
-   "swaps": 64,
-   "mean_interval_s": 120.9,
-   "depth": "thin",
-   "reason": "quote refreshes every 121s, so any gap to a live venue is mostly age",
-   "price_usd": 4.041438189454992e-05,
-   "cex_market": null,
-   "flags": 5
-  },
-  {
-   "pool_id": "0xda9f3d166497ddfddf37c93cacfd8aa39b71e493",
-   "version": "v3",
-   "fee_bps": 100.0,
-   "token0": {
-    "address": "0x2164bb17a2d38c1b5170e987b2c0416df1efc752",
-    "symbol": "LONG",
-    "decimals": 18,
-    "impersonating": null
-   },
-   "token1": {
-    "address": "0x3600000000000000000000000000000000000000",
-    "symbol": "USDC",
-    "decimals": 6,
-    "impersonating": null
-   },
-   "volume_usd": 8847.29,
-   "swaps": 155,
-   "mean_interval_s": 48.9,
-   "depth": "thin",
-   "reason": "quote refreshes every 49s, so any gap to a live venue is mostly age",
-   "price_usd": 0.0022258262251500043,
-   "cex_market": null,
-   "flags": 5
-  },
-  {
-   "pool_id": "0x0e3778957c57c367e7ea5513122d3e300a1ee635166e22d07c284b01dcea1f95",
-   "version": "v4",
-   "fee_bps": 25.0,
-   "token0": {
-    "address": "0x128cc466b61f542da60c70e3aa11c10e19b84edb",
-    "symbol": "WETH",
-    "decimals": 18,
-    "impersonating": null
-   },
-   "token1": {
-    "address": "0x3600000000000000000000000000000000000000",
-    "symbol": "USDC",
-    "decimals": 6,
-    "impersonating": null
-   },
-   "volume_usd": 7710.37,
-   "swaps": 13,
-   "mean_interval_s": 435.9,
-   "depth": "thin",
-   "reason": "quote refreshes every 436s, so any gap to a live venue is mostly age",
-   "price_usd": 2578.5265286014906,
-   "cex_market": "ETHUSDT",
-   "flags": 37
-  },
-  {
-   "pool_id": "0x432d75d7c8a163a949731f34bd163e099c09ad27df5f0271e3bc0c96fb420b34",
-   "version": "v4",
-   "fee_bps": 83886.08,
-   "token0": {
-    "address": "0x128cc466b61f542da60c70e3aa11c10e19b84edb",
-    "symbol": "WETH",
-    "decimals": 18,
-    "impersonating": null
-   },
-   "token1": {
-    "address": "0x3600000000000000000000000000000000000000",
-    "symbol": "USDC",
-    "decimals": 6,
-    "impersonating": null
-   },
-   "volume_usd": 7618.74,
-   "swaps": 7,
-   "mean_interval_s": 1078.7,
-   "depth": "thin",
-   "reason": "quote refreshes every 1079s, so any gap to a live venue is mostly age",
-   "price_usd": 2585.222100776856,
-   "cex_market": "ETHUSDT",
-   "flags": 37
-  },
-  {
-   "pool_id": "0x27b37d8ba66027716bc4bccdce7b797e4ecd9d2dc7e59df3eb5c8cf473b4081b",
-   "version": "v4",
-   "fee_bps": 17.0,
-   "token0": {
-    "address": "0x2ba0f44bdfc17fba30eda9cdbecb908ca45b043b",
-    "symbol": "CRCL",
-    "decimals": 18,
-    "impersonating": null
-   },
-   "token1": {
-    "address": "0x3600000000000000000000000000000000000000",
-    "symbol": "USDC",
-    "decimals": 6,
-    "impersonating": null
-   },
-   "volume_usd": 7580.78,
-   "swaps": 39,
-   "mean_interval_s": 179.2,
-   "depth": "thin",
-   "reason": "quote refreshes every 179s, so any gap to a live venue is mostly age",
-   "price_usd": 89.53737265835792,
+   "reason": "quote refreshes every 102s, so any gap to a live venue is mostly age",
+   "price_usd": 0.00043021925609241796,
    "cex_market": null,
    "flags": 5
   },
@@ -960,17 +957,42 @@
     "decimals": 18,
     "impersonating": null
    },
-   "volume_usd": 7356.54,
-   "swaps": 111,
-   "mean_interval_s": 65.4,
+   "volume_usd": 28900.64,
+   "swaps": 212,
+   "mean_interval_s": 104.2,
    "depth": "thin",
-   "reason": "quote refreshes every 65s, so any gap to a live venue is mostly age",
-   "price_usd": 0.00015652609438836262,
+   "reason": "quote refreshes every 104s, so any gap to a live venue is mostly age",
+   "price_usd": 0.00039136297687368673,
    "cex_market": null,
    "flags": 5
   },
   {
-   "pool_id": "0xc4f9c3d33b28710420b9d4966c932ef4b754660c",
+   "pool_id": "0xf26ed425bae6cb71d65a14115f7af4d315e3fb70fcc0db22195d38c2c09f8295",
+   "version": "v4",
+   "fee_bps": 100.0,
+   "token0": {
+    "address": "0x3600000000000000000000000000000000000000",
+    "symbol": "USDC",
+    "decimals": 6,
+    "impersonating": null
+   },
+   "token1": {
+    "address": "0x8faae5592b9acc27a79fca745c6b872adf514a5d",
+    "symbol": "MURMUR",
+    "decimals": 18,
+    "impersonating": null
+   },
+   "volume_usd": 28010.12,
+   "swaps": 217,
+   "mean_interval_s": 107.9,
+   "depth": "thin",
+   "reason": "quote refreshes every 108s, so any gap to a live venue is mostly age",
+   "price_usd": 0.0011197822868650946,
+   "cex_market": null,
+   "flags": 5
+  },
+  {
+   "pool_id": "0x085c2b626c6440e84e000267af157537be469b11",
    "version": "v3",
    "fee_bps": 100.0,
    "token0": {
@@ -980,52 +1002,327 @@
     "impersonating": null
    },
    "token1": {
-    "address": "0xc1347b8f2b79af2f150d26f350eb974cd7dab6f3",
-    "symbol": "ARK",
+    "address": "0x4f7dc89dc44ad08c20d9680d2ee9cfad69bfda55",
+    "symbol": "MALA",
     "decimals": 18,
     "impersonating": null
    },
-   "volume_usd": 7141.24,
-   "swaps": 120,
-   "mean_interval_s": 58.4,
+   "volume_usd": 26524.56,
+   "swaps": 356,
+   "mean_interval_s": 61.4,
    "depth": "thin",
-   "reason": "quote refreshes every 58s, so any gap to a live venue is mostly age",
-   "price_usd": 3.755170607451188e-05,
+   "reason": "quote refreshes every 61s, so any gap to a live venue is mostly age",
+   "price_usd": 0.00034306986685283495,
    "cex_market": null,
    "flags": 5
   },
   {
-   "pool_id": "0xefe060b7f012c3f051f072be4b3d0eafefea9df1f18796b6d9b59d6749e21649",
+   "pool_id": "0x56c25a77887d84324ea2fbfb280f600947187ac01a44f38725aa6667a4706141",
+   "version": "v4",
+   "fee_bps": 100.0,
+   "token0": {
+    "address": "0x3600000000000000000000000000000000000000",
+    "symbol": "USDC",
+    "decimals": 6,
+    "impersonating": null
+   },
+   "token1": {
+    "address": "0xa4ee9d419c21ac5763dc9c9990454284fe90a44e",
+    "symbol": "SIRIUS",
+    "decimals": 18,
+    "impersonating": null
+   },
+   "volume_usd": 24821.43,
+   "swaps": 519,
+   "mean_interval_s": 9.0,
+   "depth": "tradeable",
+   "reason": "$24,821 across 519 trades, 9.0s apart",
+   "price_usd": 2.4820179729718328e-06,
+   "cex_market": null,
+   "flags": 9
+  },
+  {
+   "pool_id": "0xeb0fd02fb8044d5514fb6e165ee134fd547eff0378bb33b76f4b81d8b03bd1ae",
+   "version": "v4",
+   "fee_bps": 5.0,
+   "token0": {
+    "address": "0x3600000000000000000000000000000000000000",
+    "symbol": "USDC",
+    "decimals": 6,
+    "impersonating": null
+   },
+   "token1": {
+    "address": "0xbef5f6d51cb62b58e6a8f77868681825c6fe21c1",
+    "symbol": "EURC",
+    "decimals": 6,
+    "impersonating": null
+   },
+   "volume_usd": 24705.38,
+   "swaps": 223,
+   "mean_interval_s": 105.5,
+   "depth": "thin",
+   "reason": "quote refreshes every 105s, so any gap to a live venue is mostly age",
+   "price_usd": 1.1370669149702923,
+   "cex_market": null,
+   "flags": 5
+  },
+  {
+   "pool_id": "0xda9f3d166497ddfddf37c93cacfd8aa39b71e493",
+   "version": "v3",
+   "fee_bps": 100.0,
+   "token0": {
+    "address": "0x2164bb17a2d38c1b5170e987b2c0416df1efc752",
+    "symbol": "LONG",
+    "decimals": 18,
+    "impersonating": null
+   },
+   "token1": {
+    "address": "0x3600000000000000000000000000000000000000",
+    "symbol": "USDC",
+    "decimals": 6,
+    "impersonating": null
+   },
+   "volume_usd": 24549.35,
+   "swaps": 698,
+   "mean_interval_s": 35.7,
+   "depth": "thin",
+   "reason": "quote refreshes every 36s, so any gap to a live venue is mostly age",
+   "price_usd": 0.0025446352277473704,
+   "cex_market": null,
+   "flags": 5
+  },
+  {
+   "pool_id": "0xe5434aec0bcf1bef4ffddb0dfcbc0c8b96643e55b5e1fd7b390cd911baed743f",
+   "version": "v4",
+   "fee_bps": 83886.08,
+   "token0": {
+    "address": "0x3600000000000000000000000000000000000000",
+    "symbol": "USDC",
+    "decimals": 6,
+    "impersonating": null
+   },
+   "token1": {
+    "address": "0x8f9491d2f611f657d9603c0974bae4c21445484c",
+    "symbol": "TEZO",
+    "decimals": 18,
+    "impersonating": null
+   },
+   "volume_usd": 24169.23,
+   "swaps": 494,
+   "mean_interval_s": 43.9,
+   "depth": "thin",
+   "reason": "quote refreshes every 44s, so any gap to a live venue is mostly age",
+   "price_usd": 2.0912785915912274e-05,
+   "cex_market": null,
+   "flags": 5
+  },
+  {
+   "pool_id": "0x273ec4949457a96469abb0f6e9a3362b52597a379fea8ed4da3f278529c7c2fe",
+   "version": "v4",
+   "fee_bps": 100.0,
+   "token0": {
+    "address": "0x3600000000000000000000000000000000000000",
+    "symbol": "USDC",
+    "decimals": 6,
+    "impersonating": null
+   },
+   "token1": {
+    "address": "0x9c791b9c2c992ea4a064e8de0b153a0bbaaf5cf7",
+    "symbol": "BMSH",
+    "decimals": 18,
+    "impersonating": null
+   },
+   "volume_usd": 24138.84,
+   "swaps": 515,
+   "mean_interval_s": 4.2,
+   "depth": "tradeable",
+   "reason": "$24,139 across 515 trades, 4.2s apart",
+   "price_usd": 2.482199734187482e-06,
+   "cex_market": null,
+   "flags": 9
+  },
+  {
+   "pool_id": "0x2f4040d563fc000f9d0ee449f21c6d551e471ecdce0e618a14507af43b18101f",
+   "version": "v4",
+   "fee_bps": 299.9,
+   "token0": {
+    "address": "0x3600000000000000000000000000000000000000",
+    "symbol": "USDC",
+    "decimals": 6,
+    "impersonating": null
+   },
+   "token1": {
+    "address": "0x8e98a62a995a50eca9979bfa016f91bf36a8f9d9",
+    "symbol": "USDC",
+    "decimals": 18,
+    "impersonating": "USDC"
+   },
+   "volume_usd": 22454.95,
+   "swaps": 111,
+   "mean_interval_s": 196.3,
+   "depth": "thin",
+   "reason": "quote refreshes every 196s, so any gap to a live venue is mostly age",
+   "price_usd": 0.0021577299484193857,
+   "cex_market": null,
+   "flags": 21
+  },
+  {
+   "pool_id": "0xa62bfd5f41bd591b3bb6b7972b5c47d083129256b27eec680c70ef507e1ac1a5",
+   "version": "v4",
+   "fee_bps": 100.0,
+   "token0": {
+    "address": "0x3600000000000000000000000000000000000000",
+    "symbol": "USDC",
+    "decimals": 6,
+    "impersonating": null
+   },
+   "token1": {
+    "address": "0xb691df13fc759a938b419d6202ad48e6510f0ec3",
+    "symbol": "GENLAYER",
+    "decimals": 18,
+    "impersonating": null
+   },
+   "volume_usd": 22234.29,
+   "swaps": 430,
+   "mean_interval_s": 3.0,
+   "depth": "tradeable",
+   "reason": "$22,234 across 430 trades, 3.0s apart",
+   "price_usd": 2.4865303419998666e-06,
+   "cex_market": null,
+   "flags": 9
+  },
+  {
+   "pool_id": "0x8fba2ea1e85e6e21ae488dc074e55e580cfedf8b1b114d9703772886744574d0",
+   "version": "v4",
+   "fee_bps": 100.0,
+   "token0": {
+    "address": "0x3600000000000000000000000000000000000000",
+    "symbol": "USDC",
+    "decimals": 6,
+    "impersonating": null
+   },
+   "token1": {
+    "address": "0xbb7cf6f505d6906f9d91219b4dd3ad3880dd328f",
+    "symbol": "ASTRION",
+    "decimals": 18,
+    "impersonating": null
+   },
+   "volume_usd": 21240.14,
+   "swaps": 360,
+   "mean_interval_s": 6.1,
+   "depth": "tradeable",
+   "reason": "$21,240 across 360 trades, 6.1s apart",
+   "price_usd": 2.484004302540795e-06,
+   "cex_market": null,
+   "flags": 9
+  },
+  {
+   "pool_id": "0x067648331e1834721dc935d7d8d88ef1b31b15f16c7f1cbb30179a371f29897b",
+   "version": "v4",
+   "fee_bps": 100.0,
+   "token0": {
+    "address": "0x3600000000000000000000000000000000000000",
+    "symbol": "USDC",
+    "decimals": 6,
+    "impersonating": null
+   },
+   "token1": {
+    "address": "0x952036f9f529de52fba9dfafe90b87734af11cdb",
+    "symbol": "ZARA",
+    "decimals": 18,
+    "impersonating": null
+   },
+   "volume_usd": 20674.27,
+   "swaps": 369,
+   "mean_interval_s": 24.4,
+   "depth": "tradeable",
+   "reason": "$20,674 across 369 trades, 24.4s apart",
+   "price_usd": 2.483494713369083e-06,
+   "cex_market": null,
+   "flags": 9
+  },
+  {
+   "pool_id": "0xf89005ccf237a59eeee1521e74b15c7d8d022ab7",
+   "version": "v3",
+   "fee_bps": 100.0,
+   "token0": {
+    "address": "0x1ea1e4f9a9975f1f6e9c0a9f6e8ada7a66e6de52",
+    "symbol": "ARCT",
+    "decimals": 18,
+    "impersonating": null
+   },
+   "token1": {
+    "address": "0x3600000000000000000000000000000000000000",
+    "symbol": "USDC",
+    "decimals": 6,
+    "impersonating": null
+   },
+   "volume_usd": 20334.66,
+   "swaps": 341,
+   "mean_interval_s": 65.3,
+   "depth": "thin",
+   "reason": "quote refreshes every 65s, so any gap to a live venue is mostly age",
+   "price_usd": 0.001364341195106387,
+   "cex_market": null,
+   "flags": 5
+  },
+  {
+   "pool_id": "0xd71e15a5c45a204f5228d68165925741efa79995d2671a9e291e6e5cffcc89fc",
+   "version": "v4",
+   "fee_bps": 100.0,
+   "token0": {
+    "address": "0x29316db42ff99f640fd4d1bb169635b6318cd430",
+    "symbol": "ARCANUS",
+    "decimals": 18,
+    "impersonating": null
+   },
+   "token1": {
+    "address": "0x3600000000000000000000000000000000000000",
+    "symbol": "USDC",
+    "decimals": 6,
+    "impersonating": null
+   },
+   "volume_usd": 20253.36,
+   "swaps": 240,
+   "mean_interval_s": 90.2,
+   "depth": "thin",
+   "reason": "quote refreshes every 90s, so any gap to a live venue is mostly age",
+   "price_usd": 6.560814875294354e-05,
+   "cex_market": null,
+   "flags": 5
+  },
+  {
+   "pool_id": "0x62048ba5a1ae633e1b2aef70a5261db53799ecf2e5754d680ed89d9c8e91c31d",
+   "version": "v4",
+   "fee_bps": 200.0,
+   "token0": {
+    "address": "0x3600000000000000000000000000000000000000",
+    "symbol": "USDC",
+    "decimals": 6,
+    "impersonating": null
+   },
+   "token1": {
+    "address": "0x3dd6db0f20d747e1274839cdd6724cc5df1fb813",
+    "symbol": "ASPAD",
+    "decimals": 18,
+    "impersonating": null
+   },
+   "volume_usd": 20091.72,
+   "swaps": 164,
+   "mean_interval_s": 135.7,
+   "depth": "thin",
+   "reason": "quote refreshes every 136s, so any gap to a live venue is mostly age",
+   "price_usd": 0.00019439010106269252,
+   "cex_market": null,
+   "flags": 5
+  },
+  {
+   "pool_id": "0xcb884ecb09388944a1afd5e1b74c42a4dfb2f93ec38288ce20c966ec233a0d52",
    "version": "v4",
    "fee_bps": 0.0,
    "token0": {
-    "address": "0x3600000000000000000000000000000000000000",
-    "symbol": "USDC",
-    "decimals": 6,
-    "impersonating": null
-   },
-   "token1": {
-    "address": "0xafa78bc7c2e1142f4b2a225ae4aee17d6b7d7f01",
-    "symbol": "MOSS",
-    "decimals": 18,
-    "impersonating": null
-   },
-   "volume_usd": 6685.11,
-   "swaps": 229,
-   "mean_interval_s": 45.2,
-   "depth": "thin",
-   "reason": "quote refreshes every 45s, so any gap to a live venue is mostly age",
-   "price_usd": 0.00012488035921644325,
-   "cex_market": null,
-   "flags": 5
-  },
-  {
-   "pool_id": "0x278eab5f794ccbaa85dd7cd275e56bf563d8d26e35fd717800f39340f9730c3a",
-   "version": "v4",
-   "fee_bps": 100.0,
-   "token0": {
-    "address": "0x08adbf431569a1aacac2606d2adcd18f4ebf2a71",
-    "symbol": "GLITCH",
+    "address": "0x28f986a61e078795639f239675582a12b4cf7f01",
+    "symbol": "oBrain",
     "decimals": 18,
     "impersonating": null
    },
@@ -1035,17 +1332,17 @@
     "decimals": 6,
     "impersonating": null
    },
-   "volume_usd": 6331.32,
-   "swaps": 99,
-   "mean_interval_s": 70.9,
+   "volume_usd": 19848.4,
+   "swaps": 167,
+   "mean_interval_s": 134.1,
    "depth": "thin",
-   "reason": "quote refreshes every 71s, so any gap to a live venue is mostly age",
-   "price_usd": 3.348184282902678e-05,
+   "reason": "quote refreshes every 134s, so any gap to a live venue is mostly age",
+   "price_usd": 0.00015058858262799782,
    "cex_market": null,
    "flags": 5
   },
   {
-   "pool_id": "0x67b53af67c3f1886d0618b16f86684dfd75d486064782a3eddca83541400fdce",
+   "pool_id": "0x5e2efe267cdaa27c2ed7ea3f3369f9f891ca67a069e9419e1d0ba41c7f4f0e17",
    "version": "v4",
    "fee_bps": 100.0,
    "token0": {
@@ -1055,17 +1352,317 @@
     "impersonating": null
    },
    "token1": {
-    "address": "0xbc3764348131fe1962f267f442a8fe30459ededd",
-    "symbol": "AKIT",
+    "address": "0xcc5c8d46666f107a052538b9b1c1834d1e006911",
+    "symbol": "ARCA",
     "decimals": 18,
     "impersonating": null
    },
-   "volume_usd": 5691.68,
-   "swaps": 80,
-   "mean_interval_s": 87.6,
+   "volume_usd": 19501.33,
+   "swaps": 167,
+   "mean_interval_s": 138.8,
    "depth": "thin",
-   "reason": "quote refreshes every 88s, so any gap to a live venue is mostly age",
-   "price_usd": 5.1441582388663815e-05,
+   "reason": "quote refreshes every 139s, so any gap to a live venue is mostly age",
+   "price_usd": 7.586327718259158e-05,
+   "cex_market": null,
+   "flags": 5
+  },
+  {
+   "pool_id": "0x7dd9273990486fd47bab5186c3774679ba9c1399ddc20101a195bdbf633c0c36",
+   "version": "v4",
+   "fee_bps": 100.0,
+   "token0": {
+    "address": "0x3600000000000000000000000000000000000000",
+    "symbol": "USDC",
+    "decimals": 6,
+    "impersonating": null
+   },
+   "token1": {
+    "address": "0xa51452327dc43dbef2d2940285e56e28b1f55670",
+    "symbol": "TERRA",
+    "decimals": 18,
+    "impersonating": null
+   },
+   "volume_usd": 19458.7,
+   "swaps": 328,
+   "mean_interval_s": 13.8,
+   "depth": "thin",
+   "reason": "turned over $19,459, thin but live",
+   "price_usd": 2.500673866350302e-06,
+   "cex_market": null,
+   "flags": 5
+  },
+  {
+   "pool_id": "0x7555d7de79e4212dcdcaf1d054176199706c01d8f472bb1c9ce055a089b7d5f8",
+   "version": "v4",
+   "fee_bps": 100.0,
+   "token0": {
+    "address": "0x3600000000000000000000000000000000000000",
+    "symbol": "USDC",
+    "decimals": 6,
+    "impersonating": null
+   },
+   "token1": {
+    "address": "0x38d5f0acad88dd059c6acf68aafbdb27bf0964a3",
+    "symbol": "KNX",
+    "decimals": 18,
+    "impersonating": null
+   },
+   "volume_usd": 19290.51,
+   "swaps": 324,
+   "mean_interval_s": 5.1,
+   "depth": "thin",
+   "reason": "turned over $19,291, thin but live",
+   "price_usd": 2.481977519587496e-06,
+   "cex_market": null,
+   "flags": 5
+  },
+  {
+   "pool_id": "0x07a4db62643663d75f32849f894d2a3a7d7323087ea1fdbc1a29363caeeb5d16",
+   "version": "v4",
+   "fee_bps": 100.0,
+   "token0": {
+    "address": "0x3600000000000000000000000000000000000000",
+    "symbol": "USDC",
+    "decimals": 6,
+    "impersonating": null
+   },
+   "token1": {
+    "address": "0xeca7c682fbb32ec4f1b3bbb28791fe184d3552a8",
+    "symbol": "HOLOTYPE",
+    "decimals": 18,
+    "impersonating": null
+   },
+   "volume_usd": 19098.43,
+   "swaps": 197,
+   "mean_interval_s": 115.2,
+   "depth": "thin",
+   "reason": "quote refreshes every 115s, so any gap to a live venue is mostly age",
+   "price_usd": 4.449594549929462e-05,
+   "cex_market": null,
+   "flags": 5
+  },
+  {
+   "pool_id": "0x3a61ada69fbf03fdeb2fa7ab899f2e8e8c63b04117a376dafbb9d54e15c2ba50",
+   "version": "v4",
+   "fee_bps": 100.0,
+   "token0": {
+    "address": "0x3600000000000000000000000000000000000000",
+    "symbol": "USDC",
+    "decimals": 6,
+    "impersonating": null
+   },
+   "token1": {
+    "address": "0x5f59a5de1b5c4ff87e9f89a09e1212c6d31f10a6",
+    "symbol": "BLOCKRUN",
+    "decimals": 18,
+    "impersonating": null
+   },
+   "volume_usd": 19031.33,
+   "swaps": 338,
+   "mean_interval_s": 2.0,
+   "depth": "thin",
+   "reason": "turned over $19,031, thin but live",
+   "price_usd": 2.509943431775165e-06,
+   "cex_market": null,
+   "flags": 5
+  },
+  {
+   "pool_id": "0x932a29f936ac1f6a682fef3eab27efd034bdb52f27ab9f184090cb47b9319ca7",
+   "version": "v4",
+   "fee_bps": 25.0,
+   "token0": {
+    "address": "0x171a4217b86a807a64eb94757db6849fb4bdbaa0",
+    "symbol": "cirBTC",
+    "decimals": 8,
+    "impersonating": null
+   },
+   "token1": {
+    "address": "0x3600000000000000000000000000000000000000",
+    "symbol": "USDC",
+    "decimals": 6,
+    "impersonating": null
+   },
+   "volume_usd": 19005.77,
+   "swaps": 56,
+   "mean_interval_s": 389.4,
+   "depth": "thin",
+   "reason": "quote refreshes every 389s, so any gap to a live venue is mostly age",
+   "price_usd": 84162.381305924,
+   "cex_market": "BTCUSDT",
+   "flags": 37
+  },
+  {
+   "pool_id": "0xa7442188d518f6cf21f04481f78a3855646a1bb97fc9f2431f0c3382ff348311",
+   "version": "v4",
+   "fee_bps": 100.0,
+   "token0": {
+    "address": "0x005582baf52316ceaff9055dde63b3bd216863b8",
+    "symbol": "ATLAS",
+    "decimals": 18,
+    "impersonating": null
+   },
+   "token1": {
+    "address": "0x3600000000000000000000000000000000000000",
+    "symbol": "USDC",
+    "decimals": 6,
+    "impersonating": null
+   },
+   "volume_usd": 18967.82,
+   "swaps": 293,
+   "mean_interval_s": 7.4,
+   "depth": "thin",
+   "reason": "turned over $18,968, thin but live",
+   "price_usd": 2.4813413310929013e-06,
+   "cex_market": null,
+   "flags": 5
+  },
+  {
+   "pool_id": "0xd8cc33cd52cfdb220f37c86ac5fca044ec37b4d0ae3e07812397bcb112e1820a",
+   "version": "v4",
+   "fee_bps": 100.0,
+   "token0": {
+    "address": "0x3600000000000000000000000000000000000000",
+    "symbol": "USDC",
+    "decimals": 6,
+    "impersonating": null
+   },
+   "token1": {
+    "address": "0x61fa560a97d5b281ec3f0989156e775d6490eb9a",
+    "symbol": "MALACAT",
+    "decimals": 18,
+    "impersonating": null
+   },
+   "volume_usd": 18505.46,
+   "swaps": 397,
+   "mean_interval_s": 10.7,
+   "depth": "thin",
+   "reason": "turned over $18,505, thin but live",
+   "price_usd": 2.4901138841395496e-06,
+   "cex_market": null,
+   "flags": 5
+  },
+  {
+   "pool_id": "0x8a5e2e1c5a96ca61b02f5d3f72e2ad0f1d319e6b",
+   "version": "v3",
+   "fee_bps": 1.0,
+   "token0": {
+    "address": "0x3600000000000000000000000000000000000000",
+    "symbol": "USDC",
+    "decimals": 6,
+    "impersonating": null
+   },
+   "token1": {
+    "address": "0xa5faff269eb7594c20834b8d178f0c602b1ea9a2",
+    "symbol": "ARGUSFLOW",
+    "decimals": 18,
+    "impersonating": null
+   },
+   "volume_usd": 18217.55,
+   "swaps": 173,
+   "mean_interval_s": 11.4,
+   "depth": "thin",
+   "reason": "turned over $18,218, thin but live",
+   "price_usd": 2.4501355002648414e-05,
+   "cex_market": null,
+   "flags": 5
+  },
+  {
+   "pool_id": "0xf53f02d9041d00bbd92235b4c902b9f350c554a8ed2dc64fa0a4585aac413f09",
+   "version": "v4",
+   "fee_bps": 98.8,
+   "token0": {
+    "address": "0x3600000000000000000000000000000000000000",
+    "symbol": "USDC",
+    "decimals": 6,
+    "impersonating": null
+   },
+   "token1": {
+    "address": "0x8faae5592b9acc27a79fca745c6b872adf514a5d",
+    "symbol": "MURMUR",
+    "decimals": 18,
+    "impersonating": null
+   },
+   "volume_usd": 17762.21,
+   "swaps": 195,
+   "mean_interval_s": 113.9,
+   "depth": "thin",
+   "reason": "quote refreshes every 114s, so any gap to a live venue is mostly age",
+   "price_usd": 0.0011570127881909275,
+   "cex_market": null,
+   "flags": 5
+  },
+  {
+   "pool_id": "0x4843abe8cd02d27a95feb92d0ae0b11a98c98a6e4936c285d4a48abfe580c02d",
+   "version": "v4",
+   "fee_bps": 100.0,
+   "token0": {
+    "address": "0x2ec0d0593482229bac883adfa4edd5588c186a05",
+    "symbol": "ORBIT",
+    "decimals": 18,
+    "impersonating": null
+   },
+   "token1": {
+    "address": "0x3600000000000000000000000000000000000000",
+    "symbol": "USDC",
+    "decimals": 6,
+    "impersonating": null
+   },
+   "volume_usd": 17425.67,
+   "swaps": 209,
+   "mean_interval_s": 112.7,
+   "depth": "thin",
+   "reason": "quote refreshes every 113s, so any gap to a live venue is mostly age",
+   "price_usd": 2.5084332540560517e-06,
+   "cex_market": null,
+   "flags": 5
+  },
+  {
+   "pool_id": "0x1d28d7c16eb40c73a8dec10683838e9246dcf4d5c65375252326d01ae6466c0c",
+   "version": "v4",
+   "fee_bps": 100.0,
+   "token0": {
+    "address": "0x3600000000000000000000000000000000000000",
+    "symbol": "USDC",
+    "decimals": 6,
+    "impersonating": null
+   },
+   "token1": {
+    "address": "0x5681e38cbff1d5c4461294c6cf3970aa0761d2eb",
+    "symbol": "ROUTER",
+    "decimals": 18,
+    "impersonating": null
+   },
+   "volume_usd": 17334.16,
+   "swaps": 193,
+   "mean_interval_s": 121.1,
+   "depth": "thin",
+   "reason": "quote refreshes every 121s, so any gap to a live venue is mostly age",
+   "price_usd": 3.730973352327669e-05,
+   "cex_market": null,
+   "flags": 5
+  },
+  {
+   "pool_id": "0x4fc104cc3f94f8e465cef0069eebca9d62657d91404c65624a7697b9f19cf5e2",
+   "version": "v4",
+   "fee_bps": 100.0,
+   "token0": {
+    "address": "0x347ef48695eb437cf9e7e3df8637866f9baf1767",
+    "symbol": "ABYS",
+    "decimals": 18,
+    "impersonating": null
+   },
+   "token1": {
+    "address": "0x3600000000000000000000000000000000000000",
+    "symbol": "USDC",
+    "decimals": 6,
+    "impersonating": null
+   },
+   "volume_usd": 17243.57,
+   "swaps": 159,
+   "mean_interval_s": 140.0,
+   "depth": "thin",
+   "reason": "quote refreshes every 140s, so any gap to a live venue is mostly age",
+   "price_usd": 7.679254916093365e-05,
    "cex_market": null,
    "flags": 5
   },
@@ -1085,12 +1682,362 @@
     "decimals": 18,
     "impersonating": null
    },
-   "volume_usd": 5136.09,
-   "swaps": 91,
-   "mean_interval_s": 84.9,
+   "volume_usd": 17172.06,
+   "swaps": 267,
+   "mean_interval_s": 80.7,
    "depth": "thin",
-   "reason": "quote refreshes every 85s, so any gap to a live venue is mostly age",
-   "price_usd": 3.486148017976007e-05,
+   "reason": "quote refreshes every 81s, so any gap to a live venue is mostly age",
+   "price_usd": 3.7051547341249786e-05,
+   "cex_market": null,
+   "flags": 5
+  },
+  {
+   "pool_id": "0xd7c763b9f378a89f545f6b69383cf82a9098dc5e6d02668f72c9eeb839f60e32",
+   "version": "v4",
+   "fee_bps": 100.0,
+   "token0": {
+    "address": "0x3600000000000000000000000000000000000000",
+    "symbol": "USDC",
+    "decimals": 6,
+    "impersonating": null
+   },
+   "token1": {
+    "address": "0x57f8b99c6e6774b677d73606fa273ce716bac349",
+    "symbol": "COOLCAT",
+    "decimals": 18,
+    "impersonating": null
+   },
+   "volume_usd": 17142.81,
+   "swaps": 396,
+   "mean_interval_s": 26.2,
+   "depth": "thin",
+   "reason": "turned over $17,143, thin but live",
+   "price_usd": 2.4850444576721674e-06,
+   "cex_market": null,
+   "flags": 5
+  },
+  {
+   "pool_id": "0x2683ea93d164acb2bb73dc97dfc6eb59883119e05e3b00842debdebc488e7533",
+   "version": "v4",
+   "fee_bps": 100.0,
+   "token0": {
+    "address": "0x3600000000000000000000000000000000000000",
+    "symbol": "USDC",
+    "decimals": 6,
+    "impersonating": null
+   },
+   "token1": {
+    "address": "0xd2038e2889c63e92e51e49d64c51d083b30519cc",
+    "symbol": "AlloX",
+    "decimals": 18,
+    "impersonating": null
+   },
+   "volume_usd": 17053.84,
+   "swaps": 402,
+   "mean_interval_s": 2.1,
+   "depth": "thin",
+   "reason": "turned over $17,054, thin but live",
+   "price_usd": 2.486087449667116e-06,
+   "cex_market": null,
+   "flags": 5
+  },
+  {
+   "pool_id": "0x21b38b9f11e9147be8affc59872cb4ed2b5cb682d47ee451ffdf091f636f36c4",
+   "version": "v4",
+   "fee_bps": 100.0,
+   "token0": {
+    "address": "0x01b78442818bdf076112364b6963343cc5ca22fd",
+    "symbol": "MMC",
+    "decimals": 18,
+    "impersonating": null
+   },
+   "token1": {
+    "address": "0x3600000000000000000000000000000000000000",
+    "symbol": "USDC",
+    "decimals": 6,
+    "impersonating": null
+   },
+   "volume_usd": 16907.93,
+   "swaps": 164,
+   "mean_interval_s": 161.9,
+   "depth": "thin",
+   "reason": "quote refreshes every 162s, so any gap to a live venue is mostly age",
+   "price_usd": 2.481858023630325e-06,
+   "cex_market": null,
+   "flags": 5
+  },
+  {
+   "pool_id": "0x1e784bafc825929f6953343fd2e5385f5d4c1b784a08c265209c4b144b764d53",
+   "version": "v4",
+   "fee_bps": 100.0,
+   "token0": {
+    "address": "0x3600000000000000000000000000000000000000",
+    "symbol": "USDC",
+    "decimals": 6,
+    "impersonating": null
+   },
+   "token1": {
+    "address": "0x3d73b2da025a666d78047950bec012c7ea1c84d9",
+    "symbol": "ASTERIX",
+    "decimals": 18,
+    "impersonating": null
+   },
+   "volume_usd": 16566.94,
+   "swaps": 190,
+   "mean_interval_s": 9.7,
+   "depth": "thin",
+   "reason": "turned over $16,567, thin but live",
+   "price_usd": 2.5008775539508998e-06,
+   "cex_market": null,
+   "flags": 5
+  },
+  {
+   "pool_id": "0xb57993a1daa2ee3a3b2cd0196c68e44aef076f414fb901f883d43392f1b800a0",
+   "version": "v4",
+   "fee_bps": 100.0,
+   "token0": {
+    "address": "0x3600000000000000000000000000000000000000",
+    "symbol": "USDC",
+    "decimals": 6,
+    "impersonating": null
+   },
+   "token1": {
+    "address": "0x5fa141e3455f5504a923f226c8d337530c934179",
+    "symbol": "ASTERIX",
+    "decimals": 18,
+    "impersonating": null
+   },
+   "volume_usd": 15771.88,
+   "swaps": 127,
+   "mean_interval_s": 32.5,
+   "depth": "thin",
+   "reason": "quote refreshes every 33s, so any gap to a live venue is mostly age",
+   "price_usd": 2.483934409502201e-06,
+   "cex_market": null,
+   "flags": 5
+  },
+  {
+   "pool_id": "0xd86a9e58d668acc7c13bd547f9fa5cc113ae0083a9fc39f97aab857349ee343d",
+   "version": "v4",
+   "fee_bps": 100.0,
+   "token0": {
+    "address": "0x3600000000000000000000000000000000000000",
+    "symbol": "USDC",
+    "decimals": 6,
+    "impersonating": null
+   },
+   "token1": {
+    "address": "0x41358defd0dedc90528b3f1835715e907b686e6a",
+    "symbol": "DUKE",
+    "decimals": 18,
+    "impersonating": null
+   },
+   "volume_usd": 15225.97,
+   "swaps": 114,
+   "mean_interval_s": 206.6,
+   "depth": "thin",
+   "reason": "quote refreshes every 207s, so any gap to a live venue is mostly age",
+   "price_usd": 0.0005375750438699764,
+   "cex_market": null,
+   "flags": 5
+  },
+  {
+   "pool_id": "0x1bd29e75ceac359120eb20377e5b503f72094c56239386d7d9694c40de6c23d9",
+   "version": "v4",
+   "fee_bps": 100.0,
+   "token0": {
+    "address": "0x3600000000000000000000000000000000000000",
+    "symbol": "USDC",
+    "decimals": 6,
+    "impersonating": null
+   },
+   "token1": {
+    "address": "0xf1b72b46e2364356c1d8343590e4c0deefb19c3b",
+    "symbol": "WAVE",
+    "decimals": 18,
+    "impersonating": null
+   },
+   "volume_usd": 15032.63,
+   "swaps": 83,
+   "mean_interval_s": 264.9,
+   "depth": "thin",
+   "reason": "quote refreshes every 265s, so any gap to a live venue is mostly age",
+   "price_usd": 0.00020456238848117866,
+   "cex_market": null,
+   "flags": 5
+  },
+  {
+   "pool_id": "0x5b25154f6b0e4b63d9a6322c3836a9f29ccd407f83385ff593772d78d8e87a95",
+   "version": "v4",
+   "fee_bps": 100.0,
+   "token0": {
+    "address": "0x3600000000000000000000000000000000000000",
+    "symbol": "USDC",
+    "decimals": 6,
+    "impersonating": null
+   },
+   "token1": {
+    "address": "0x5a1dfb15d0e2edf47618702cee0dbb256fe5d058",
+    "symbol": "ONDO",
+    "decimals": 18,
+    "impersonating": null
+   },
+   "volume_usd": 15011.31,
+   "swaps": 159,
+   "mean_interval_s": 66.4,
+   "depth": "thin",
+   "reason": "quote refreshes every 66s, so any gap to a live venue is mostly age",
+   "price_usd": 0.5242505348896505,
+   "cex_market": null,
+   "flags": 5
+  },
+  {
+   "pool_id": "0xffaaa096f840024a3f60eec77da2ebdaa4701604b04ae6f126264142b353f637",
+   "version": "v4",
+   "fee_bps": 100.0,
+   "token0": {
+    "address": "0x06e0ec452120316fcb0240a20aa461e0a1a7b329",
+    "symbol": "WICKET",
+    "decimals": 18,
+    "impersonating": null
+   },
+   "token1": {
+    "address": "0x3600000000000000000000000000000000000000",
+    "symbol": "USDC",
+    "decimals": 6,
+    "impersonating": null
+   },
+   "volume_usd": 13188.48,
+   "swaps": 201,
+   "mean_interval_s": 108.7,
+   "depth": "thin",
+   "reason": "quote refreshes every 109s, so any gap to a live venue is mostly age",
+   "price_usd": 3.7792749840568394e-05,
+   "cex_market": null,
+   "flags": 5
+  },
+  {
+   "pool_id": "0x3664e34418868c4e64c59c0e45f23c1f9361c4f4b6c23b3793d336be1d675a24",
+   "version": "v4",
+   "fee_bps": 100.0,
+   "token0": {
+    "address": "0x30ac39dec8a854c5fd03aa429e3bef32a7e4c84a",
+    "symbol": "PI",
+    "decimals": 18,
+    "impersonating": null
+   },
+   "token1": {
+    "address": "0x3600000000000000000000000000000000000000",
+    "symbol": "USDC",
+    "decimals": 6,
+    "impersonating": null
+   },
+   "volume_usd": 13095.86,
+   "swaps": 169,
+   "mean_interval_s": 135.6,
+   "depth": "thin",
+   "reason": "quote refreshes every 136s, so any gap to a live venue is mostly age",
+   "price_usd": 0.00010911935695097026,
+   "cex_market": null,
+   "flags": 5
+  },
+  {
+   "pool_id": "0x0b5894074612fdbc1f5e87404d1ab57b7b680eea1e15a76b50c8ee7c75336e34",
+   "version": "v4",
+   "fee_bps": 100.0,
+   "token0": {
+    "address": "0x3600000000000000000000000000000000000000",
+    "symbol": "USDC",
+    "decimals": 6,
+    "impersonating": null
+   },
+   "token1": {
+    "address": "0x918df9c49cd3c2f4dad7b057e8117cbcba5ca9f3",
+    "symbol": "Hyperspace",
+    "decimals": 18,
+    "impersonating": null
+   },
+   "volume_usd": 13075.64,
+   "swaps": 276,
+   "mean_interval_s": 2.0,
+   "depth": "thin",
+   "reason": "turned over $13,076, thin but live",
+   "price_usd": 2.482850225846055e-06,
+   "cex_market": null,
+   "flags": 5
+  },
+  {
+   "pool_id": "0x083859cf0533b25f35a958a9292fa5653528f841",
+   "version": "v3",
+   "fee_bps": 100.0,
+   "token0": {
+    "address": "0x3600000000000000000000000000000000000000",
+    "symbol": "USDC",
+    "decimals": 6,
+    "impersonating": null
+   },
+   "token1": {
+    "address": "0x8e98a62a995a50eca9979bfa016f91bf36a8f9d9",
+    "symbol": "USDC",
+    "decimals": 18,
+    "impersonating": "USDC"
+   },
+   "volume_usd": 12787.66,
+   "swaps": 282,
+   "mean_interval_s": 79.5,
+   "depth": "thin",
+   "reason": "quote refreshes every 80s, so any gap to a live venue is mostly age",
+   "price_usd": 0.002188412078728145,
+   "cex_market": null,
+   "flags": 21
+  },
+  {
+   "pool_id": "0xb77d490678cd45ba16cc96627bf82dc44c863d44cf724363ff82fa7ee4a2f759",
+   "version": "v4",
+   "fee_bps": 83886.08,
+   "token0": {
+    "address": "0x3600000000000000000000000000000000000000",
+    "symbol": "USDC",
+    "decimals": 6,
+    "impersonating": null
+   },
+   "token1": {
+    "address": "0xbc43ce8dec648ea298c4275559b81d6261c90b67",
+    "symbol": "TOLLY",
+    "decimals": 18,
+    "impersonating": null
+   },
+   "volume_usd": 12306.18,
+   "swaps": 292,
+   "mean_interval_s": 92.4,
+   "depth": "thin",
+   "reason": "quote refreshes every 92s, so any gap to a live venue is mostly age",
+   "price_usd": 0.006456200903707865,
+   "cex_market": null,
+   "flags": 5
+  },
+  {
+   "pool_id": "0x4edf19c92a8756a395c946fca384d479c15a4329d77a4c77ee2633a3d421f2bf",
+   "version": "v4",
+   "fee_bps": 0.0,
+   "token0": {
+    "address": "0x3600000000000000000000000000000000000000",
+    "symbol": "USDC",
+    "decimals": 6,
+    "impersonating": null
+   },
+   "token1": {
+    "address": "0x44b453d355835ce1269fc11d3fa4161c0dcc0087",
+    "symbol": "LIFT",
+    "decimals": 18,
+    "impersonating": null
+   },
+   "volume_usd": 12264.6,
+   "swaps": 76,
+   "mean_interval_s": 268.9,
+   "depth": "thin",
+   "reason": "quote refreshes every 269s, so any gap to a live venue is mostly age",
+   "price_usd": 0.0016419741086737406,
    "cex_market": null,
    "flags": 5
   },
@@ -1110,92 +2057,42 @@
     "decimals": 6,
     "impersonating": null
    },
-   "volume_usd": 5113.7,
-   "swaps": 65,
-   "mean_interval_s": 108.9,
+   "volume_usd": 11365.36,
+   "swaps": 268,
+   "mean_interval_s": 84.4,
    "depth": "thin",
-   "reason": "quote refreshes every 109s, so any gap to a live venue is mostly age",
-   "price_usd": 89.4332386747596,
+   "reason": "quote refreshes every 84s, so any gap to a live venue is mostly age",
+   "price_usd": 92.42182048484663,
    "cex_market": null,
    "flags": 5
   },
   {
-   "pool_id": "0xded0f405a268903086f85273461b2a99fc66bf00046604d2ee4d8c1554e031e0",
-   "version": "v4",
-   "fee_bps": 100.0,
-   "token0": {
-    "address": "0x3600000000000000000000000000000000000000",
-    "symbol": "USDC",
-    "decimals": 6,
-    "impersonating": null
-   },
-   "token1": {
-    "address": "0x399bb1ff01cb6850b759544c48c24579618076fd",
-    "symbol": "BLACKROCK",
-    "decimals": 18,
-    "impersonating": null
-   },
-   "volume_usd": 4907.15,
-   "swaps": 60,
-   "mean_interval_s": 119.3,
-   "depth": "dust",
-   "reason": "turned over $4,907, below $5,000",
-   "price_usd": 7.9845812438965e-06,
-   "cex_market": null,
-   "flags": 3
-  },
-  {
-   "pool_id": "0xf89005ccf237a59eeee1521e74b15c7d8d022ab7",
+   "pool_id": "0x5e9331bf2731887556f7064cebca00ba6d0b02ae",
    "version": "v3",
-   "fee_bps": 100.0,
+   "fee_bps": 5.5,
    "token0": {
-    "address": "0x1ea1e4f9a9975f1f6e9c0a9f6e8ada7a66e6de52",
-    "symbol": "ARCT",
-    "decimals": 18,
-    "impersonating": null
-   },
-   "token1": {
     "address": "0x3600000000000000000000000000000000000000",
     "symbol": "USDC",
     "decimals": 6,
     "impersonating": null
    },
-   "volume_usd": 4778.01,
-   "swaps": 88,
-   "mean_interval_s": 83.9,
-   "depth": "dust",
-   "reason": "turned over $4,778, below $5,000",
-   "price_usd": 0.0003427384407903929,
+   "token1": {
+    "address": "0xbbe6aab0ed76e90aea0d1cd978ec231c8adcdf8b",
+    "symbol": "GBPA",
+    "decimals": 6,
+    "impersonating": null
+   },
+   "volume_usd": 11117.54,
+   "swaps": 26,
+   "mean_interval_s": 631.1,
+   "depth": "thin",
+   "reason": "quote refreshes every 631s, so any gap to a live venue is mostly age",
+   "price_usd": 1.321708994527097,
    "cex_market": null,
-   "flags": 3
+   "flags": 5
   },
   {
-   "pool_id": "0xe68ba1ac44fe2b602ae95c05df0d3b8940e81ad16d859e63449b6fb5c64f2f8f",
-   "version": "v4",
-   "fee_bps": 29.0,
-   "token0": {
-    "address": "0x128cc466b61f542da60c70e3aa11c10e19b84edb",
-    "symbol": "WETH",
-    "decimals": 18,
-    "impersonating": null
-   },
-   "token1": {
-    "address": "0x3600000000000000000000000000000000000000",
-    "symbol": "USDC",
-    "decimals": 6,
-    "impersonating": null
-   },
-   "volume_usd": 4632.69,
-   "swaps": 8,
-   "mean_interval_s": 831.4,
-   "depth": "dust",
-   "reason": "turned over $4,633, below $5,000",
-   "price_usd": 2580.1499999936636,
-   "cex_market": "ETHUSDT",
-   "flags": 35
-  },
-  {
-   "pool_id": "0x64b42a608584bdae23b337c119eec1d165d0846a4ddf37727c7aba838510c911",
+   "pool_id": "0x5e794e5d3d01c045ddfb2448c4afd557ec297d1dee49b28923dc0ada3425f780",
    "version": "v4",
    "fee_bps": 100.0,
    "token0": {
@@ -1205,24 +2102,24 @@
     "impersonating": null
    },
    "token1": {
-    "address": "0xb62c4646f924dd21dc2ccd4e451786743b275218",
-    "symbol": "AI",
+    "address": "0xb7c934ff18730c24e6113bb4bc5a68feef16fd29",
+    "symbol": "ARCUS",
     "decimals": 18,
     "impersonating": null
    },
-   "volume_usd": 4080.1,
-   "swaps": 81,
-   "mean_interval_s": 80.0,
-   "depth": "dust",
-   "reason": "turned over $4,080, below $5,000",
-   "price_usd": 6.922916892237404e-06,
+   "volume_usd": 10496.98,
+   "swaps": 152,
+   "mean_interval_s": 148.5,
+   "depth": "thin",
+   "reason": "quote refreshes every 149s, so any gap to a live venue is mostly age",
+   "price_usd": 0.00025431735541474543,
    "cex_market": null,
-   "flags": 3
+   "flags": 5
   },
   {
-   "pool_id": "0xe25480f3cc5556c0aec28d781738e066455554e0b450b4715226b047fac6bcb2",
+   "pool_id": "0x55a8ca2e6b471cc5a0f78c024d91dcef3ab21f5d699c3fef90bd9e7dc7805563",
    "version": "v4",
-   "fee_bps": 83886.08,
+   "fee_bps": 499.99,
    "token0": {
     "address": "0x3600000000000000000000000000000000000000",
     "symbol": "USDC",
@@ -1230,22 +2127,22 @@
     "impersonating": null
    },
    "token1": {
-    "address": "0xece5ca8bf9220718e5727754026757512212cb3c",
-    "symbol": "ARGUS",
+    "address": "0x7c7489163b1060333e71229bb7a9f8cb7094a7a9",
+    "symbol": "FOCI",
     "decimals": 18,
     "impersonating": null
    },
-   "volume_usd": 4039.33,
-   "swaps": 177,
-   "mean_interval_s": 41.4,
-   "depth": "dust",
-   "reason": "turned over $4,039, below $5,000",
-   "price_usd": 0.017696557966850972,
+   "volume_usd": 10202.96,
+   "swaps": 96,
+   "mean_interval_s": 237.0,
+   "depth": "thin",
+   "reason": "quote refreshes every 237s, so any gap to a live venue is mostly age",
+   "price_usd": 0.00042851436709872,
    "cex_market": null,
-   "flags": 3
+   "flags": 5
   },
   {
-   "pool_id": "0x971d66fcc2f16bc1b11ca254ad600d2ad8432ff134669169d35f48303063dcff",
+   "pool_id": "0xbac0ac97a66141290e3383353e30692f67cef574026aa9b7093152e8e6322eb9",
    "version": "v4",
    "fee_bps": 100.0,
    "token0": {
@@ -1255,24 +2152,74 @@
     "impersonating": null
    },
    "token1": {
-    "address": "0x41358defd0dedc90528b3f1835715e907b686e6a",
-    "symbol": "DUKE",
+    "address": "0x9270e5855eec3e2668e73a48cf78dd994581d409",
+    "symbol": "LESGO",
     "decimals": 18,
     "impersonating": null
    },
-   "volume_usd": 3712.78,
-   "swaps": 127,
-   "mean_interval_s": 62.0,
-   "depth": "dust",
-   "reason": "turned over $3,713, below $5,000",
-   "price_usd": 0.0012510024482343962,
+   "volume_usd": 10196.67,
+   "swaps": 27,
+   "mean_interval_s": 191.0,
+   "depth": "thin",
+   "reason": "quote refreshes every 191s, so any gap to a live venue is mostly age",
+   "price_usd": 2.4831062027343973e-06,
    "cex_market": null,
-   "flags": 3
+   "flags": 5
   },
   {
-   "pool_id": "0x083859cf0533b25f35a958a9292fa5653528f841",
+   "pool_id": "0xf986385e269df859c73d64ec22be69ca7e72a53e2473886f4e67813558a41153",
+   "version": "v4",
+   "fee_bps": 100.0,
+   "token0": {
+    "address": "0x3600000000000000000000000000000000000000",
+    "symbol": "USDC",
+    "decimals": 6,
+    "impersonating": null
+   },
+   "token1": {
+    "address": "0x5a1f1c4f113ce20f6dda1548485a0bebdf0a3fea",
+    "symbol": "MUSEGOD",
+    "decimals": 18,
+    "impersonating": null
+   },
+   "volume_usd": 9854.04,
+   "swaps": 20,
+   "mean_interval_s": 5.0,
+   "depth": "thin",
+   "reason": "turned over $9,854, thin but live",
+   "price_usd": 3.378299324686283e-05,
+   "cex_market": null,
+   "flags": 5
+  },
+  {
+   "pool_id": "0x7d88288ee8fd9fd6b79ec2487bc81d0d01c4a1eb04e8d818c0dfbacc84c64fb3",
+   "version": "v4",
+   "fee_bps": 90.0,
+   "token0": {
+    "address": "0x3600000000000000000000000000000000000000",
+    "symbol": "USDC",
+    "decimals": 6,
+    "impersonating": null
+   },
+   "token1": {
+    "address": "0x75d658f8101fbe6dc217fbba7e20a0312af5fa2e",
+    "symbol": "AF",
+    "decimals": 18,
+    "impersonating": null
+   },
+   "volume_usd": 8597.83,
+   "swaps": 142,
+   "mean_interval_s": 161.4,
+   "depth": "thin",
+   "reason": "quote refreshes every 161s, so any gap to a live venue is mostly age",
+   "price_usd": 0.0008275060657499106,
+   "cex_market": null,
+   "flags": 5
+  },
+  {
+   "pool_id": "0xb88c08e31c1bc7d41f2cfc4fbafad5b3b0a5eae9",
    "version": "v3",
-   "fee_bps": 100.0,
+   "fee_bps": 1.0,
    "token0": {
     "address": "0x3600000000000000000000000000000000000000",
     "symbol": "USDC",
@@ -1280,194 +2227,19 @@
     "impersonating": null
    },
    "token1": {
-    "address": "0x8e98a62a995a50eca9979bfa016f91bf36a8f9d9",
-    "symbol": "USDC",
-    "decimals": 18,
-    "impersonating": "USDC"
-   },
-   "volume_usd": 3399.86,
-   "swaps": 172,
-   "mean_interval_s": 45.6,
-   "depth": "dust",
-   "reason": "turned over $3,400, below $5,000",
-   "price_usd": 0.003245480117482267,
-   "cex_market": null,
-   "flags": 19
-  },
-  {
-   "pool_id": "0x68266e6f53ce72b90272a7598fae8a5544c376ff4bc6c3c5d7fdf3e488f382a9",
-   "version": "v4",
-   "fee_bps": 0.0,
-   "token0": {
-    "address": "0x1c98d896328c35a751ce18323f47139a44188001",
-    "symbol": "creo",
-    "decimals": 18,
-    "impersonating": null
-   },
-   "token1": {
-    "address": "0x3600000000000000000000000000000000000000",
-    "symbol": "USDC",
+    "address": "0xbef5f6d51cb62b58e6a8f77868681825c6fe21c1",
+    "symbol": "EURC",
     "decimals": 6,
     "impersonating": null
    },
-   "volume_usd": 3017.04,
-   "swaps": 63,
-   "mean_interval_s": 124.1,
-   "depth": "dust",
-   "reason": "turned over $3,017, below $5,000",
-   "price_usd": 6.960939226304989e-05,
+   "volume_usd": 8356.65,
+   "swaps": 26,
+   "mean_interval_s": 763.9,
+   "depth": "thin",
+   "reason": "quote refreshes every 764s, so any gap to a live venue is mostly age",
+   "price_usd": 1.1370674229549713,
    "cex_market": null,
-   "flags": 3
-  },
-  {
-   "pool_id": "0x771b16f71e0086e673a5866ead7607855cc9cd4636fe789521b4cd80aa5958dc",
-   "version": "v4",
-   "fee_bps": 400.0,
-   "token0": {
-    "address": "0x3600000000000000000000000000000000000000",
-    "symbol": "USDC",
-    "decimals": 6,
-    "impersonating": null
-   },
-   "token1": {
-    "address": "0x8e98a62a995a50eca9979bfa016f91bf36a8f9d9",
-    "symbol": "USDC",
-    "decimals": 18,
-    "impersonating": "USDC"
-   },
-   "volume_usd": 2913.88,
-   "swaps": 39,
-   "mean_interval_s": 158.3,
-   "depth": "dust",
-   "reason": "turned over $2,914, below $5,000",
-   "price_usd": 0.0031522367650622263,
-   "cex_market": null,
-   "flags": 19
-  },
-  {
-   "pool_id": "0x62048ba5a1ae633e1b2aef70a5261db53799ecf2e5754d680ed89d9c8e91c31d",
-   "version": "v4",
-   "fee_bps": 200.0,
-   "token0": {
-    "address": "0x3600000000000000000000000000000000000000",
-    "symbol": "USDC",
-    "decimals": 6,
-    "impersonating": null
-   },
-   "token1": {
-    "address": "0x3dd6db0f20d747e1274839cdd6724cc5df1fb813",
-    "symbol": "ASPAD",
-    "decimals": 18,
-    "impersonating": null
-   },
-   "volume_usd": 2647.36,
-   "swaps": 49,
-   "mean_interval_s": 138.6,
-   "depth": "dust",
-   "reason": "turned over $2,647, below $5,000",
-   "price_usd": 6.569302953181721e-05,
-   "cex_market": null,
-   "flags": 3
-  },
-  {
-   "pool_id": "0x16ed5aa447912bb60b0be1ece9211fe7592bef3d4dbed287839c0eeff693a90f",
-   "version": "v4",
-   "fee_bps": 100.0,
-   "token0": {
-    "address": "0x3600000000000000000000000000000000000000",
-    "symbol": "USDC",
-    "decimals": 6,
-    "impersonating": null
-   },
-   "token1": {
-    "address": "0xd4374ec6b1e9a208101bb0ac11c07c10fffd566d",
-    "symbol": "BULL",
-    "decimals": 18,
-    "impersonating": null
-   },
-   "volume_usd": 2538.3,
-   "swaps": 56,
-   "mean_interval_s": 129.8,
-   "depth": "dust",
-   "reason": "turned over $2,538, below $5,000",
-   "price_usd": 2.21748297694553e-05,
-   "cex_market": null,
-   "flags": 3
-  },
-  {
-   "pool_id": "0x9673b01178e483c9ea427a76567ed6383e6ca72f",
-   "version": "v3",
-   "fee_bps": 100.0,
-   "token0": {
-    "address": "0x3600000000000000000000000000000000000000",
-    "symbol": "USDC",
-    "decimals": 6,
-    "impersonating": null
-   },
-   "token1": {
-    "address": "0xe6a2476f33ec1566288aa32ec3319a6b77dd1e3b",
-    "symbol": "DUKE",
-    "decimals": 18,
-    "impersonating": null
-   },
-   "volume_usd": 2522.56,
-   "swaps": 87,
-   "mean_interval_s": 83.6,
-   "depth": "dust",
-   "reason": "turned over $2,523, below $5,000",
-   "price_usd": 0.00023063692613072646,
-   "cex_market": null,
-   "flags": 3
-  },
-  {
-   "pool_id": "0x785a917be49d24a59ae36f8406018aa0f481982e2d67b8dafbae62d5b3e6380b",
-   "version": "v4",
-   "fee_bps": 0.0,
-   "token0": {
-    "address": "0x3600000000000000000000000000000000000000",
-    "symbol": "USDC",
-    "decimals": 6,
-    "impersonating": null
-   },
-   "token1": {
-    "address": "0x8c4252c87081c88c6ad57d6dd97e1cafebf842b7",
-    "symbol": "VIRTUAL",
-    "decimals": 18,
-    "impersonating": null
-   },
-   "volume_usd": 2517.72,
-   "swaps": 19,
-   "mean_interval_s": 187.6,
-   "depth": "dust",
-   "reason": "turned over $2,518, below $5,000",
-   "price_usd": 0.6389821962467844,
-   "cex_market": null,
-   "flags": 3
-  },
-  {
-   "pool_id": "0x482a249eb473b7de0ca8357b5496ccb7c55dfb72",
-   "version": "v3",
-   "fee_bps": 100.0,
-   "token0": {
-    "address": "0x3600000000000000000000000000000000000000",
-    "symbol": "USDC",
-    "decimals": 6,
-    "impersonating": null
-   },
-   "token1": {
-    "address": "0xbe0cad585ea2d13de2f4e36376be755c0afd8b97",
-    "symbol": "ARCBAT",
-    "decimals": 18,
-    "impersonating": null
-   },
-   "volume_usd": 2372.22,
-   "swaps": 98,
-   "mean_interval_s": 76.5,
-   "depth": "dust",
-   "reason": "turned over $2,372, below $5,000",
-   "price_usd": 0.0002173469504275204,
-   "cex_market": null,
-   "flags": 3
+   "flags": 5
   },
   {
    "pool_id": "0xa2ed014384e061ec2aaccea186d41798dcf4da29264c44a676d3006fdc252ae0",
@@ -1485,17 +2257,17 @@
     "decimals": 18,
     "impersonating": null
    },
-   "volume_usd": 2348.3,
-   "swaps": 200,
-   "mean_interval_s": 36.5,
-   "depth": "dust",
-   "reason": "turned over $2,348, below $5,000",
-   "price_usd": 0.003298183764717492,
+   "volume_usd": 8271.17,
+   "swaps": 410,
+   "mean_interval_s": 53.0,
+   "depth": "thin",
+   "reason": "quote refreshes every 53s, so any gap to a live venue is mostly age",
+   "price_usd": 0.00775876566811361,
    "cex_market": null,
-   "flags": 3
+   "flags": 5
   },
   {
-   "pool_id": "0xcb6717372f4795cf9d6be3a72b39a2cc885cacb426792018612b5c901ba5eb4a",
+   "pool_id": "0x1337f20bf44ceca0d5d1503af2b47c84572fbf60abb0063671a1cdae208ab874",
    "version": "v4",
    "fee_bps": 100.0,
    "token0": {
@@ -1505,22 +2277,272 @@
     "impersonating": null
    },
    "token1": {
-    "address": "0xcb2df9b431fe7c19ee7f0d62d487b0121abdd075",
-    "symbol": "HTTP",
+    "address": "0x4d57060f3825d3b995f35a30194f3e74e105f3ec",
+    "symbol": "VORT",
     "decimals": 18,
     "impersonating": null
    },
-   "volume_usd": 2297.47,
-   "swaps": 27,
-   "mean_interval_s": 277.3,
-   "depth": "dust",
-   "reason": "turned over $2,297, below $5,000",
-   "price_usd": 4.817595260896544e-05,
+   "volume_usd": 7658.3,
+   "swaps": 139,
+   "mean_interval_s": 152.7,
+   "depth": "thin",
+   "reason": "quote refreshes every 153s, so any gap to a live venue is mostly age",
+   "price_usd": 8.707973342117794e-05,
    "cex_market": null,
-   "flags": 3
+   "flags": 5
   },
   {
-   "pool_id": "0xfb5eb295933e48d8481fe61eee08212a97a17875",
+   "pool_id": "0x9bae04dfad2e8c960c85f9c26f946953b23fa7280532c45578198f04fd2ae1b9",
+   "version": "v4",
+   "fee_bps": 83886.08,
+   "token0": {
+    "address": "0x3600000000000000000000000000000000000000",
+    "symbol": "USDC",
+    "decimals": 6,
+    "impersonating": null
+   },
+   "token1": {
+    "address": "0xf8fef4a162a3cec456dc26a46de87f6469e87fc9",
+    "symbol": "BOOTH",
+    "decimals": 18,
+    "impersonating": null
+   },
+   "volume_usd": 7635.03,
+   "swaps": 95,
+   "mean_interval_s": 13.1,
+   "depth": "thin",
+   "reason": "turned over $7,635, thin but live",
+   "price_usd": 2.6857132974118408e-06,
+   "cex_market": null,
+   "flags": 5
+  },
+  {
+   "pool_id": "0x8104ff819d152edcea09076a53fea75b20712c7e1efe33869e822d4c5f40c804",
+   "version": "v4",
+   "fee_bps": 83886.08,
+   "token0": {
+    "address": "0x1930869939b5a096d9a3537c598de93dd5a2d7ba",
+    "symbol": "TRIPWIRE",
+    "decimals": 18,
+    "impersonating": null
+   },
+   "token1": {
+    "address": "0x3600000000000000000000000000000000000000",
+    "symbol": "USDC",
+    "decimals": 6,
+    "impersonating": null
+   },
+   "volume_usd": 7343.26,
+   "swaps": 64,
+   "mean_interval_s": 70.7,
+   "depth": "thin",
+   "reason": "quote refreshes every 71s, so any gap to a live venue is mostly age",
+   "price_usd": 2.481403979657141e-06,
+   "cex_market": null,
+   "flags": 5
+  },
+  {
+   "pool_id": "0xba50cbad0316ea887fc402833dd02a722024c3a61c38424d77100213f3be3058",
+   "version": "v4",
+   "fee_bps": 83886.08,
+   "token0": {
+    "address": "0x3600000000000000000000000000000000000000",
+    "symbol": "USDC",
+    "decimals": 6,
+    "impersonating": null
+   },
+   "token1": {
+    "address": "0x855866eef40d13720c600d4f21d143646b182b5c",
+    "symbol": "SLERF",
+    "decimals": 18,
+    "impersonating": null
+   },
+   "volume_usd": 7215.42,
+   "swaps": 79,
+   "mean_interval_s": 47.8,
+   "depth": "thin",
+   "reason": "quote refreshes every 48s, so any gap to a live venue is mostly age",
+   "price_usd": 2.4811016591783555e-06,
+   "cex_market": null,
+   "flags": 5
+  },
+  {
+   "pool_id": "0xcb4925117715e6983ee6e03d491d90bbc498776b761714c447a9ea80265ca846",
+   "version": "v4",
+   "fee_bps": 500.0,
+   "token0": {
+    "address": "0x3600000000000000000000000000000000000000",
+    "symbol": "USDC",
+    "decimals": 6,
+    "impersonating": null
+   },
+   "token1": {
+    "address": "0x394d38f807ee0027a182216f5e67a15ae441fa2e",
+    "symbol": "FAZE",
+    "decimals": 18,
+    "impersonating": null
+   },
+   "volume_usd": 6804.47,
+   "swaps": 134,
+   "mean_interval_s": 168.3,
+   "depth": "thin",
+   "reason": "quote refreshes every 168s, so any gap to a live venue is mostly age",
+   "price_usd": 0.004318778471121147,
+   "cex_market": null,
+   "flags": 5
+  },
+  {
+   "pool_id": "0x778029e36cae80284b8395eb524d166bb54ccd46461918b379c21ea018db2a64",
+   "version": "v4",
+   "fee_bps": 100.0,
+   "token0": {
+    "address": "0x12ce1f970722ca6e08364b60099b3d25c09b5434",
+    "symbol": "ARCX10",
+    "decimals": 18,
+    "impersonating": null
+   },
+   "token1": {
+    "address": "0x3600000000000000000000000000000000000000",
+    "symbol": "USDC",
+    "decimals": 6,
+    "impersonating": null
+   },
+   "volume_usd": 6648.62,
+   "swaps": 78,
+   "mean_interval_s": 348.3,
+   "depth": "thin",
+   "reason": "quote refreshes every 348s, so any gap to a live venue is mostly age",
+   "price_usd": 0.00030584302215092517,
+   "cex_market": null,
+   "flags": 5
+  },
+  {
+   "pool_id": "0xd8e8a6e1813daacdd7af6c57f28e21a5f08fd0e1f43ce3a58b1d00f44c1220bf",
+   "version": "v4",
+   "fee_bps": 83886.08,
+   "token0": {
+    "address": "0x311ab8362aa11c1513ebddc428ab9fb4bf336dd6",
+    "symbol": "BOOTH",
+    "decimals": 18,
+    "impersonating": null
+   },
+   "token1": {
+    "address": "0x3600000000000000000000000000000000000000",
+    "symbol": "USDC",
+    "decimals": 6,
+    "impersonating": null
+   },
+   "volume_usd": 6540.63,
+   "swaps": 90,
+   "mean_interval_s": 11.4,
+   "depth": "thin",
+   "reason": "turned over $6,541, thin but live",
+   "price_usd": 2.96862929384015e-06,
+   "cex_market": null,
+   "flags": 5
+  },
+  {
+   "pool_id": "0xd508652f5523421e848e974ed5ad6d94e88351182e72062cac45a2692d37d268",
+   "version": "v4",
+   "fee_bps": 1.0,
+   "token0": {
+    "address": "0x0dc4f92879b7670e5f4e4e6e3c801d229129d90d",
+    "symbol": "wARS",
+    "decimals": 18,
+    "impersonating": null
+   },
+   "token1": {
+    "address": "0x3600000000000000000000000000000000000000",
+    "symbol": "USDC",
+    "decimals": 6,
+    "impersonating": null
+   },
+   "volume_usd": 6372.06,
+   "swaps": 3,
+   "mean_interval_s": 5132.0,
+   "depth": "thin",
+   "reason": "quote refreshes every 5132s, so any gap to a live venue is mostly age",
+   "price_usd": 0.0006247988643544236,
+   "cex_market": null,
+   "flags": 5
+  },
+  {
+   "pool_id": "0xc83ae9cbe2c64097e6b919eda0f8bc3837361aa89f454d8a3afec7f0d03d8a1d",
+   "version": "v4",
+   "fee_bps": 100.0,
+   "token0": {
+    "address": "0x3600000000000000000000000000000000000000",
+    "symbol": "USDC",
+    "decimals": 6,
+    "impersonating": null
+   },
+   "token1": {
+    "address": "0xc45ae84e38871a2c1cd9eeec489680edbcaa146b",
+    "symbol": "BULL",
+    "decimals": 18,
+    "impersonating": null
+   },
+   "volume_usd": 6365.5,
+   "swaps": 64,
+   "mean_interval_s": 536.4,
+   "depth": "thin",
+   "reason": "quote refreshes every 536s, so any gap to a live venue is mostly age",
+   "price_usd": 3.6624226257325675e-06,
+   "cex_market": null,
+   "flags": 5
+  },
+  {
+   "pool_id": "0x67b53af67c3f1886d0618b16f86684dfd75d486064782a3eddca83541400fdce",
+   "version": "v4",
+   "fee_bps": 100.0,
+   "token0": {
+    "address": "0x3600000000000000000000000000000000000000",
+    "symbol": "USDC",
+    "decimals": 6,
+    "impersonating": null
+   },
+   "token1": {
+    "address": "0xbc3764348131fe1962f267f442a8fe30459ededd",
+    "symbol": "AKIT",
+    "decimals": 18,
+    "impersonating": null
+   },
+   "volume_usd": 6206.09,
+   "swaps": 71,
+   "mean_interval_s": 302.7,
+   "depth": "thin",
+   "reason": "quote refreshes every 303s, so any gap to a live venue is mostly age",
+   "price_usd": 6.44523746942703e-05,
+   "cex_market": null,
+   "flags": 5
+  },
+  {
+   "pool_id": "0xba9840bc80d525071b6f1c36fccf13c9f1c630a1e6e6edf07ebf17df8425a66d",
+   "version": "v4",
+   "fee_bps": 98.1,
+   "token0": {
+    "address": "0x3600000000000000000000000000000000000000",
+    "symbol": "USDC",
+    "decimals": 6,
+    "impersonating": null
+   },
+   "token1": {
+    "address": "0xece5ca8bf9220718e5727754026757512212cb3c",
+    "symbol": "ARGUS",
+    "decimals": 18,
+    "impersonating": null
+   },
+   "volume_usd": 6032.43,
+   "swaps": 136,
+   "mean_interval_s": 162.1,
+   "depth": "thin",
+   "reason": "quote refreshes every 162s, so any gap to a live venue is mostly age",
+   "price_usd": 0.018307733219534175,
+   "cex_market": null,
+   "flags": 5
+  },
+  {
+   "pool_id": "0x482a249eb473b7de0ca8357b5496ccb7c55dfb72",
    "version": "v3",
    "fee_bps": 100.0,
    "token0": {
@@ -1530,17 +2552,242 @@
     "impersonating": null
    },
    "token1": {
-    "address": "0xcb29d563e07d2c5cd27c1e293ad78c66e3dba12c",
-    "symbol": "ARCM",
+    "address": "0xbe0cad585ea2d13de2f4e36376be755c0afd8b97",
+    "symbol": "ARCBAT",
     "decimals": 18,
     "impersonating": null
    },
-   "volume_usd": 2185.65,
-   "swaps": 21,
-   "mean_interval_s": 58.3,
+   "volume_usd": 6027.93,
+   "swaps": 255,
+   "mean_interval_s": 87.6,
+   "depth": "thin",
+   "reason": "quote refreshes every 88s, so any gap to a live venue is mostly age",
+   "price_usd": 0.00011025437491497787,
+   "cex_market": null,
+   "flags": 5
+  },
+  {
+   "pool_id": "0x87b6581bc0170f6c850e1bb1f7df230c31b41c959ab64ff494ee40286bbeea4e",
+   "version": "v4",
+   "fee_bps": 83886.08,
+   "token0": {
+    "address": "0x3600000000000000000000000000000000000000",
+    "symbol": "USDC",
+    "decimals": 6,
+    "impersonating": null
+   },
+   "token1": {
+    "address": "0xe0df80f3b6958e867efd17056463934c7854c8a8",
+    "symbol": "SKIM",
+    "decimals": 18,
+    "impersonating": null
+   },
+   "volume_usd": 5681.92,
+   "swaps": 102,
+   "mean_interval_s": 48.4,
+   "depth": "thin",
+   "reason": "quote refreshes every 48s, so any gap to a live venue is mostly age",
+   "price_usd": 3.1985879709947885e-06,
+   "cex_market": null,
+   "flags": 5
+  },
+  {
+   "pool_id": "0x5e82892d361a6c680027a97da2280064b8fc8a52",
+   "version": "v3",
+   "fee_bps": 5.0,
+   "token0": {
+    "address": "0x178b01f61cbea1d2a5581fe1621be607835ec349",
+    "symbol": "XAUM",
+    "decimals": 18,
+    "impersonating": null
+   },
+   "token1": {
+    "address": "0x3600000000000000000000000000000000000000",
+    "symbol": "USDC",
+    "decimals": 6,
+    "impersonating": null
+   },
+   "volume_usd": 5351.4,
+   "swaps": 83,
+   "mean_interval_s": 393.7,
+   "depth": "thin",
+   "reason": "quote refreshes every 394s, so any gap to a live venue is mostly age",
+   "price_usd": 4250.820832450815,
+   "cex_market": null,
+   "flags": 5
+  },
+  {
+   "pool_id": "0xe71d47bc4e5f4baeab1b62fce2ca8297e58997d97c0dc7e58c3e3c9e2c61de1c",
+   "version": "v4",
+   "fee_bps": 100.0,
+   "token0": {
+    "address": "0x3600000000000000000000000000000000000000",
+    "symbol": "USDC",
+    "decimals": 6,
+    "impersonating": null
+   },
+   "token1": {
+    "address": "0x4da156d40648c3521c5c7a53ef0073f54516b350",
+    "symbol": "10M",
+    "decimals": 18,
+    "impersonating": null
+   },
+   "volume_usd": 5202.08,
+   "swaps": 194,
+   "mean_interval_s": 112.5,
+   "depth": "thin",
+   "reason": "quote refreshes every 113s, so any gap to a live venue is mostly age",
+   "price_usd": 2.874191806104839e-05,
+   "cex_market": null,
+   "flags": 5
+  },
+  {
+   "pool_id": "0x093ffd5335d34c9e73ff3f2a800f2a76b85d3fee",
+   "version": "v3",
+   "fee_bps": 100.0,
+   "token0": {
+    "address": "0x3600000000000000000000000000000000000000",
+    "symbol": "USDC",
+    "decimals": 6,
+    "impersonating": null
+   },
+   "token1": {
+    "address": "0x8f8a6f6d2ed42508372fd70efcb9f05182eb10ad",
+    "symbol": "PKMN",
+    "decimals": 18,
+    "impersonating": null
+   },
+   "volume_usd": 5076.9,
+   "swaps": 181,
+   "mean_interval_s": 136.5,
+   "depth": "thin",
+   "reason": "quote refreshes every 136s, so any gap to a live venue is mostly age",
+   "price_usd": 3.10385899352118e-06,
+   "cex_market": null,
+   "flags": 5
+  },
+  {
+   "pool_id": "0xc2a8b92fe79e5a0111ec8d8d33b6b22a1eb73b62f95d947a11dd7ad2c45f8a53",
+   "version": "v4",
+   "fee_bps": 100.0,
+   "token0": {
+    "address": "0x3600000000000000000000000000000000000000",
+    "symbol": "USDC",
+    "decimals": 6,
+    "impersonating": null
+   },
+   "token1": {
+    "address": "0xe19e1853b71a8c97cd3471caefeef1dfee4c30fc",
+    "symbol": "LESGO",
+    "decimals": 18,
+    "impersonating": null
+   },
+   "volume_usd": 5038.28,
+   "swaps": 13,
+   "mean_interval_s": 26.6,
+   "depth": "thin",
+   "reason": "turned over $5,038, thin but live",
+   "price_usd": 2.4811091010006197e-06,
+   "cex_market": null,
+   "flags": 5
+  },
+  {
+   "pool_id": "0x43482876fa96451e96dcbbc4091cd17c919e62c8ccae297d804d561147f9e953",
+   "version": "v4",
+   "fee_bps": 100.0,
+   "token0": {
+    "address": "0x3600000000000000000000000000000000000000",
+    "symbol": "USDC",
+    "decimals": 6,
+    "impersonating": null
+   },
+   "token1": {
+    "address": "0x4fff97f261bc50138b18668937a6946936f7b108",
+    "symbol": "familiarss",
+    "decimals": 18,
+    "impersonating": null
+   },
+   "volume_usd": 5021.12,
+   "swaps": 11,
+   "mean_interval_s": 1409.1,
+   "depth": "thin",
+   "reason": "quote refreshes every 1409s, so any gap to a live venue is mostly age",
+   "price_usd": 2.483306301132708e-06,
+   "cex_market": null,
+   "flags": 5
+  },
+  {
+   "pool_id": "0x5449f9a93ede94837433911dff30f9281b9ec1506b766c9730c9a46d2e863001",
+   "version": "v4",
+   "fee_bps": 100.0,
+   "token0": {
+    "address": "0x3600000000000000000000000000000000000000",
+    "symbol": "USDC",
+    "decimals": 6,
+    "impersonating": null
+   },
+   "token1": {
+    "address": "0xb23b8a22b81ceb049041d8846a978ac147ce6ac6",
+    "symbol": "familiarss",
+    "decimals": 18,
+    "impersonating": null
+   },
+   "volume_usd": 5018.88,
+   "swaps": 14,
+   "mean_interval_s": 126.0,
+   "depth": "thin",
+   "reason": "quote refreshes every 126s, so any gap to a live venue is mostly age",
+   "price_usd": 2.4814389764618778e-06,
+   "cex_market": null,
+   "flags": 5
+  },
+  {
+   "pool_id": "0xcb9ae59d99c1d5cc2934f4d0ccce40e56c10dc8f7d5593c99fd6d8f4098df22d",
+   "version": "v4",
+   "fee_bps": 100.0,
+   "token0": {
+    "address": "0x3600000000000000000000000000000000000000",
+    "symbol": "USDC",
+    "decimals": 6,
+    "impersonating": null
+   },
+   "token1": {
+    "address": "0xb42ea0541dd5e7e8bb67e80bc12fedf655b856f5",
+    "symbol": "MUSEGOD",
+    "decimals": 18,
+    "impersonating": null
+   },
+   "volume_usd": 5000.71,
+   "swaps": 8,
+   "mean_interval_s": 32.7,
+   "depth": "thin",
+   "reason": "quote refreshes every 33s, so any gap to a live venue is mostly age",
+   "price_usd": 2.4810586612356515e-06,
+   "cex_market": null,
+   "flags": 5
+  },
+  {
+   "pool_id": "0x6e0a678028266d3f241f624e14418cbd80a4536595384023df244bef42ff3c55",
+   "version": "v4",
+   "fee_bps": 100.0,
+   "token0": {
+    "address": "0x3600000000000000000000000000000000000000",
+    "symbol": "USDC",
+    "decimals": 6,
+    "impersonating": null
+   },
+   "token1": {
+    "address": "0x91da6784e4aae72d7298629d1ac142df8473bae9",
+    "symbol": "$BLOB",
+    "decimals": 18,
+    "impersonating": null
+   },
+   "volume_usd": 4998.39,
+   "swaps": 14,
+   "mean_interval_s": 1076.3,
    "depth": "dust",
-   "reason": "turned over $2,186, below $5,000",
-   "price_usd": 8.717829931967945e-06,
+   "reason": "turned over $4,998, below $5,000",
+   "price_usd": 2.483093659591226e-06,
    "cex_market": null,
    "flags": 3
   },
@@ -1560,17 +2807,92 @@
     "decimals": 6,
     "impersonating": null
    },
-   "volume_usd": 2173.58,
-   "swaps": 221,
-   "mean_interval_s": 35.1,
+   "volume_usd": 4837.47,
+   "swaps": 12346,
+   "mean_interval_s": 4.6,
    "depth": "dust",
-   "reason": "turned over $2,174, below $5,000",
-   "price_usd": 1.1491868522665056,
+   "reason": "turned over $4,837, below $5,000",
+   "price_usd": 1.137611480332058,
    "cex_market": null,
    "flags": 3
   },
   {
-   "pool_id": "0x6ae118a17aae2912e515bbf96f9bb6b987d3d47dd8b9d3e5418b2332cf513894",
+   "pool_id": "0xaa790773e4fea921b4d027ea782298d63579d55f901ef5d07a9424f8c36ada67",
+   "version": "v4",
+   "fee_bps": 83886.08,
+   "token0": {
+    "address": "0x3600000000000000000000000000000000000000",
+    "symbol": "USDC",
+    "decimals": 6,
+    "impersonating": null
+   },
+   "token1": {
+    "address": "0x89f94f262477fef4166e1b3947f6917f8313eebd",
+    "symbol": "$HMM",
+    "decimals": 18,
+    "impersonating": null
+   },
+   "volume_usd": 4832.34,
+   "swaps": 57,
+   "mean_interval_s": 24.6,
+   "depth": "dust",
+   "reason": "turned over $4,832, below $5,000",
+   "price_usd": 2.5069834202169902e-06,
+   "cex_market": null,
+   "flags": 3
+  },
+  {
+   "pool_id": "0x5b7a351a9cba016043bfc60dd98b0f41ca1a72f219f6cbbd1ac51c9dcff15049",
+   "version": "v4",
+   "fee_bps": 83886.08,
+   "token0": {
+    "address": "0x3600000000000000000000000000000000000000",
+    "symbol": "USDC",
+    "decimals": 6,
+    "impersonating": null
+   },
+   "token1": {
+    "address": "0xd47188eafd44811035892f7a59d7733df4bd2cc4",
+    "symbol": "NEIRO",
+    "decimals": 18,
+    "impersonating": null
+   },
+   "volume_usd": 4781.76,
+   "swaps": 77,
+   "mean_interval_s": 47.5,
+   "depth": "dust",
+   "reason": "turned over $4,782, below $5,000",
+   "price_usd": 2.481332069001383e-06,
+   "cex_market": null,
+   "flags": 3
+  },
+  {
+   "pool_id": "0x7ea7c2a23838f7182b94b7c3cd87779fa9c97d7d9920352996f7a74b400a872d",
+   "version": "v4",
+   "fee_bps": 83886.08,
+   "token0": {
+    "address": "0x3600000000000000000000000000000000000000",
+    "symbol": "USDC",
+    "decimals": 6,
+    "impersonating": null
+   },
+   "token1": {
+    "address": "0x65d65177b53e71912f9b25ebfb569b09092205b1",
+    "symbol": "ECHDS",
+    "decimals": 18,
+    "impersonating": null
+   },
+   "volume_usd": 4679.66,
+   "swaps": 55,
+   "mean_interval_s": 72.8,
+   "depth": "dust",
+   "reason": "turned over $4,680, below $5,000",
+   "price_usd": 2.4807440585052083e-06,
+   "cex_market": null,
+   "flags": 3
+  },
+  {
+   "pool_id": "0xefe060b7f012c3f051f072be4b3d0eafefea9df1f18796b6d9b59d6749e21649",
    "version": "v4",
    "fee_bps": 0.0,
    "token0": {
@@ -1580,317 +2902,17 @@
     "impersonating": null
    },
    "token1": {
-    "address": "0xc99ddf8dce152ac3932b504c26989bc09a6ebf01",
-    "symbol": "ACT",
+    "address": "0xafa78bc7c2e1142f4b2a225ae4aee17d6b7d7f01",
+    "symbol": "MOSS",
     "decimals": 18,
     "impersonating": null
    },
-   "volume_usd": 2072.31,
-   "swaps": 49,
-   "mean_interval_s": 138.9,
+   "volume_usd": 4477.31,
+   "swaps": 38,
+   "mean_interval_s": 546.2,
    "depth": "dust",
-   "reason": "turned over $2,072, below $5,000",
-   "price_usd": 1.0535376097962154e-05,
-   "cex_market": null,
-   "flags": 3
-  },
-  {
-   "pool_id": "0x0524891564755c3895fb6cca45787c530ccf0cfae4e6fad937c763f65822a400",
-   "version": "v4",
-   "fee_bps": 100.0,
-   "token0": {
-    "address": "0x1fc29df411ec71a48a431ebbc9f585b98af910b3",
-    "symbol": "$$$",
-    "decimals": 18,
-    "impersonating": null
-   },
-   "token1": {
-    "address": "0x3600000000000000000000000000000000000000",
-    "symbol": "USDC",
-    "decimals": 6,
-    "impersonating": null
-   },
-   "volume_usd": 1811.54,
-   "swaps": 33,
-   "mean_interval_s": 222.5,
-   "depth": "dust",
-   "reason": "turned over $1,812, below $5,000",
-   "price_usd": 4.342823286275117e-05,
-   "cex_market": null,
-   "flags": 3
-  },
-  {
-   "pool_id": "0x87b43138aaa3f48603f5ce4feff3cd84b228ff3b",
-   "version": "v3",
-   "fee_bps": 100.0,
-   "token0": {
-    "address": "0x3600000000000000000000000000000000000000",
-    "symbol": "USDC",
-    "decimals": 6,
-    "impersonating": null
-   },
-   "token1": {
-    "address": "0x5ea12158d68f20cd0ab4be1ec6a936df2c77a9a6",
-    "symbol": "RADAR",
-    "decimals": 18,
-    "impersonating": null
-   },
-   "volume_usd": 1768.21,
-   "swaps": 25,
-   "mean_interval_s": 77.1,
-   "depth": "dust",
-   "reason": "turned over $1,768, below $5,000",
-   "price_usd": 5.9737186654258995e-06,
-   "cex_market": null,
-   "flags": 3
-  },
-  {
-   "pool_id": "0xddd3be58126308ecf4ff9906b497a7c90eb2cc66d9bbcac0f1df4579cec746b2",
-   "version": "v4",
-   "fee_bps": 400.0,
-   "token0": {
-    "address": "0x1e849f5960f02503939cbcbd44ab99b6dfcc4735",
-    "symbol": "MI",
-    "decimals": 18,
-    "impersonating": null
-   },
-   "token1": {
-    "address": "0x3600000000000000000000000000000000000000",
-    "symbol": "USDC",
-    "decimals": 6,
-    "impersonating": null
-   },
-   "volume_usd": 1649.77,
-   "swaps": 16,
-   "mean_interval_s": 338.4,
-   "depth": "dust",
-   "reason": "turned over $1,650, below $5,000",
-   "price_usd": 0.00026207108804768124,
-   "cex_market": null,
-   "flags": 3
-  },
-  {
-   "pool_id": "0x22bccf2f038cebcf6e27f2e185845b48bfeba370729fb421cc0d8b910202f14b",
-   "version": "v4",
-   "fee_bps": 500.0,
-   "token0": {
-    "address": "0x3600000000000000000000000000000000000000",
-    "symbol": "USDC",
-    "decimals": 6,
-    "impersonating": null
-   },
-   "token1": {
-    "address": "0x41358defd0dedc90528b3f1835715e907b686e6a",
-    "symbol": "DUKE",
-    "decimals": 18,
-    "impersonating": null
-   },
-   "volume_usd": 1640.76,
-   "swaps": 14,
-   "mean_interval_s": 516.7,
-   "depth": "dust",
-   "reason": "turned over $1,641, below $5,000",
-   "price_usd": 0.0012103823587678573,
-   "cex_market": null,
-   "flags": 3
-  },
-  {
-   "pool_id": "0x7557f2e9784a78990035085febdef9a466b7197da62a4d8fbaa57b4af57b3d0f",
-   "version": "v4",
-   "fee_bps": 100.0,
-   "token0": {
-    "address": "0x055cee57084aadaf2a1a086db3ecfe8dc605faea",
-    "symbol": "ARCH",
-    "decimals": 18,
-    "impersonating": null
-   },
-   "token1": {
-    "address": "0x3600000000000000000000000000000000000000",
-    "symbol": "USDC",
-    "decimals": 6,
-    "impersonating": null
-   },
-   "volume_usd": 1613.01,
-   "swaps": 37,
-   "mean_interval_s": 194.9,
-   "depth": "dust",
-   "reason": "turned over $1,613, below $5,000",
-   "price_usd": 3.090702827083253e-05,
-   "cex_market": null,
-   "flags": 3
-  },
-  {
-   "pool_id": "0x22f8489accccfaa0f1e56d1ac3e748056eab699549e38f7f042c6003ed07648e",
-   "version": "v4",
-   "fee_bps": 0.0,
-   "token0": {
-    "address": "0x1d8fcd7ba7cfecc739b2a7314c08a36b179a16e9",
-    "symbol": "ARCFUN",
-    "decimals": 18,
-    "impersonating": null
-   },
-   "token1": {
-    "address": "0x3600000000000000000000000000000000000000",
-    "symbol": "USDC",
-    "decimals": 6,
-    "impersonating": null
-   },
-   "volume_usd": 1368.16,
-   "swaps": 17,
-   "mean_interval_s": 374.9,
-   "depth": "dust",
-   "reason": "turned over $1,368, below $5,000",
-   "price_usd": 1.172936753906673e-05,
-   "cex_market": null,
-   "flags": 3
-  },
-  {
-   "pool_id": "0x1bb5c22ae4560dc887164d96ebeaa756130948314ce132fee3c8d14e5b95758b",
-   "version": "v4",
-   "fee_bps": 100.0,
-   "token0": {
-    "address": "0x3600000000000000000000000000000000000000",
-    "symbol": "USDC",
-    "decimals": 6,
-    "impersonating": null
-   },
-   "token1": {
-    "address": "0x4c9b47dbd5933aa4574b2c27f82419e4dbbd0222",
-    "symbol": "ASTOCK",
-    "decimals": 18,
-    "impersonating": null
-   },
-   "volume_usd": 1324.77,
-   "swaps": 17,
-   "mean_interval_s": 452.8,
-   "depth": "dust",
-   "reason": "turned over $1,325, below $5,000",
-   "price_usd": 0.000100665435867391,
-   "cex_market": null,
-   "flags": 3
-  },
-  {
-   "pool_id": "0xe15bf13a4959e46acf69ee86a2b3771de76ae86729d2c6f0c8b43c70edfe15ce",
-   "version": "v4",
-   "fee_bps": 500.0,
-   "token0": {
-    "address": "0x30ac39dec8a854c5fd03aa429e3bef32a7e4c84a",
-    "symbol": "PI",
-    "decimals": 18,
-    "impersonating": null
-   },
-   "token1": {
-    "address": "0x3600000000000000000000000000000000000000",
-    "symbol": "USDC",
-    "decimals": 6,
-    "impersonating": null
-   },
-   "volume_usd": 1288.38,
-   "swaps": 24,
-   "mean_interval_s": 228.1,
-   "depth": "dust",
-   "reason": "turned over $1,288, below $5,000",
-   "price_usd": 0.0005117275484705192,
-   "cex_market": null,
-   "flags": 3
-  },
-  {
-   "pool_id": "0xcc35225ebf0bb79fc1e5a1c5ffe383ba06a6c1e8",
-   "version": "v3",
-   "fee_bps": 100.0,
-   "token0": {
-    "address": "0x3600000000000000000000000000000000000000",
-    "symbol": "USDC",
-    "decimals": 6,
-    "impersonating": null
-   },
-   "token1": {
-    "address": "0xebb871bc394e83008120fab3c9ed5773642a29a1",
-    "symbol": "ARCANIUM",
-    "decimals": 18,
-    "impersonating": null
-   },
-   "volume_usd": 1139.13,
-   "swaps": 12,
-   "mean_interval_s": 516.3,
-   "depth": "dust",
-   "reason": "turned over $1,139, below $5,000",
-   "price_usd": 1.910927719445568e-05,
-   "cex_market": null,
-   "flags": 3
-  },
-  {
-   "pool_id": "0x7284a37ce09652233804ec5457f6989f3a560982",
-   "version": "v3",
-   "fee_bps": 100.0,
-   "token0": {
-    "address": "0x3600000000000000000000000000000000000000",
-    "symbol": "USDC",
-    "decimals": 6,
-    "impersonating": null
-   },
-   "token1": {
-    "address": "0xc55a4468a3e1c2dfe58dddad0188c71d5dffd740",
-    "symbol": "BANCOR",
-    "decimals": 18,
-    "impersonating": null
-   },
-   "volume_usd": 985.34,
-   "swaps": 9,
-   "mean_interval_s": 766.9,
-   "depth": "dust",
-   "reason": "turned over $985, below $5,000",
-   "price_usd": 6.298908120765731e-05,
-   "cex_market": null,
-   "flags": 3
-  },
-  {
-   "pool_id": "0x79ccbd9dd0a25d4fc1a320cafaa9698f7fe2725774d166a2fa5e385d3ad88e78",
-   "version": "v4",
-   "fee_bps": 500.0,
-   "token0": {
-    "address": "0x3600000000000000000000000000000000000000",
-    "symbol": "USDC",
-    "decimals": 6,
-    "impersonating": null
-   },
-   "token1": {
-    "address": "0x8e98a62a995a50eca9979bfa016f91bf36a8f9d9",
-    "symbol": "USDC",
-    "decimals": 18,
-    "impersonating": "USDC"
-   },
-   "volume_usd": 933.78,
-   "swaps": 18,
-   "mean_interval_s": 329.8,
-   "depth": "dust",
-   "reason": "turned over $934, below $5,000",
-   "price_usd": 0.003117878684459282,
-   "cex_market": null,
-   "flags": 19
-  },
-  {
-   "pool_id": "0x843faa844e7cbf25c9d812a5243924ea1cf49fc3525a3198785b82956cf43fe5",
-   "version": "v4",
-   "fee_bps": 285.0,
-   "token0": {
-    "address": "0x3600000000000000000000000000000000000000",
-    "symbol": "USDC",
-    "decimals": 6,
-    "impersonating": null
-   },
-   "token1": {
-    "address": "0xb7c934ff18730c24e6113bb4bc5a68feef16fd29",
-    "symbol": "ARCUS",
-    "decimals": 18,
-    "impersonating": null
-   },
-   "volume_usd": 864.23,
-   "swaps": 63,
-   "mean_interval_s": 111.1,
-   "depth": "dust",
-   "reason": "turned over $864, below $5,000",
-   "price_usd": 0.0003535318096497812,
+   "reason": "turned over $4,477, below $5,000",
+   "price_usd": 3.987591724788856e-05,
    "cex_market": null,
    "flags": 3
   },
@@ -1910,242 +2932,17 @@
     "decimals": 18,
     "impersonating": null
    },
-   "volume_usd": 846.36,
-   "swaps": 28,
-   "mean_interval_s": 259.0,
+   "volume_usd": 4333.59,
+   "swaps": 60,
+   "mean_interval_s": 349.6,
    "depth": "dust",
-   "reason": "turned over $846, below $5,000",
-   "price_usd": 1.1708902033938495e-05,
+   "reason": "turned over $4,334, below $5,000",
+   "price_usd": 1.659070815230452e-05,
    "cex_market": null,
    "flags": 3
   },
   {
-   "pool_id": "0x0b856af74fdf58b85f6125ff8ea9bbf6e0a782a73789b7035c3fc1fcb4b76d67",
-   "version": "v4",
-   "fee_bps": 0.0,
-   "token0": {
-    "address": "0x3600000000000000000000000000000000000000",
-    "symbol": "USDC",
-    "decimals": 6,
-    "impersonating": null
-   },
-   "token1": {
-    "address": "0xece5ca8bf9220718e5727754026757512212cb3c",
-    "symbol": "ARGUS",
-    "decimals": 18,
-    "impersonating": null
-   },
-   "volume_usd": 817.41,
-   "swaps": 67,
-   "mean_interval_s": 107.3,
-   "depth": "dust",
-   "reason": "turned over $817, below $5,000",
-   "price_usd": 0.01768191537709414,
-   "cex_market": null,
-   "flags": 3
-  },
-  {
-   "pool_id": "0xbdb5bd4958e5044c7475dc389501b29bc44d0a41e3ce4d5362ec95ec55b9503e",
-   "version": "v4",
-   "fee_bps": 90.0,
-   "token0": {
-    "address": "0x3600000000000000000000000000000000000000",
-    "symbol": "USDC",
-    "decimals": 6,
-    "impersonating": null
-   },
-   "token1": {
-    "address": "0xb7c934ff18730c24e6113bb4bc5a68feef16fd29",
-    "symbol": "ARCUS",
-    "decimals": 18,
-    "impersonating": null
-   },
-   "volume_usd": 812.26,
-   "swaps": 97,
-   "mean_interval_s": 79.9,
-   "depth": "dust",
-   "reason": "turned over $812, below $5,000",
-   "price_usd": 0.00036029405306187135,
-   "cex_market": null,
-   "flags": 3
-  },
-  {
-   "pool_id": "0x5509fd7271615f3c2cd268429b48ec48c935352db781d0aed25fd004b5296217",
-   "version": "v4",
-   "fee_bps": 100.0,
-   "token0": {
-    "address": "0x3600000000000000000000000000000000000000",
-    "symbol": "USDC",
-    "decimals": 6,
-    "impersonating": null
-   },
-   "token1": {
-    "address": "0x7366d2ffaf98b6621fa3791d760de2c942dbc95d",
-    "symbol": "USDC",
-    "decimals": 18,
-    "impersonating": "USDC"
-   },
-   "volume_usd": 777.99,
-   "swaps": 17,
-   "mean_interval_s": 294.7,
-   "depth": "dust",
-   "reason": "turned over $778, below $5,000",
-   "price_usd": 5.9262693809904956e-06,
-   "cex_market": null,
-   "flags": 19
-  },
-  {
-   "pool_id": "0xd4dda59a2eabd6ab93fff6cc7112e00cc2ec558a353923884e1942edb80e85ef",
-   "version": "v4",
-   "fee_bps": 300.0,
-   "token0": {
-    "address": "0x3600000000000000000000000000000000000000",
-    "symbol": "USDC",
-    "decimals": 6,
-    "impersonating": null
-   },
-   "token1": {
-    "address": "0xa163d7624da3b5d9182c50eab5b8cd247ae861bb",
-    "symbol": "Minara",
-    "decimals": 18,
-    "impersonating": null
-   },
-   "volume_usd": 772.27,
-   "swaps": 28,
-   "mean_interval_s": 222.7,
-   "depth": "dust",
-   "reason": "turned over $772, below $5,000",
-   "price_usd": 0.0001844253337945467,
-   "cex_market": null,
-   "flags": 3
-  },
-  {
-   "pool_id": "0x399b4fe3a9d4688fb302d67cc5839d24271903e38c1573745cbcd8fa6f1702a0",
-   "version": "v4",
-   "fee_bps": 970.0,
-   "token0": {
-    "address": "0x3600000000000000000000000000000000000000",
-    "symbol": "USDC",
-    "decimals": 6,
-    "impersonating": null
-   },
-   "token1": {
-    "address": "0x9034c916008b7379ecce8f8df54dbfd52418e69c",
-    "symbol": "GOOSE",
-    "decimals": 18,
-    "impersonating": null
-   },
-   "volume_usd": 768.88,
-   "swaps": 17,
-   "mean_interval_s": 406.1,
-   "depth": "dust",
-   "reason": "turned over $769, below $5,000",
-   "price_usd": 0.00034757437145236416,
-   "cex_market": null,
-   "flags": 3
-  },
-  {
-   "pool_id": "0x1db82974ae1c63bce03703062502330ede3178adb76ed749ce0ecb8e0af58218",
-   "version": "v4",
-   "fee_bps": 450.0,
-   "token0": {
-    "address": "0x3600000000000000000000000000000000000000",
-    "symbol": "USDC",
-    "decimals": 6,
-    "impersonating": null
-   },
-   "token1": {
-    "address": "0xb7c934ff18730c24e6113bb4bc5a68feef16fd29",
-    "symbol": "ARCUS",
-    "decimals": 18,
-    "impersonating": null
-   },
-   "volume_usd": 750.09,
-   "swaps": 49,
-   "mean_interval_s": 137.0,
-   "depth": "dust",
-   "reason": "turned over $750, below $5,000",
-   "price_usd": 0.00034731064636109267,
-   "cex_market": null,
-   "flags": 3
-  },
-  {
-   "pool_id": "0xe8124f328be26f5d078c6363a9dcd4e3c0fef73f2d58a2afbee0bed94540c960",
-   "version": "v4",
-   "fee_bps": 200.0,
-   "token0": {
-    "address": "0x07704b06981ea962b87296362a1281484d160000",
-    "symbol": "ARCAT",
-    "decimals": 18,
-    "impersonating": null
-   },
-   "token1": {
-    "address": "0x3600000000000000000000000000000000000000",
-    "symbol": "USDC",
-    "decimals": 6,
-    "impersonating": null
-   },
-   "volume_usd": 748.11,
-   "swaps": 38,
-   "mean_interval_s": 197.8,
-   "depth": "dust",
-   "reason": "turned over $748, below $5,000",
-   "price_usd": 0.00045776523422515637,
-   "cex_market": null,
-   "flags": 3
-  },
-  {
-   "pool_id": "0xa6a31ae2492336bea7abce035ac10d149b2259265024037a37be4355923e3aa0",
-   "version": "v4",
-   "fee_bps": 90.0,
-   "token0": {
-    "address": "0x3600000000000000000000000000000000000000",
-    "symbol": "USDC",
-    "decimals": 6,
-    "impersonating": null
-   },
-   "token1": {
-    "address": "0xf76b1d00bd3d63a37246b5f512074e864010e33d",
-    "symbol": "POLL",
-    "decimals": 18,
-    "impersonating": null
-   },
-   "volume_usd": 734.16,
-   "swaps": 51,
-   "mean_interval_s": 153.1,
-   "depth": "dust",
-   "reason": "turned over $734, below $5,000",
-   "price_usd": 0.0005701144502329103,
-   "cex_market": null,
-   "flags": 3
-  },
-  {
-   "pool_id": "0x1201d03bacbe8a9afd55d58b6ba52b21983268d6168612c091a07f9a31f05789",
-   "version": "v4",
-   "fee_bps": 100.0,
-   "token0": {
-    "address": "0x3600000000000000000000000000000000000000",
-    "symbol": "USDC",
-    "decimals": 6,
-    "impersonating": null
-   },
-   "token1": {
-    "address": "0xbdbb76db770cc99dcf3fa31c42c171b9584d6a10",
-    "symbol": "CINU",
-    "decimals": 18,
-    "impersonating": null
-   },
-   "volume_usd": 728.87,
-   "swaps": 15,
-   "mean_interval_s": 497.3,
-   "depth": "dust",
-   "reason": "turned over $729, below $5,000",
-   "price_usd": 4.575754453400424e-05,
-   "cex_market": null,
-   "flags": 3
-  },
-  {
-   "pool_id": "0x01be77f0a364bddafd34521892ea4745ebf9b5a2",
+   "pool_id": "0xc4f9c3d33b28710420b9d4966c932ef4b754660c",
    "version": "v3",
    "fee_bps": 100.0,
    "token0": {
@@ -2155,99 +2952,149 @@
     "impersonating": null
    },
    "token1": {
-    "address": "0x4cb8382b9daf7992d3b27d32f7db650c57881daa",
-    "symbol": "BUILDOG",
+    "address": "0xc1347b8f2b79af2f150d26f350eb974cd7dab6f3",
+    "symbol": "ARK",
     "decimals": 18,
     "impersonating": null
    },
-   "volume_usd": 711.69,
-   "swaps": 14,
-   "mean_interval_s": 348.7,
+   "volume_usd": 4081.93,
+   "swaps": 78,
+   "mean_interval_s": 263.9,
    "depth": "dust",
-   "reason": "turned over $712, below $5,000",
-   "price_usd": 3.644511325490205e-05,
+   "reason": "turned over $4,082, below $5,000",
+   "price_usd": 4.290538309186199e-05,
    "cex_market": null,
    "flags": 3
   },
   {
-   "pool_id": "0x1bd29e75ceac359120eb20377e5b503f72094c56239386d7d9694c40de6c23d9",
-   "version": "v4",
-   "fee_bps": 100.0,
-   "token0": {
-    "address": "0x3600000000000000000000000000000000000000",
-    "symbol": "USDC",
-    "decimals": 6,
-    "impersonating": null
-   },
-   "token1": {
-    "address": "0xf1b72b46e2364356c1d8343590e4c0deefb19c3b",
-    "symbol": "WAVE",
-    "decimals": 18,
-    "impersonating": null
-   },
-   "volume_usd": 687.75,
-   "swaps": 19,
-   "mean_interval_s": 357.5,
-   "depth": "dust",
-   "reason": "turned over $688, below $5,000",
-   "price_usd": 0.0001579719122081258,
-   "cex_market": null,
-   "flags": 3
-  },
-  {
-   "pool_id": "0x035979cb4486af9c449a6043823ed94bef9b0a0ec4188ca33ffeec96c4b3c606",
-   "version": "v4",
-   "fee_bps": 100.0,
-   "token0": {
-    "address": "0x3600000000000000000000000000000000000000",
-    "symbol": "USDC",
-    "decimals": 6,
-    "impersonating": null
-   },
-   "token1": {
-    "address": "0xe2f68f8ff00910e53b608994e116e69acf2f61f6",
-    "symbol": "WOLF",
-    "decimals": 18,
-    "impersonating": null
-   },
-   "volume_usd": 687.21,
-   "swaps": 16,
-   "mean_interval_s": 382.4,
-   "depth": "dust",
-   "reason": "turned over $687, below $5,000",
-   "price_usd": 1.4884844189535262e-05,
-   "cex_market": null,
-   "flags": 3
-  },
-  {
-   "pool_id": "0x9450215f2d779c177b172cec1eceeb77cddac0a93f2c2be1d40ebdc4d5ab16ff",
-   "version": "v4",
-   "fee_bps": 100.0,
-   "token0": {
-    "address": "0x3600000000000000000000000000000000000000",
-    "symbol": "USDC",
-    "decimals": 6,
-    "impersonating": null
-   },
-   "token1": {
-    "address": "0xbcf7f4efa52f1d6370f6b082da3828ab3b01ea07",
-    "symbol": "COVERCAT",
-    "decimals": 18,
-    "impersonating": null
-   },
-   "volume_usd": 666.77,
-   "swaps": 22,
-   "mean_interval_s": 238.7,
-   "depth": "dust",
-   "reason": "turned over $667, below $5,000",
-   "price_usd": 5.026342609033617e-06,
-   "cex_market": null,
-   "flags": 3
-  },
-  {
-   "pool_id": "0xd3fd0ecc36bbd15bfed676a2fd494ae4102116f02e0f45156d5972932d65c241",
+   "pool_id": "0xdb04fb5955d97f988fc371be1798747acef42baac5e3b7e47a40986a3a6b5d37",
    "version": "v4",
    "fee_bps": 83886.08,
+   "token0": {
+    "address": "0x3600000000000000000000000000000000000000",
+    "symbol": "USDC",
+    "decimals": 6,
+    "impersonating": null
+   },
+   "token1": {
+    "address": "0xec95267a01c1ffc8b2a5fa621b4c1bcc148bf35e",
+    "symbol": "QUID",
+    "decimals": 18,
+    "impersonating": null
+   },
+   "volume_usd": 4046.72,
+   "swaps": 55,
+   "mean_interval_s": 23.5,
+   "depth": "dust",
+   "reason": "turned over $4,047, below $5,000",
+   "price_usd": 2.7790181020791355e-06,
+   "cex_market": null,
+   "flags": 3
+  },
+  {
+   "pool_id": "0xc94b62f92d4466613242090883863c2846c341a940fd87f3e9f62a7ccc044f22",
+   "version": "v4",
+   "fee_bps": 83886.08,
+   "token0": {
+    "address": "0x3600000000000000000000000000000000000000",
+    "symbol": "USDC",
+    "decimals": 6,
+    "impersonating": null
+   },
+   "token1": {
+    "address": "0xa1628c244b63e67766f614c21869642e6e1fc4fc",
+    "symbol": "AAA",
+    "decimals": 18,
+    "impersonating": null
+   },
+   "volume_usd": 3963.11,
+   "swaps": 7,
+   "mean_interval_s": 24.6,
+   "depth": "dust",
+   "reason": "turned over $3,963, below $5,000",
+   "price_usd": 2.4821246439257753e-06,
+   "cex_market": null,
+   "flags": 3
+  },
+  {
+   "pool_id": "0x09cf6fc95841871ab5df8243e1ec29458a002aab37d4e8f004c8daeb19fa9158",
+   "version": "v4",
+   "fee_bps": 100.0,
+   "token0": {
+    "address": "0x09f4f85b8428a451222be6c121883ae6ecedbf1f",
+    "symbol": "AQUA",
+    "decimals": 18,
+    "impersonating": null
+   },
+   "token1": {
+    "address": "0x3600000000000000000000000000000000000000",
+    "symbol": "USDC",
+    "decimals": 6,
+    "impersonating": null
+   },
+   "volume_usd": 3932.47,
+   "swaps": 107,
+   "mean_interval_s": 204.3,
+   "depth": "dust",
+   "reason": "turned over $3,932, below $5,000",
+   "price_usd": 3.22357268271417e-05,
+   "cex_market": null,
+   "flags": 3
+  },
+  {
+   "pool_id": "0xf5a913528f0d4e0c68e63977c83ab901d88f1e05c76836707431ea08291863b8",
+   "version": "v4",
+   "fee_bps": 100.0,
+   "token0": {
+    "address": "0x3600000000000000000000000000000000000000",
+    "symbol": "USDC",
+    "decimals": 6,
+    "impersonating": null
+   },
+   "token1": {
+    "address": "0xb67f50fde86e09b5da963c4251cbd4788b151ed5",
+    "symbol": "USDC",
+    "decimals": 18,
+    "impersonating": "USDC"
+   },
+   "volume_usd": 3792.22,
+   "swaps": 36,
+   "mean_interval_s": 615.7,
+   "depth": "dust",
+   "reason": "turned over $3,792, below $5,000",
+   "price_usd": 0.00012393732140825395,
+   "cex_market": null,
+   "flags": 19
+  },
+  {
+   "pool_id": "0x9673b01178e483c9ea427a76567ed6383e6ca72f",
+   "version": "v3",
+   "fee_bps": 100.0,
+   "token0": {
+    "address": "0x3600000000000000000000000000000000000000",
+    "symbol": "USDC",
+    "decimals": 6,
+    "impersonating": null
+   },
+   "token1": {
+    "address": "0xe6a2476f33ec1566288aa32ec3319a6b77dd1e3b",
+    "symbol": "DUKE",
+    "decimals": 18,
+    "impersonating": null
+   },
+   "volume_usd": 3790.13,
+   "swaps": 258,
+   "mean_interval_s": 85.5,
+   "depth": "dust",
+   "reason": "turned over $3,790, below $5,000",
+   "price_usd": 0.00024629824397630004,
+   "cex_market": null,
+   "flags": 3
+  },
+  {
+   "pool_id": "0xbedc196c251a8a47fa0e1c3f1a54319c6c88c0a8b276b96a7f1f4aef8a7ded37",
+   "version": "v4",
+   "fee_bps": 100.0,
    "token0": {
     "address": "0x3600000000000000000000000000000000000000",
     "symbol": "USDC",
@@ -2260,117 +3107,17 @@
     "decimals": 18,
     "impersonating": null
    },
-   "volume_usd": 636.3,
-   "swaps": 7,
-   "mean_interval_s": 1007.1,
+   "volume_usd": 3688.67,
+   "swaps": 69,
+   "mean_interval_s": 311.0,
    "depth": "dust",
-   "reason": "turned over $636, below $5,000",
-   "price_usd": 92.14707105067427,
+   "reason": "turned over $3,689, below $5,000",
+   "price_usd": 94.13860105094342,
    "cex_market": null,
    "flags": 3
   },
   {
-   "pool_id": "0xa6d6e8d5d38363eb041a71db064f9274d2e62dac5da5fd5b3757e32d2ce192d7",
-   "version": "v4",
-   "fee_bps": 0.0,
-   "token0": {
-    "address": "0x3600000000000000000000000000000000000000",
-    "symbol": "USDC",
-    "decimals": 6,
-    "impersonating": null
-   },
-   "token1": {
-    "address": "0xe4bf28b3ac8ba884c369e37833a1a66cb353dda3",
-    "symbol": "Fest",
-    "decimals": 18,
-    "impersonating": null
-   },
-   "volume_usd": 592.82,
-   "swaps": 10,
-   "mean_interval_s": 72.9,
-   "depth": "dust",
-   "reason": "turned over $593, below $5,000",
-   "price_usd": 8.743449426070016e-06,
-   "cex_market": null,
-   "flags": 3
-  },
-  {
-   "pool_id": "0xd149a144e207c8873658f6f5821129e5549dc6a6a88451526ccafc597654556f",
-   "version": "v4",
-   "fee_bps": 100.0,
-   "token0": {
-    "address": "0x2b4623c889ae110df5c80ce679aa062631ac92ab",
-    "symbol": "ARCY",
-    "decimals": 18,
-    "impersonating": null
-   },
-   "token1": {
-    "address": "0x3600000000000000000000000000000000000000",
-    "symbol": "USDC",
-    "decimals": 6,
-    "impersonating": null
-   },
-   "volume_usd": 582.59,
-   "swaps": 29,
-   "mean_interval_s": 246.8,
-   "depth": "dust",
-   "reason": "turned over $583, below $5,000",
-   "price_usd": 8.038666780465187e-06,
-   "cex_market": null,
-   "flags": 3
-  },
-  {
-   "pool_id": "0xe81ee0da8f405d2abe2f38573ccd4d6cb1c2d13d",
-   "version": "v3",
-   "fee_bps": 100.0,
-   "token0": {
-    "address": "0x2b1ca431a12a3f2af63e69c809e743ac766096b8",
-    "symbol": "ANTHROPIC",
-    "decimals": 18,
-    "impersonating": null
-   },
-   "token1": {
-    "address": "0x3600000000000000000000000000000000000000",
-    "symbol": "USDC",
-    "decimals": 6,
-    "impersonating": null
-   },
-   "volume_usd": 559.28,
-   "swaps": 19,
-   "mean_interval_s": 46.8,
-   "depth": "dust",
-   "reason": "turned over $559, below $5,000",
-   "price_usd": 2181.4782495703644,
-   "cex_market": null,
-   "flags": 3
-  },
-  {
-   "pool_id": "0x7053b1779afa9c9482c9ad48240fdbba77276e1de82d2e20581e9199d8a7a8dd",
-   "version": "v4",
-   "fee_bps": 100.0,
-   "token0": {
-    "address": "0x26e9fcf0cd573012084627c4e1e1947c5d028939",
-    "symbol": "ARC",
-    "decimals": 18,
-    "impersonating": null
-   },
-   "token1": {
-    "address": "0x3600000000000000000000000000000000000000",
-    "symbol": "USDC",
-    "decimals": 6,
-    "impersonating": null
-   },
-   "volume_usd": 542.29,
-   "swaps": 13,
-   "mean_interval_s": 513.2,
-   "depth": "dust",
-   "reason": "turned over $542, below $5,000",
-   "price_usd": 1.0988327888347884e-05,
-   "cex_market": null,
-   "flags": 3
-  },
-  {
-   "pool_id": "0x1f7f6a5e2ba06e9b3644afa8db8e1c606b5a5abb",
+   "pool_id": "0xe59c7fada87c866cffc9261c4e7cb19848f0f3db",
    "version": "v3",
    "fee_bps": 100.0,
    "token0": {
@@ -2380,49 +3127,24 @@
     "impersonating": null
    },
    "token1": {
-    "address": "0x41c8a71f630c636294009fa4fb0cc4c3bbe674fe",
-    "symbol": "BEANCAT",
+    "address": "0x3ead4e80e9e5bc0e01682d7ee74c4881b040d3ea",
+    "symbol": "KAIRO",
     "decimals": 18,
     "impersonating": null
    },
-   "volume_usd": 532.36,
-   "swaps": 12,
-   "mean_interval_s": 675.5,
+   "volume_usd": 3666.55,
+   "swaps": 48,
+   "mean_interval_s": 462.9,
    "depth": "dust",
-   "reason": "turned over $532, below $5,000",
-   "price_usd": 0.0001263449068596929,
+   "reason": "turned over $3,667, below $5,000",
+   "price_usd": 0.00040304889937461805,
    "cex_market": null,
    "flags": 3
   },
   {
-   "pool_id": "0x6d8db35396b5eb98dee495e32b8cca992682316d",
-   "version": "v3",
-   "fee_bps": 100.0,
-   "token0": {
-    "address": "0x3600000000000000000000000000000000000000",
-    "symbol": "USDC",
-    "decimals": 6,
-    "impersonating": null
-   },
-   "token1": {
-    "address": "0xf3715bf5c2de299f08b81180ffb739a8372a175f",
-    "symbol": "ARCANINE",
-    "decimals": 18,
-    "impersonating": null
-   },
-   "volume_usd": 497.65,
-   "swaps": 14,
-   "mean_interval_s": 463.5,
-   "depth": "dust",
-   "reason": "turned over $498, below $5,000",
-   "price_usd": 0.00013880083630195375,
-   "cex_market": null,
-   "flags": 3
-  },
-  {
-   "pool_id": "0x84177748017cdb352323216bbae83925e8465c32970509e423aa206a1e045a0d",
+   "pool_id": "0xa8849dcc3a29c6a3dbb4c9770c69a1bec84722a395ade58bd8a4233ea950fb84",
    "version": "v4",
-   "fee_bps": 490.0,
+   "fee_bps": 90.0,
    "token0": {
     "address": "0x3600000000000000000000000000000000000000",
     "symbol": "USDC",
@@ -2435,144 +3157,44 @@
     "decimals": 18,
     "impersonating": null
    },
-   "volume_usd": 484.73,
-   "swaps": 13,
-   "mean_interval_s": 551.2,
+   "volume_usd": 3488.34,
+   "swaps": 92,
+   "mean_interval_s": 251.9,
    "depth": "dust",
-   "reason": "turned over $485, below $5,000",
-   "price_usd": 0.0012340450543664948,
+   "reason": "turned over $3,488, below $5,000",
+   "price_usd": 0.00052330463786302,
    "cex_market": null,
    "flags": 3
   },
   {
-   "pool_id": "0x5cabc6b372732bd607402df6a8a6a548f047a811e281a5298c9fb9156b94967e",
+   "pool_id": "0xd9f937203a1fbd0284b64f5b3f144b1abf6265f87a3e86ef43a4e64c7767dc50",
+   "version": "v4",
+   "fee_bps": 25.0,
+   "token0": {
+    "address": "0x1d25509a7e5c170a4662771fa51054b0383b65a3",
+    "symbol": "PARCEL",
+    "decimals": 18,
+    "impersonating": null
+   },
+   "token1": {
+    "address": "0x3600000000000000000000000000000000000000",
+    "symbol": "USDC",
+    "decimals": 6,
+    "impersonating": null
+   },
+   "volume_usd": 3448.03,
+   "swaps": 42,
+   "mean_interval_s": 19.4,
+   "depth": "dust",
+   "reason": "turned over $3,448, below $5,000",
+   "price_usd": 1.4210245006865154e-05,
+   "cex_market": null,
+   "flags": 3
+  },
+  {
+   "pool_id": "0xc362f08b2d304500e7299eaaf6184492ba3653d831615fe521d0791147f5a0f2",
    "version": "v4",
    "fee_bps": 100.0,
-   "token0": {
-    "address": "0x3600000000000000000000000000000000000000",
-    "symbol": "USDC",
-    "decimals": 6,
-    "impersonating": null
-   },
-   "token1": {
-    "address": "0x86604fab00e7c773fb6bed883d6cea603ba1eaa3",
-    "symbol": "SASHIMI",
-    "decimals": 18,
-    "impersonating": null
-   },
-   "volume_usd": 470.67,
-   "swaps": 7,
-   "mean_interval_s": 779.8,
-   "depth": "dust",
-   "reason": "turned over $471, below $5,000",
-   "price_usd": 3.442154059694979e-05,
-   "cex_market": null,
-   "flags": 3
-  },
-  {
-   "pool_id": "0x9889182b0bcf2855e16075c66d5e8f423a8fde14cf61a0c1129b8e3b4596d031",
-   "version": "v4",
-   "fee_bps": 100.0,
-   "token0": {
-    "address": "0x3600000000000000000000000000000000000000",
-    "symbol": "USDC",
-    "decimals": 6,
-    "impersonating": null
-   },
-   "token1": {
-    "address": "0xc0b8e31b80683c6e79758836424933893e1fb385",
-    "symbol": "DIC",
-    "decimals": 18,
-    "impersonating": null
-   },
-   "volume_usd": 447.13,
-   "swaps": 8,
-   "mean_interval_s": 1005.1,
-   "depth": "dust",
-   "reason": "turned over $447, below $5,000",
-   "price_usd": 8.493299887484511e-06,
-   "cex_market": null,
-   "flags": 3
-  },
-  {
-   "pool_id": "0xc955cbfb9d03cde6f78901a81740264f895b9c00025beb9115cf2d7b86b3ee5a",
-   "version": "v4",
-   "fee_bps": 30.0,
-   "token0": {
-    "address": "0x171a4217b86a807a64eb94757db6849fb4bdbaa0",
-    "symbol": "cirBTC",
-    "decimals": 8,
-    "impersonating": null
-   },
-   "token1": {
-    "address": "0x3600000000000000000000000000000000000000",
-    "symbol": "USDC",
-    "decimals": 6,
-    "impersonating": null
-   },
-   "volume_usd": 441.98,
-   "swaps": 21,
-   "mean_interval_s": 316.2,
-   "depth": "dust",
-   "reason": "turned over $442, below $5,000",
-   "price_usd": 80477.25052665085,
-   "cex_market": "BTCUSDT",
-   "flags": 35
-  },
-  {
-   "pool_id": "0x80d56586aa2f51661f54c109a58b6391eafdd934",
-   "version": "v3",
-   "fee_bps": 100.0,
-   "token0": {
-    "address": "0x3600000000000000000000000000000000000000",
-    "symbol": "USDC",
-    "decimals": 6,
-    "impersonating": null
-   },
-   "token1": {
-    "address": "0xf76b1d00bd3d63a37246b5f512074e864010e33d",
-    "symbol": "POLL",
-    "decimals": 18,
-    "impersonating": null
-   },
-   "volume_usd": 435.67,
-   "swaps": 56,
-   "mean_interval_s": 135.5,
-   "depth": "dust",
-   "reason": "turned over $436, below $5,000",
-   "price_usd": 0.0005702322152044764,
-   "cex_market": null,
-   "flags": 3
-  },
-  {
-   "pool_id": "0x28dc13eb70d6dcfbe38727a1adec13bd034d3664a853a3e59e63e1cd567d6d7a",
-   "version": "v4",
-   "fee_bps": 820.0,
-   "token0": {
-    "address": "0x3600000000000000000000000000000000000000",
-    "symbol": "USDC",
-    "decimals": 6,
-    "impersonating": null
-   },
-   "token1": {
-    "address": "0x41358defd0dedc90528b3f1835715e907b686e6a",
-    "symbol": "DUKE",
-    "decimals": 18,
-    "impersonating": null
-   },
-   "volume_usd": 432.8,
-   "swaps": 6,
-   "mean_interval_s": 228.7,
-   "depth": "dust",
-   "reason": "turned over $433, below $5,000",
-   "price_usd": 0.0012789603037160887,
-   "cex_market": null,
-   "flags": 3
-  },
-  {
-   "pool_id": "0x7d7780dbc78c1947c481e3329b070ec95045e7dd42fa969ef3ee7c77e701079f",
-   "version": "v4",
-   "fee_bps": 500.0,
    "token0": {
     "address": "0x3600000000000000000000000000000000000000",
     "symbol": "USDC",
@@ -2585,72 +3207,22 @@
     "decimals": 18,
     "impersonating": null
    },
-   "volume_usd": 380.26,
-   "swaps": 59,
-   "mean_interval_s": 122.4,
+   "volume_usd": 3422.94,
+   "swaps": 105,
+   "mean_interval_s": 206.0,
    "depth": "dust",
-   "reason": "turned over $380, below $5,000",
-   "price_usd": 0.00039190993810605965,
+   "reason": "turned over $3,423, below $5,000",
+   "price_usd": 0.00012152439411784948,
    "cex_market": null,
    "flags": 3
   },
   {
-   "pool_id": "0x2c816337f346d640bb0238838cc458d3db0d0360fee8b03bfb4086528f317903",
+   "pool_id": "0x278eab5f794ccbaa85dd7cd275e56bf563d8d26e35fd717800f39340f9730c3a",
    "version": "v4",
-   "fee_bps": 0.0,
+   "fee_bps": 100.0,
    "token0": {
-    "address": "0x3600000000000000000000000000000000000000",
-    "symbol": "USDC",
-    "decimals": 6,
-    "impersonating": null
-   },
-   "token1": {
-    "address": "0xe4cbffe8712ad4c3ea431f1897ece70a2f44631a",
-    "symbol": "APE",
-    "decimals": 18,
-    "impersonating": null
-   },
-   "volume_usd": 333.21,
-   "swaps": 5,
-   "mean_interval_s": 0.5,
-   "depth": "dust",
-   "reason": "turned over $333, below $5,000",
-   "price_usd": 2.9349342676875552e-06,
-   "cex_market": null,
-   "flags": 3
-  },
-  {
-   "pool_id": "0x53fb907ffd11313490e9c1d660a914d73fbfe37cab4289e0e617a43fbb746512",
-   "version": "v4",
-   "fee_bps": 1500.0,
-   "token0": {
-    "address": "0x3600000000000000000000000000000000000000",
-    "symbol": "USDC",
-    "decimals": 6,
-    "impersonating": null
-   },
-   "token1": {
-    "address": "0x9328d6eb99158551400f2afe402836e1d6fd6120",
-    "symbol": "HOPIUM",
-    "decimals": 18,
-    "impersonating": null
-   },
-   "volume_usd": 315.52,
-   "swaps": 13,
-   "mean_interval_s": 488.3,
-   "depth": "dust",
-   "reason": "turned over $316, below $5,000",
-   "price_usd": 0.00012339204313213865,
-   "cex_market": null,
-   "flags": 3
-  },
-  {
-   "pool_id": "0x8a0637fb3591d6731f37b37ceb950aa9cf3b4c3c6e0d2127acb2f5ad0becac61",
-   "version": "v4",
-   "fee_bps": 1000.0,
-   "token0": {
-    "address": "0x1e849f5960f02503939cbcbd44ab99b6dfcc4735",
-    "symbol": "MI",
+    "address": "0x08adbf431569a1aacac2606d2adcd18f4ebf2a71",
+    "symbol": "GLITCH",
     "decimals": 18,
     "impersonating": null
    },
@@ -2660,17 +3232,42 @@
     "decimals": 6,
     "impersonating": null
    },
-   "volume_usd": 306.83,
-   "swaps": 5,
-   "mean_interval_s": 722.2,
+   "volume_usd": 3353.55,
+   "swaps": 2141,
+   "mean_interval_s": 10.0,
    "depth": "dust",
-   "reason": "turned over $307, below $5,000",
-   "price_usd": 0.0002474790204176525,
+   "reason": "turned over $3,354, below $5,000",
+   "price_usd": 3.9778734312712325e-05,
    "cex_market": null,
    "flags": 3
   },
   {
-   "pool_id": "0x4d5ebb48eaac668d0125d7c50d67866ae1aa10dc452a3f035d184a8720f9b404",
+   "pool_id": "0x51a8508e34218236f10777484bdad96fc1c54d2484baa34e0c0fdee208c917b4",
+   "version": "v4",
+   "fee_bps": 5.0,
+   "token0": {
+    "address": "0x3600000000000000000000000000000000000000",
+    "symbol": "USDC",
+    "decimals": 6,
+    "impersonating": null
+   },
+   "token1": {
+    "address": "0xbef5f6d51cb62b58e6a8f77868681825c6fe21c1",
+    "symbol": "EURC",
+    "decimals": 6,
+    "impersonating": null
+   },
+   "volume_usd": 3343.48,
+   "swaps": 25,
+   "mean_interval_s": 151.5,
+   "depth": "dust",
+   "reason": "turned over $3,343, below $5,000",
+   "price_usd": 1.1368509065422985,
+   "cex_market": null,
+   "flags": 3
+  },
+  {
+   "pool_id": "0xe816c8b938a26cb0f9eb553b05d4055d37718a01c7dbef23902ef3e11c5752c1",
    "version": "v4",
    "fee_bps": 100.0,
    "token0": {
@@ -2680,27 +3277,77 @@
     "impersonating": null
    },
    "token1": {
-    "address": "0x68ed2c86bab73c2369510a3aee702603cf923929",
-    "symbol": "CATITO",
+    "address": "0xbb38a7f4441d9ac6a49ea4ba8cbc87d8ec5d2066",
+    "symbol": "GENLAYER",
     "decimals": 18,
     "impersonating": null
    },
-   "volume_usd": 292.38,
-   "swaps": 6,
-   "mean_interval_s": 456.5,
+   "volume_usd": 3201.59,
+   "swaps": 18,
+   "mean_interval_s": 10.3,
    "depth": "dust",
-   "reason": "turned over $292, below $5,000",
-   "price_usd": 4.281919776977835e-06,
+   "reason": "turned over $3,202, below $5,000",
+   "price_usd": 2.4831742004709272e-06,
    "cex_market": null,
    "flags": 3
   },
   {
-   "pool_id": "0x17209ae9d70832ff73280c98d9c5562b7b996fe79cff0055360f5dfb94813277",
+   "pool_id": "0xc7cf0c94850c912a5045f2a0f2d70ca18085b829",
+   "version": "v3",
+   "fee_bps": 100.0,
+   "token0": {
+    "address": "0x3600000000000000000000000000000000000000",
+    "symbol": "USDC",
+    "decimals": 6,
+    "impersonating": null
+   },
+   "token1": {
+    "address": "0x5042419b1f2498959787bc23be1f484ed1306650",
+    "symbol": "ARCH",
+    "decimals": 18,
+    "impersonating": null
+   },
+   "volume_usd": 3112.43,
+   "swaps": 35,
+   "mean_interval_s": 613.0,
+   "depth": "dust",
+   "reason": "turned over $3,112, below $5,000",
+   "price_usd": 0.00011935099046439399,
+   "cex_market": null,
+   "flags": 3
+  },
+  {
+   "pool_id": "0x534531a384d6e8cc8fa1c22fe6910ea2987462f85607e00b36f456fb13a52a16",
    "version": "v4",
    "fee_bps": 100.0,
    "token0": {
-    "address": "0x1be6ca1ef94cfc195dc265e81c65b1efb39fad93",
-    "symbol": "BROS",
+    "address": "0x3600000000000000000000000000000000000000",
+    "symbol": "USDC",
+    "decimals": 6,
+    "impersonating": null
+   },
+   "token1": {
+    "address": "0x543f1e0fca332eb3a5f668207a2f54934c1e2296",
+    "symbol": "CRCLon",
+    "decimals": 18,
+    "impersonating": null
+   },
+   "volume_usd": 3077.86,
+   "swaps": 39,
+   "mean_interval_s": 574.6,
+   "depth": "dust",
+   "reason": "turned over $3,078, below $5,000",
+   "price_usd": 90.87273935845562,
+   "cex_market": null,
+   "flags": 3
+  },
+  {
+   "pool_id": "0x2f3df55cebac40884077cef1e06448e1d6e6ad1a",
+   "version": "v3",
+   "fee_bps": 100.0,
+   "token0": {
+    "address": "0x258bbb25fb1bc34c87212f8dab34838854ef2d5d",
+    "symbol": "BCAT",
     "decimals": 18,
     "impersonating": null
    },
@@ -2710,12 +3357,12 @@
     "decimals": 6,
     "impersonating": null
    },
-   "volume_usd": 258.09,
-   "swaps": 4,
-   "mean_interval_s": 328.0,
+   "volume_usd": 3053.64,
+   "swaps": 37,
+   "mean_interval_s": 559.4,
    "depth": "dust",
-   "reason": "turned over $258, below $5,000",
-   "price_usd": 2.4986537209864026e-06,
+   "reason": "turned over $3,054, below $5,000",
+   "price_usd": 1.2046796896030771e-05,
    "cex_market": null,
    "flags": 3
   },
@@ -2735,12 +3382,1387 @@
     "decimals": 18,
     "impersonating": null
    },
-   "volume_usd": 247.18,
-   "swaps": 11,
-   "mean_interval_s": 642.5,
+   "volume_usd": 3041.24,
+   "swaps": 63,
+   "mean_interval_s": 348.8,
    "depth": "dust",
-   "reason": "turned over $247, below $5,000",
-   "price_usd": 7.796909661743168e-06,
+   "reason": "turned over $3,041, below $5,000",
+   "price_usd": 3.3467945063489614e-05,
+   "cex_market": null,
+   "flags": 3
+  },
+  {
+   "pool_id": "0xebe01461c8e4cd89f4a55e6f9ed9b961d6c381ed89cc5c47c831a6bc68fa56a9",
+   "version": "v4",
+   "fee_bps": 100.0,
+   "token0": {
+    "address": "0x30d74ba9d6270bed30e627e2a788b3d68e2ea245",
+    "symbol": "ARCVEIL",
+    "decimals": 18,
+    "impersonating": null
+   },
+   "token1": {
+    "address": "0x3600000000000000000000000000000000000000",
+    "symbol": "USDC",
+    "decimals": 6,
+    "impersonating": null
+   },
+   "volume_usd": 3024.16,
+   "swaps": 59,
+   "mean_interval_s": 368.2,
+   "depth": "dust",
+   "reason": "turned over $3,024, below $5,000",
+   "price_usd": 3.227984504668789e-05,
+   "cex_market": null,
+   "flags": 3
+  },
+  {
+   "pool_id": "0x6f3da99085115e227e733b91f4da06f4b2aeb31f0c296d0fb357c9a40c901e64",
+   "version": "v4",
+   "fee_bps": 100.0,
+   "token0": {
+    "address": "0x3600000000000000000000000000000000000000",
+    "symbol": "USDC",
+    "decimals": 6,
+    "impersonating": null
+   },
+   "token1": {
+    "address": "0xdaf6cef07d17ff5500521e182c3e75764e633615",
+    "symbol": "GHAST",
+    "decimals": 18,
+    "impersonating": null
+   },
+   "volume_usd": 2935.63,
+   "swaps": 9,
+   "mean_interval_s": 5.9,
+   "depth": "dust",
+   "reason": "turned over $2,936, below $5,000",
+   "price_usd": 2.4809782800121003e-06,
+   "cex_market": null,
+   "flags": 3
+  },
+  {
+   "pool_id": "0xbf660fef5d16bde98d6109d80ae64b3090ca98f5403a4d0108c6f52782fb4422",
+   "version": "v4",
+   "fee_bps": 100.0,
+   "token0": {
+    "address": "0x3600000000000000000000000000000000000000",
+    "symbol": "USDC",
+    "decimals": 6,
+    "impersonating": null
+   },
+   "token1": {
+    "address": "0x604382c93857e2524a69c7057f3bf54b3cc80018",
+    "symbol": "Peg",
+    "decimals": 18,
+    "impersonating": null
+   },
+   "volume_usd": 2779.2,
+   "swaps": 10,
+   "mean_interval_s": 289.8,
+   "depth": "dust",
+   "reason": "turned over $2,779, below $5,000",
+   "price_usd": 5.206430636381599e-06,
+   "cex_market": null,
+   "flags": 3
+  },
+  {
+   "pool_id": "0xcb6717372f4795cf9d6be3a72b39a2cc885cacb426792018612b5c901ba5eb4a",
+   "version": "v4",
+   "fee_bps": 100.0,
+   "token0": {
+    "address": "0x3600000000000000000000000000000000000000",
+    "symbol": "USDC",
+    "decimals": 6,
+    "impersonating": null
+   },
+   "token1": {
+    "address": "0xcb2df9b431fe7c19ee7f0d62d487b0121abdd075",
+    "symbol": "HTTP",
+    "decimals": 18,
+    "impersonating": null
+   },
+   "volume_usd": 2723.55,
+   "swaps": 74,
+   "mean_interval_s": 295.6,
+   "depth": "dust",
+   "reason": "turned over $2,724, below $5,000",
+   "price_usd": 3.0887965744888564e-05,
+   "cex_market": null,
+   "flags": 3
+  },
+  {
+   "pool_id": "0xccf43b81ee00e39a5ef0640346fae0c95c82465e0cae610ad11010809c275d05",
+   "version": "v4",
+   "fee_bps": 100.0,
+   "token0": {
+    "address": "0x3600000000000000000000000000000000000000",
+    "symbol": "USDC",
+    "decimals": 6,
+    "impersonating": null
+   },
+   "token1": {
+    "address": "0x7ff0c493c7812bfbc10dd815996bc2c03b0b1f53",
+    "symbol": "KRAIN",
+    "decimals": 18,
+    "impersonating": null
+   },
+   "volume_usd": 2687.27,
+   "swaps": 15,
+   "mean_interval_s": 63.1,
+   "depth": "dust",
+   "reason": "turned over $2,687, below $5,000",
+   "price_usd": 2.492998474168629e-06,
+   "cex_market": null,
+   "flags": 3
+  },
+  {
+   "pool_id": "0x0e3778957c57c367e7ea5513122d3e300a1ee635166e22d07c284b01dcea1f95",
+   "version": "v4",
+   "fee_bps": 25.0,
+   "token0": {
+    "address": "0x128cc466b61f542da60c70e3aa11c10e19b84edb",
+    "symbol": "WETH",
+    "decimals": 18,
+    "impersonating": null
+   },
+   "token1": {
+    "address": "0x3600000000000000000000000000000000000000",
+    "symbol": "USDC",
+    "decimals": 6,
+    "impersonating": null
+   },
+   "volume_usd": 2670.51,
+   "swaps": 43,
+   "mean_interval_s": 508.1,
+   "depth": "dust",
+   "reason": "turned over $2,671, below $5,000",
+   "price_usd": 2666.0482487753698,
+   "cex_market": "ETHUSDT",
+   "flags": 35
+  },
+  {
+   "pool_id": "0x366ec6bc68e3d05865b805439b2bc9de480a70ecfde2f1b4bec256ccb0acd929",
+   "version": "v4",
+   "fee_bps": 100.0,
+   "token0": {
+    "address": "0x1c8d1e64381a2464cf200be69481f047f4be6494",
+    "symbol": "PEG",
+    "decimals": 18,
+    "impersonating": null
+   },
+   "token1": {
+    "address": "0x3600000000000000000000000000000000000000",
+    "symbol": "USDC",
+    "decimals": 6,
+    "impersonating": null
+   },
+   "volume_usd": 2581.01,
+   "swaps": 29,
+   "mean_interval_s": 96.9,
+   "depth": "dust",
+   "reason": "turned over $2,581, below $5,000",
+   "price_usd": 2.6784351287328876e-06,
+   "cex_market": null,
+   "flags": 3
+  },
+  {
+   "pool_id": "0x4f36e027785d3aac21b82412434d55301786c3d0a78921bc1bc64e4bbb1aeda9",
+   "version": "v4",
+   "fee_bps": 880.0,
+   "token0": {
+    "address": "0x3600000000000000000000000000000000000000",
+    "symbol": "USDC",
+    "decimals": 6,
+    "impersonating": null
+   },
+   "token1": {
+    "address": "0x4c9b47dbd5933aa4574b2c27f82419e4dbbd0222",
+    "symbol": "ASTOCK",
+    "decimals": 18,
+    "impersonating": null
+   },
+   "volume_usd": 2509.39,
+   "swaps": 49,
+   "mean_interval_s": 419.7,
+   "depth": "dust",
+   "reason": "turned over $2,509, below $5,000",
+   "price_usd": 0.0008849774024452093,
+   "cex_market": null,
+   "flags": 3
+  },
+  {
+   "pool_id": "0x1459069438818248ca46d805bd061186d382cf45d44eadca4f79a13d69ddf666",
+   "version": "v4",
+   "fee_bps": 0.0,
+   "token0": {
+    "address": "0x3600000000000000000000000000000000000000",
+    "symbol": "USDC",
+    "decimals": 6,
+    "impersonating": null
+   },
+   "token1": {
+    "address": "0xcc38f0f76a3571922783f4da9238341c4f0f924a",
+    "symbol": "Condo",
+    "decimals": 18,
+    "impersonating": null
+   },
+   "volume_usd": 2489.85,
+   "swaps": 31,
+   "mean_interval_s": 63.0,
+   "depth": "dust",
+   "reason": "turned over $2,490, below $5,000",
+   "price_usd": 4.008970761303539e-06,
+   "cex_market": null,
+   "flags": 3
+  },
+  {
+   "pool_id": "0x6c9bbde888800cf7deb23a3bee970e28dcbf9c1051af70d6490e7a9bf41611f3",
+   "version": "v4",
+   "fee_bps": 100.0,
+   "token0": {
+    "address": "0x3600000000000000000000000000000000000000",
+    "symbol": "USDC",
+    "decimals": 6,
+    "impersonating": null
+   },
+   "token1": {
+    "address": "0x5fef42634ac7e13c12ed9d0894ef58d52a5fc581",
+    "symbol": "PEGD",
+    "decimals": 18,
+    "impersonating": null
+   },
+   "volume_usd": 2419.59,
+   "swaps": 24,
+   "mean_interval_s": 797.1,
+   "depth": "dust",
+   "reason": "turned over $2,420, below $5,000",
+   "price_usd": 3.9232145403624904e-05,
+   "cex_market": null,
+   "flags": 3
+  },
+  {
+   "pool_id": "0x68266e6f53ce72b90272a7598fae8a5544c376ff4bc6c3c5d7fdf3e488f382a9",
+   "version": "v4",
+   "fee_bps": 0.0,
+   "token0": {
+    "address": "0x1c98d896328c35a751ce18323f47139a44188001",
+    "symbol": "creo",
+    "decimals": 18,
+    "impersonating": null
+   },
+   "token1": {
+    "address": "0x3600000000000000000000000000000000000000",
+    "symbol": "USDC",
+    "decimals": 6,
+    "impersonating": null
+   },
+   "volume_usd": 2318.62,
+   "swaps": 70,
+   "mean_interval_s": 313.7,
+   "depth": "dust",
+   "reason": "turned over $2,319, below $5,000",
+   "price_usd": 3.5459497538472946e-05,
+   "cex_market": null,
+   "flags": 3
+  },
+  {
+   "pool_id": "0x0b856af74fdf58b85f6125ff8ea9bbf6e0a782a73789b7035c3fc1fcb4b76d67",
+   "version": "v4",
+   "fee_bps": 0.0,
+   "token0": {
+    "address": "0x3600000000000000000000000000000000000000",
+    "symbol": "USDC",
+    "decimals": 6,
+    "impersonating": null
+   },
+   "token1": {
+    "address": "0xece5ca8bf9220718e5727754026757512212cb3c",
+    "symbol": "ARGUS",
+    "decimals": 18,
+    "impersonating": null
+   },
+   "volume_usd": 2297.27,
+   "swaps": 216,
+   "mean_interval_s": 100.5,
+   "depth": "dust",
+   "reason": "turned over $2,297, below $5,000",
+   "price_usd": 0.018361171285264634,
+   "cex_market": null,
+   "flags": 3
+  },
+  {
+   "pool_id": "0x771b16f71e0086e673a5866ead7607855cc9cd4636fe789521b4cd80aa5958dc",
+   "version": "v4",
+   "fee_bps": 400.0,
+   "token0": {
+    "address": "0x3600000000000000000000000000000000000000",
+    "symbol": "USDC",
+    "decimals": 6,
+    "impersonating": null
+   },
+   "token1": {
+    "address": "0x8e98a62a995a50eca9979bfa016f91bf36a8f9d9",
+    "symbol": "USDC",
+    "decimals": 18,
+    "impersonating": "USDC"
+   },
+   "volume_usd": 2258.16,
+   "swaps": 51,
+   "mean_interval_s": 379.7,
+   "depth": "dust",
+   "reason": "turned over $2,258, below $5,000",
+   "price_usd": 0.0021528176591461253,
+   "cex_market": null,
+   "flags": 19
+  },
+  {
+   "pool_id": "0xab6ab7323d5fb24ba09472353a505231eb0c6c97",
+   "version": "v3",
+   "fee_bps": 30.0,
+   "token0": {
+    "address": "0x3600000000000000000000000000000000000000",
+    "symbol": "USDC",
+    "decimals": 6,
+    "impersonating": null
+   },
+   "token1": {
+    "address": "0xa83a7be150d97b77c4ad96742ea38ab7c8e13782",
+    "symbol": "WPAY",
+    "decimals": 18,
+    "impersonating": null
+   },
+   "volume_usd": 2085.25,
+   "swaps": 13,
+   "mean_interval_s": 1354.7,
+   "depth": "dust",
+   "reason": "turned over $2,085, below $5,000",
+   "price_usd": 0.7758884123912385,
+   "cex_market": null,
+   "flags": 3
+  },
+  {
+   "pool_id": "0x0069cb6f70e2f848405f4483f232274c720ce6f9",
+   "version": "v3",
+   "fee_bps": 100.0,
+   "token0": {
+    "address": "0x3600000000000000000000000000000000000000",
+    "symbol": "USDC",
+    "decimals": 6,
+    "impersonating": null
+   },
+   "token1": {
+    "address": "0x8bcb94279fc2c984ec34e0c1f2192df8c69ea4f0",
+    "symbol": "Architects",
+    "decimals": 18,
+    "impersonating": null
+   },
+   "volume_usd": 2082.17,
+   "swaps": 245,
+   "mean_interval_s": 91.6,
+   "depth": "dust",
+   "reason": "turned over $2,082, below $5,000",
+   "price_usd": 0.00030404396607315424,
+   "cex_market": null,
+   "flags": 3
+  },
+  {
+   "pool_id": "0xbb2cff1ea59daa260919f3f579c32cc261eebeb69126ec2a5b3ea77018f3e8e2",
+   "version": "v4",
+   "fee_bps": 100.0,
+   "token0": {
+    "address": "0x3600000000000000000000000000000000000000",
+    "symbol": "USDC",
+    "decimals": 6,
+    "impersonating": null
+   },
+   "token1": {
+    "address": "0xf8df98fda14cabb2e8b6efe920081ffcbb0bb405",
+    "symbol": "SDOGE",
+    "decimals": 18,
+    "impersonating": null
+   },
+   "volume_usd": 1965.28,
+   "swaps": 790,
+   "mean_interval_s": 27.9,
+   "depth": "dust",
+   "reason": "turned over $1,965, below $5,000",
+   "price_usd": 7.559813756413286e-06,
+   "cex_market": null,
+   "flags": 3
+  },
+  {
+   "pool_id": "0x85ff2b5048d26bbdf37e249333b59891605149a4a5476cea5c93050501e0f83d",
+   "version": "v4",
+   "fee_bps": 15.0,
+   "token0": {
+    "address": "0x171a4217b86a807a64eb94757db6849fb4bdbaa0",
+    "symbol": "cirBTC",
+    "decimals": 8,
+    "impersonating": null
+   },
+   "token1": {
+    "address": "0x3600000000000000000000000000000000000000",
+    "symbol": "USDC",
+    "decimals": 6,
+    "impersonating": null
+   },
+   "volume_usd": 1962.32,
+   "swaps": 129,
+   "mean_interval_s": 168.4,
+   "depth": "dust",
+   "reason": "turned over $1,962, below $5,000",
+   "price_usd": 84074.14763320597,
+   "cex_market": "BTCUSDT",
+   "flags": 35
+  },
+  {
+   "pool_id": "0xa165ca4908dcc030c509a6bd50872531523271c179c5d41d716559dc311e0b36",
+   "version": "v4",
+   "fee_bps": 100.0,
+   "token0": {
+    "address": "0x3600000000000000000000000000000000000000",
+    "symbol": "USDC",
+    "decimals": 6,
+    "impersonating": null
+   },
+   "token1": {
+    "address": "0x4b81d0fb2522260f5bc9aafa4cc56d223cf097c1",
+    "symbol": "NOA",
+    "decimals": 18,
+    "impersonating": null
+   },
+   "volume_usd": 1891.35,
+   "swaps": 63,
+   "mean_interval_s": 304.2,
+   "depth": "dust",
+   "reason": "turned over $1,891, below $5,000",
+   "price_usd": 6.230183920751365e-06,
+   "cex_market": null,
+   "flags": 3
+  },
+  {
+   "pool_id": "0x1b8623661c0147f34917ab6256af56386ef287094b5c9291f28bd7d0ff36d01d",
+   "version": "v4",
+   "fee_bps": 222.0,
+   "token0": {
+    "address": "0x3600000000000000000000000000000000000000",
+    "symbol": "USDC",
+    "decimals": 6,
+    "impersonating": null
+   },
+   "token1": {
+    "address": "0x7c7489163b1060333e71229bb7a9f8cb7094a7a9",
+    "symbol": "FOCI",
+    "decimals": 18,
+    "impersonating": null
+   },
+   "volume_usd": 1837.08,
+   "swaps": 145,
+   "mean_interval_s": 154.5,
+   "depth": "dust",
+   "reason": "turned over $1,837, below $5,000",
+   "price_usd": 0.0004402493075765451,
+   "cex_market": null,
+   "flags": 3
+  },
+  {
+   "pool_id": "0x6f02b897efd86e626a28e77e82649ad9e4a55b08a616671469852b6bbc11cb07",
+   "version": "v4",
+   "fee_bps": 100.0,
+   "token0": {
+    "address": "0x3600000000000000000000000000000000000000",
+    "symbol": "USDC",
+    "decimals": 6,
+    "impersonating": null
+   },
+   "token1": {
+    "address": "0x941c58bef8061441219077a34ab55f8f603616f1",
+    "symbol": "VIA",
+    "decimals": 18,
+    "impersonating": null
+   },
+   "volume_usd": 1813.19,
+   "swaps": 36,
+   "mean_interval_s": 606.3,
+   "depth": "dust",
+   "reason": "turned over $1,813, below $5,000",
+   "price_usd": 5.607280900706756e-05,
+   "cex_market": null,
+   "flags": 3
+  },
+  {
+   "pool_id": "0x17dd25520fd8d33766a80d42a7e7c8ce37ef296de9b124f441be64cee8985865",
+   "version": "v4",
+   "fee_bps": 100.0,
+   "token0": {
+    "address": "0x3600000000000000000000000000000000000000",
+    "symbol": "USDC",
+    "decimals": 6,
+    "impersonating": null
+   },
+   "token1": {
+    "address": "0xc95b0cbcd0a28a633f39bb0cf9be6c35b6dac7b2",
+    "symbol": "USD",
+    "decimals": 18,
+    "impersonating": null
+   },
+   "volume_usd": 1808.14,
+   "swaps": 32,
+   "mean_interval_s": 135.3,
+   "depth": "dust",
+   "reason": "turned over $1,808, below $5,000",
+   "price_usd": 2.483364974623357e-06,
+   "cex_market": null,
+   "flags": 3
+  },
+  {
+   "pool_id": "0xc2ba39e24002f061747d456b2894175f4bcd1b8d7ea11562be350c3da62f74fe",
+   "version": "v4",
+   "fee_bps": 83886.08,
+   "token0": {
+    "address": "0x26f391bb09cc05704d017c3ac2b5735ed4cedcf6",
+    "symbol": "BLACKCAT",
+    "decimals": 18,
+    "impersonating": null
+   },
+   "token1": {
+    "address": "0x3600000000000000000000000000000000000000",
+    "symbol": "USDC",
+    "decimals": 6,
+    "impersonating": null
+   },
+   "volume_usd": 1724.78,
+   "swaps": 28,
+   "mean_interval_s": 23.8,
+   "depth": "dust",
+   "reason": "turned over $1,725, below $5,000",
+   "price_usd": 2.569448472906205e-06,
+   "cex_market": null,
+   "flags": 3
+  },
+  {
+   "pool_id": "0x5540ae9ddba8f2fdc7d5f29aa1cfc0eb32e0964a2c2ffc919933c7b2229eccc2",
+   "version": "v4",
+   "fee_bps": 100.0,
+   "token0": {
+    "address": "0x3600000000000000000000000000000000000000",
+    "symbol": "USDC",
+    "decimals": 6,
+    "impersonating": null
+   },
+   "token1": {
+    "address": "0xb969b1fb1c4ebd407fef8622947af85f3d1cff28",
+    "symbol": "SAFEMOON",
+    "decimals": 18,
+    "impersonating": null
+   },
+   "volume_usd": 1694.29,
+   "swaps": 67,
+   "mean_interval_s": 324.1,
+   "depth": "dust",
+   "reason": "turned over $1,694, below $5,000",
+   "price_usd": 0.00012105894734267098,
+   "cex_market": null,
+   "flags": 3
+  },
+  {
+   "pool_id": "0xc955cbfb9d03cde6f78901a81740264f895b9c00025beb9115cf2d7b86b3ee5a",
+   "version": "v4",
+   "fee_bps": 30.0,
+   "token0": {
+    "address": "0x171a4217b86a807a64eb94757db6849fb4bdbaa0",
+    "symbol": "cirBTC",
+    "decimals": 8,
+    "impersonating": null
+   },
+   "token1": {
+    "address": "0x3600000000000000000000000000000000000000",
+    "symbol": "USDC",
+    "decimals": 6,
+    "impersonating": null
+   },
+   "volume_usd": 1677.47,
+   "swaps": 71,
+   "mean_interval_s": 309.3,
+   "depth": "dust",
+   "reason": "turned over $1,677, below $5,000",
+   "price_usd": 83952.49474533524,
+   "cex_market": "BTCUSDT",
+   "flags": 35
+  },
+  {
+   "pool_id": "0xa6a31ae2492336bea7abce035ac10d149b2259265024037a37be4355923e3aa0",
+   "version": "v4",
+   "fee_bps": 90.0,
+   "token0": {
+    "address": "0x3600000000000000000000000000000000000000",
+    "symbol": "USDC",
+    "decimals": 6,
+    "impersonating": null
+   },
+   "token1": {
+    "address": "0xf76b1d00bd3d63a37246b5f512074e864010e33d",
+    "symbol": "POLL",
+    "decimals": 18,
+    "impersonating": null
+   },
+   "volume_usd": 1675.12,
+   "swaps": 99,
+   "mean_interval_s": 219.1,
+   "depth": "dust",
+   "reason": "turned over $1,675, below $5,000",
+   "price_usd": 0.0004239492031209909,
+   "cex_market": null,
+   "flags": 3
+  },
+  {
+   "pool_id": "0x5cabc6b372732bd607402df6a8a6a548f047a811e281a5298c9fb9156b94967e",
+   "version": "v4",
+   "fee_bps": 100.0,
+   "token0": {
+    "address": "0x3600000000000000000000000000000000000000",
+    "symbol": "USDC",
+    "decimals": 6,
+    "impersonating": null
+   },
+   "token1": {
+    "address": "0x86604fab00e7c773fb6bed883d6cea603ba1eaa3",
+    "symbol": "SASHIMI",
+    "decimals": 18,
+    "impersonating": null
+   },
+   "volume_usd": 1638.15,
+   "swaps": 29,
+   "mean_interval_s": 734.0,
+   "depth": "dust",
+   "reason": "turned over $1,638, below $5,000",
+   "price_usd": 1.5215699088727873e-05,
+   "cex_market": null,
+   "flags": 3
+  },
+  {
+   "pool_id": "0xd3fd0ecc36bbd15bfed676a2fd494ae4102116f02e0f45156d5972932d65c241",
+   "version": "v4",
+   "fee_bps": 83886.08,
+   "token0": {
+    "address": "0x3600000000000000000000000000000000000000",
+    "symbol": "USDC",
+    "decimals": 6,
+    "impersonating": null
+   },
+   "token1": {
+    "address": "0x8f2c1979b852043f6fe5ae7eb4ec6b896ae7e30b",
+    "symbol": "bCRCL",
+    "decimals": 18,
+    "impersonating": null
+   },
+   "volume_usd": 1599.43,
+   "swaps": 15,
+   "mean_interval_s": 1254.6,
+   "depth": "dust",
+   "reason": "turned over $1,599, below $5,000",
+   "price_usd": 94.51822841483389,
+   "cex_market": null,
+   "flags": 3
+  },
+  {
+   "pool_id": "0x5129458f7dbd64ef6a7b2778cf0d735f024eced6324fa8c12a8f0b0b47fb6c86",
+   "version": "v4",
+   "fee_bps": 100.0,
+   "token0": {
+    "address": "0x3600000000000000000000000000000000000000",
+    "symbol": "USDC",
+    "decimals": 6,
+    "impersonating": null
+   },
+   "token1": {
+    "address": "0xf1d5ea4ccee3d5a2380e7f4f3d79b4c562841524",
+    "symbol": "\u5df2\u8d70\u5411\u5168\u7403",
+    "decimals": 18,
+    "impersonating": null
+   },
+   "volume_usd": 1587.32,
+   "swaps": 17,
+   "mean_interval_s": 196.5,
+   "depth": "dust",
+   "reason": "turned over $1,587, below $5,000",
+   "price_usd": 2.480763663642808e-06,
+   "cex_market": null,
+   "flags": 3
+  },
+  {
+   "pool_id": "0x6b849ecb360d69a31bb1e972bbe048a32e25c324e4235b1d87911e16d1e857f2",
+   "version": "v4",
+   "fee_bps": 400.0,
+   "token0": {
+    "address": "0x3600000000000000000000000000000000000000",
+    "symbol": "USDC",
+    "decimals": 6,
+    "impersonating": null
+   },
+   "token1": {
+    "address": "0x4c9b47dbd5933aa4574b2c27f82419e4dbbd0222",
+    "symbol": "ASTOCK",
+    "decimals": 18,
+    "impersonating": null
+   },
+   "volume_usd": 1496.57,
+   "swaps": 113,
+   "mean_interval_s": 207.2,
+   "depth": "dust",
+   "reason": "turned over $1,497, below $5,000",
+   "price_usd": 0.0008863143178473733,
+   "cex_market": null,
+   "flags": 3
+  },
+  {
+   "pool_id": "0x7557f2e9784a78990035085febdef9a466b7197da62a4d8fbaa57b4af57b3d0f",
+   "version": "v4",
+   "fee_bps": 100.0,
+   "token0": {
+    "address": "0x055cee57084aadaf2a1a086db3ecfe8dc605faea",
+    "symbol": "ARCH",
+    "decimals": 18,
+    "impersonating": null
+   },
+   "token1": {
+    "address": "0x3600000000000000000000000000000000000000",
+    "symbol": "USDC",
+    "decimals": 6,
+    "impersonating": null
+   },
+   "volume_usd": 1472.65,
+   "swaps": 20,
+   "mean_interval_s": 1017.5,
+   "depth": "dust",
+   "reason": "turned over $1,473, below $5,000",
+   "price_usd": 2.9946982341549848e-05,
+   "cex_market": null,
+   "flags": 3
+  },
+  {
+   "pool_id": "0xccf79b13f91bca6e49b8c917122ce3f211daeb763d5517a31f444b30634aff7d",
+   "version": "v4",
+   "fee_bps": 400.0,
+   "token0": {
+    "address": "0x3600000000000000000000000000000000000000",
+    "symbol": "USDC",
+    "decimals": 6,
+    "impersonating": null
+   },
+   "token1": {
+    "address": "0x8c4252c87081c88c6ad57d6dd97e1cafebf842b7",
+    "symbol": "VIRTUAL",
+    "decimals": 18,
+    "impersonating": null
+   },
+   "volume_usd": 1431.45,
+   "swaps": 8,
+   "mean_interval_s": 504.9,
+   "depth": "dust",
+   "reason": "turned over $1,431, below $5,000",
+   "price_usd": 0.7162572950734947,
+   "cex_market": null,
+   "flags": 3
+  },
+  {
+   "pool_id": "0xebde8959fac1a0a1f837189e7f00f40566f4c1fc6efa3b3c987222222fd31455",
+   "version": "v4",
+   "fee_bps": 400.0,
+   "token0": {
+    "address": "0x3600000000000000000000000000000000000000",
+    "symbol": "USDC",
+    "decimals": 6,
+    "impersonating": null
+   },
+   "token1": {
+    "address": "0xece5ca8bf9220718e5727754026757512212cb3c",
+    "symbol": "ARGUS",
+    "decimals": 18,
+    "impersonating": null
+   },
+   "volume_usd": 1409.91,
+   "swaps": 12,
+   "mean_interval_s": 584.7,
+   "depth": "dust",
+   "reason": "turned over $1,410, below $5,000",
+   "price_usd": 0.01798705668928451,
+   "cex_market": null,
+   "flags": 3
+  },
+  {
+   "pool_id": "0x551bc9702b51f76e50e4ab76cd92bfe7dd826bb76f52671348f76c0cbd95d889",
+   "version": "v4",
+   "fee_bps": 100.0,
+   "token0": {
+    "address": "0x28f2890e274281ec0bd7b0d1b9f3b519c4691c03",
+    "symbol": "TROLL",
+    "decimals": 18,
+    "impersonating": null
+   },
+   "token1": {
+    "address": "0x3600000000000000000000000000000000000000",
+    "symbol": "USDC",
+    "decimals": 6,
+    "impersonating": null
+   },
+   "volume_usd": 1368.21,
+   "swaps": 5134,
+   "mean_interval_s": 4.2,
+   "depth": "dust",
+   "reason": "turned over $1,368, below $5,000",
+   "price_usd": 1.1099876123978515e-05,
+   "cex_market": null,
+   "flags": 3
+  },
+  {
+   "pool_id": "0xc0bf5f39ac2010ea38e040d85719b14d390e87c4",
+   "version": "v3",
+   "fee_bps": 30.0,
+   "token0": {
+    "address": "0x3600000000000000000000000000000000000000",
+    "symbol": "USDC",
+    "decimals": 6,
+    "impersonating": null
+   },
+   "token1": {
+    "address": "0x6505506540dc99f7366316b10e9cf1a584cbd42a",
+    "symbol": "NVDA",
+    "decimals": 18,
+    "impersonating": null
+   },
+   "volume_usd": 1345.5,
+   "swaps": 16,
+   "mean_interval_s": 1280.9,
+   "depth": "dust",
+   "reason": "turned over $1,346, below $5,000",
+   "price_usd": 223.92859697313267,
+   "cex_market": null,
+   "flags": 3
+  },
+  {
+   "pool_id": "0xa6d6e8d5d38363eb041a71db064f9274d2e62dac5da5fd5b3757e32d2ce192d7",
+   "version": "v4",
+   "fee_bps": 0.0,
+   "token0": {
+    "address": "0x3600000000000000000000000000000000000000",
+    "symbol": "USDC",
+    "decimals": 6,
+    "impersonating": null
+   },
+   "token1": {
+    "address": "0xe4bf28b3ac8ba884c369e37833a1a66cb353dda3",
+    "symbol": "Fest",
+    "decimals": 18,
+    "impersonating": null
+   },
+   "volume_usd": 1311.32,
+   "swaps": 38,
+   "mean_interval_s": 577.3,
+   "depth": "dust",
+   "reason": "turned over $1,311, below $5,000",
+   "price_usd": 1.093780670573789e-05,
+   "cex_market": null,
+   "flags": 3
+  },
+  {
+   "pool_id": "0x3bbec4961c22b01bf59fae55aa26bb27a09af34464c08703d732455d1cca0458",
+   "version": "v4",
+   "fee_bps": 20.0,
+   "token0": {
+    "address": "0x128cc466b61f542da60c70e3aa11c10e19b84edb",
+    "symbol": "WETH",
+    "decimals": 18,
+    "impersonating": null
+   },
+   "token1": {
+    "address": "0x3600000000000000000000000000000000000000",
+    "symbol": "USDC",
+    "decimals": 6,
+    "impersonating": null
+   },
+   "volume_usd": 1256.16,
+   "swaps": 51,
+   "mean_interval_s": 426.9,
+   "depth": "dust",
+   "reason": "turned over $1,256, below $5,000",
+   "price_usd": 2667.484053206634,
+   "cex_market": "ETHUSDT",
+   "flags": 35
+  },
+  {
+   "pool_id": "0xcd85a7c2298d8a72c6e0aea3d83dc2f01131f0135fde68b2b502aff81492b589",
+   "version": "v4",
+   "fee_bps": 100.0,
+   "token0": {
+    "address": "0x3600000000000000000000000000000000000000",
+    "symbol": "USDC",
+    "decimals": 6,
+    "impersonating": null
+   },
+   "token1": {
+    "address": "0x648a5382bdcf286e7ff5122d01a983db314e620a",
+    "symbol": "PANCHU",
+    "decimals": 18,
+    "impersonating": null
+   },
+   "volume_usd": 1189.88,
+   "swaps": 20,
+   "mean_interval_s": 1000.0,
+   "depth": "dust",
+   "reason": "turned over $1,190, below $5,000",
+   "price_usd": 5.5221243310005924e-05,
+   "cex_market": null,
+   "flags": 3
+  },
+  {
+   "pool_id": "0x2e8180fa3967caf9abf57bbaeab9ae9063bcd7ba",
+   "version": "v3",
+   "fee_bps": 100.0,
+   "token0": {
+    "address": "0x2ba0f44bdfc17fba30eda9cdbecb908ca45b043b",
+    "symbol": "CRCL",
+    "decimals": 18,
+    "impersonating": null
+   },
+   "token1": {
+    "address": "0x3600000000000000000000000000000000000000",
+    "symbol": "USDC",
+    "decimals": 6,
+    "impersonating": null
+   },
+   "volume_usd": 1134.41,
+   "swaps": 17,
+   "mean_interval_s": 1020.0,
+   "depth": "dust",
+   "reason": "turned over $1,134, below $5,000",
+   "price_usd": 92.36665450370569,
+   "cex_market": null,
+   "flags": 3
+  },
+  {
+   "pool_id": "0xc8f7e224bc4fc7673ad201ac1a074a8123d165c13e01c18e6a9cee9d18b67c33",
+   "version": "v4",
+   "fee_bps": 100.0,
+   "token0": {
+    "address": "0x3600000000000000000000000000000000000000",
+    "symbol": "USDC",
+    "decimals": 6,
+    "impersonating": null
+   },
+   "token1": {
+    "address": "0x4c658f912e70f022d50c9ed49e4caf9816afa2eb",
+    "symbol": "STONKS",
+    "decimals": 18,
+    "impersonating": null
+   },
+   "volume_usd": 1073.13,
+   "swaps": 79,
+   "mean_interval_s": 260.7,
+   "depth": "dust",
+   "reason": "turned over $1,073, below $5,000",
+   "price_usd": 4.280179682474744e-06,
+   "cex_market": null,
+   "flags": 3
+  },
+  {
+   "pool_id": "0xf32a5159bea11944a970be220e94ac11198447f68c2b19eaf37675a0d58bd018",
+   "version": "v4",
+   "fee_bps": 83886.08,
+   "token0": {
+    "address": "0x3600000000000000000000000000000000000000",
+    "symbol": "USDC",
+    "decimals": 6,
+    "impersonating": null
+   },
+   "token1": {
+    "address": "0xd02f5c40a2cd10012cb0189f2fad59745bbd2261",
+    "symbol": "ARCA",
+    "decimals": 18,
+    "impersonating": null
+   },
+   "volume_usd": 1000.0,
+   "swaps": 2,
+   "mean_interval_s": 91.1,
+   "depth": "dust",
+   "reason": "turned over $1,000, below $5,000",
+   "price_usd": 2.4807440585052083e-06,
+   "cex_market": null,
+   "flags": 3
+  },
+  {
+   "pool_id": "0x5ab9e488b9f6819d7aa514caf478a1e9123b236110597db9abb4cd4862ad1471",
+   "version": "v4",
+   "fee_bps": 100.0,
+   "token0": {
+    "address": "0x3600000000000000000000000000000000000000",
+    "symbol": "USDC",
+    "decimals": 6,
+    "impersonating": null
+   },
+   "token1": {
+    "address": "0xe05ac58d429e3a8f9f272533c19fb7f75d1fdf63",
+    "symbol": "USDUC",
+    "decimals": 18,
+    "impersonating": null
+   },
+   "volume_usd": 991.72,
+   "swaps": 11,
+   "mean_interval_s": 1092.0,
+   "depth": "dust",
+   "reason": "turned over $992, below $5,000",
+   "price_usd": 3.5574601447794667e-05,
+   "cex_market": null,
+   "flags": 3
+  },
+  {
+   "pool_id": "0xc1fbaf6faa73f05f64cfc7f2f67c6507781409a8538291f3daca49efc775c8c6",
+   "version": "v4",
+   "fee_bps": 100.0,
+   "token0": {
+    "address": "0x3600000000000000000000000000000000000000",
+    "symbol": "USDC",
+    "decimals": 6,
+    "impersonating": null
+   },
+   "token1": {
+    "address": "0x80a5d2fa2a02201fd2d47f73490b99e9dff14a5c",
+    "symbol": "LAND",
+    "decimals": 18,
+    "impersonating": null
+   },
+   "volume_usd": 930.8,
+   "swaps": 64,
+   "mean_interval_s": 335.3,
+   "depth": "dust",
+   "reason": "turned over $931, below $5,000",
+   "price_usd": 7.460164574016314e-06,
+   "cex_market": null,
+   "flags": 3
+  },
+  {
+   "pool_id": "0xdcb7418c5bd70bdfc17e5c975b5c7b2d21d9f1338e165a92db85577ddb6448ab",
+   "version": "v4",
+   "fee_bps": 100.0,
+   "token0": {
+    "address": "0x3600000000000000000000000000000000000000",
+    "symbol": "USDC",
+    "decimals": 6,
+    "impersonating": null
+   },
+   "token1": {
+    "address": "0x997caf127536de5410dc7a17a920d0a1223d866d",
+    "symbol": "barc",
+    "decimals": 18,
+    "impersonating": null
+   },
+   "volume_usd": 912.14,
+   "swaps": 24,
+   "mean_interval_s": 829.6,
+   "depth": "dust",
+   "reason": "turned over $912, below $5,000",
+   "price_usd": 0.00010181837339650778,
+   "cex_market": null,
+   "flags": 3
+  },
+  {
+   "pool_id": "0x1d627c6e1fd8563e64687d762cd91e154bcc99281fadff17e70495f12dd051cf",
+   "version": "v4",
+   "fee_bps": 100.0,
+   "token0": {
+    "address": "0x3600000000000000000000000000000000000000",
+    "symbol": "USDC",
+    "decimals": 6,
+    "impersonating": null
+   },
+   "token1": {
+    "address": "0xdd50e1991e8579636f462598cd3bde2025cfd2a2",
+    "symbol": "STABLE",
+    "decimals": 18,
+    "impersonating": null
+   },
+   "volume_usd": 880.73,
+   "swaps": 13,
+   "mean_interval_s": 166.5,
+   "depth": "dust",
+   "reason": "turned over $881, below $5,000",
+   "price_usd": 3.931246382137652e-06,
+   "cex_market": null,
+   "flags": 3
+  },
+  {
+   "pool_id": "0x19f9b0344d506b942794a4e1bbdae0c057461424b0b210c4f3a9a233bdc92b9e",
+   "version": "v4",
+   "fee_bps": 0.0,
+   "token0": {
+    "address": "0x3600000000000000000000000000000000000000",
+    "symbol": "USDC",
+    "decimals": 6,
+    "impersonating": null
+   },
+   "token1": {
+    "address": "0xbf1fdc20fbe85c3a58e0124e242662a1952293f9",
+    "symbol": "PP",
+    "decimals": 18,
+    "impersonating": null
+   },
+   "volume_usd": 879.99,
+   "swaps": 2,
+   "mean_interval_s": 1234.9,
+   "depth": "dust",
+   "reason": "turned over $880, below $5,000",
+   "price_usd": 0.001533448518374081,
+   "cex_market": null,
+   "flags": 3
+  },
+  {
+   "pool_id": "0x8bbf349b0e4a2866ae712f6853b6f43e997594fcc6bb46601b5234ecc3813e56",
+   "version": "v4",
+   "fee_bps": 100.0,
+   "token0": {
+    "address": "0x3600000000000000000000000000000000000000",
+    "symbol": "USDC",
+    "decimals": 6,
+    "impersonating": null
+   },
+   "token1": {
+    "address": "0xd20d4024976ba8e935a87ea979afc4bdcbb0ebd2",
+    "symbol": "ARCSCAN",
+    "decimals": 18,
+    "impersonating": null
+   },
+   "volume_usd": 751.15,
+   "swaps": 27,
+   "mean_interval_s": 639.1,
+   "depth": "dust",
+   "reason": "turned over $751, below $5,000",
+   "price_usd": 8.950703928014563e-06,
+   "cex_market": null,
+   "flags": 3
+  },
+  {
+   "pool_id": "0x266c92e06aa4193c525ed1d9aa53624a2f6f120a23cc23a09ac8f64a17b07f68",
+   "version": "v4",
+   "fee_bps": 100.0,
+   "token0": {
+    "address": "0x3600000000000000000000000000000000000000",
+    "symbol": "USDC",
+    "decimals": 6,
+    "impersonating": null
+   },
+   "token1": {
+    "address": "0x5aef32590125e5bfdb10e0e7ceae5e576c82447e",
+    "symbol": "PEG",
+    "decimals": 18,
+    "impersonating": null
+   },
+   "volume_usd": 746.26,
+   "swaps": 12,
+   "mean_interval_s": 315.1,
+   "depth": "dust",
+   "reason": "turned over $746, below $5,000",
+   "price_usd": 2.480773685364523e-06,
+   "cex_market": null,
+   "flags": 3
+  },
+  {
+   "pool_id": "0x852180c40655e25258e882ae0d9ed74092cf72117b0c7d7409aa7d8cb91eb760",
+   "version": "v4",
+   "fee_bps": 100.0,
+   "token0": {
+    "address": "0x3600000000000000000000000000000000000000",
+    "symbol": "USDC",
+    "decimals": 6,
+    "impersonating": null
+   },
+   "token1": {
+    "address": "0x7c7489163b1060333e71229bb7a9f8cb7094a7a9",
+    "symbol": "FOCI",
+    "decimals": 18,
+    "impersonating": null
+   },
+   "volume_usd": 710.59,
+   "swaps": 118,
+   "mean_interval_s": 145.8,
+   "depth": "dust",
+   "reason": "turned over $711, below $5,000",
+   "price_usd": 0.00045198627155776085,
+   "cex_market": null,
+   "flags": 3
+  },
+  {
+   "pool_id": "0x964cff2cccb9059e83d507df348f070e5257a2e0",
+   "version": "v3",
+   "fee_bps": 30.0,
+   "token0": {
+    "address": "0x128cc466b61f542da60c70e3aa11c10e19b84edb",
+    "symbol": "WETH",
+    "decimals": 18,
+    "impersonating": null
+   },
+   "token1": {
+    "address": "0x3600000000000000000000000000000000000000",
+    "symbol": "USDC",
+    "decimals": 6,
+    "impersonating": null
+   },
+   "volume_usd": 679.42,
+   "swaps": 48,
+   "mean_interval_s": 450.9,
+   "depth": "dust",
+   "reason": "turned over $679, below $5,000",
+   "price_usd": 2665.4018422742347,
+   "cex_market": "ETHUSDT",
+   "flags": 35
+  },
+  {
+   "pool_id": "0x4ab249bacee1ed0854d1932fa4ae6880c0f8707c37b31a443a221315a7872c52",
+   "version": "v4",
+   "fee_bps": 500.0,
+   "token0": {
+    "address": "0x3600000000000000000000000000000000000000",
+    "symbol": "USDC",
+    "decimals": 6,
+    "impersonating": null
+   },
+   "token1": {
+    "address": "0xbc43ce8dec648ea298c4275559b81d6261c90b67",
+    "symbol": "TOLLY",
+    "decimals": 18,
+    "impersonating": null
+   },
+   "volume_usd": 671.2,
+   "swaps": 18,
+   "mean_interval_s": 711.1,
+   "depth": "dust",
+   "reason": "turned over $671, below $5,000",
+   "price_usd": 0.006550266623205901,
+   "cex_market": null,
+   "flags": 3
+  },
+  {
+   "pool_id": "0x9082d371761c21fea674572b8ed0f1dc7574793b7312fe02d0d5ecd8c3df83ed",
+   "version": "v4",
+   "fee_bps": 100.0,
+   "token0": {
+    "address": "0x3600000000000000000000000000000000000000",
+    "symbol": "USDC",
+    "decimals": 6,
+    "impersonating": null
+   },
+   "token1": {
+    "address": "0x42956b05903b9545801391aa5d4cbe5c8cabda0a",
+    "symbol": "ZARA",
+    "decimals": 18,
+    "impersonating": null
+   },
+   "volume_usd": 637.9,
+   "swaps": 11,
+   "mean_interval_s": 232.8,
+   "depth": "dust",
+   "reason": "turned over $638, below $5,000",
+   "price_usd": 2.482285519812216e-06,
+   "cex_market": null,
+   "flags": 3
+  },
+  {
+   "pool_id": "0xd5f6ecb76d66eb0a5f9e09f79350f60626fecf70cce97d0a35029f2daa714df9",
+   "version": "v4",
+   "fee_bps": 100.0,
+   "token0": {
+    "address": "0x1fbb6c30da93f87a4fb9a81d6d621ba36af130dc",
+    "symbol": "ARC",
+    "decimals": 18,
+    "impersonating": null
+   },
+   "token1": {
+    "address": "0x3600000000000000000000000000000000000000",
+    "symbol": "USDC",
+    "decimals": 6,
+    "impersonating": null
+   },
+   "volume_usd": 622.83,
+   "swaps": 10,
+   "mean_interval_s": 1638.6,
+   "depth": "dust",
+   "reason": "turned over $623, below $5,000",
+   "price_usd": 4.959129210913447e-06,
+   "cex_market": null,
+   "flags": 3
+  },
+  {
+   "pool_id": "0x8d01db48eb9062ba16ef53b98ce6cab2d8701cb20b2dee6077b6444c4e1da63e",
+   "version": "v4",
+   "fee_bps": 2500.0,
+   "token0": {
+    "address": "0x3600000000000000000000000000000000000000",
+    "symbol": "USDC",
+    "decimals": 6,
+    "impersonating": null
+   },
+   "token1": {
+    "address": "0x3dd6db0f20d747e1274839cdd6724cc5df1fb813",
+    "symbol": "ASPAD",
+    "decimals": 18,
+    "impersonating": null
+   },
+   "volume_usd": 610.36,
+   "swaps": 35,
+   "mean_interval_s": 391.3,
+   "depth": "dust",
+   "reason": "turned over $610, below $5,000",
+   "price_usd": 0.00023914793938078832,
+   "cex_market": null,
+   "flags": 3
+  },
+  {
+   "pool_id": "0x1102b8858eb7179249ec94fee56a9e47f87a6f5599ae3d1b22c722f6f53fb01a",
+   "version": "v4",
+   "fee_bps": 83886.08,
+   "token0": {
+    "address": "0x3600000000000000000000000000000000000000",
+    "symbol": "USDC",
+    "decimals": 6,
+    "impersonating": null
+   },
+   "token1": {
+    "address": "0x862dc6b0e53a0a222c43d4da4b855b0d9f4f0726",
+    "symbol": "HOLDME",
+    "decimals": 18,
+    "impersonating": null
+   },
+   "volume_usd": 609.11,
+   "swaps": 32,
+   "mean_interval_s": 78.9,
+   "depth": "dust",
+   "reason": "turned over $609, below $5,000",
+   "price_usd": 2.4807440585052083e-06,
+   "cex_market": null,
+   "flags": 3
+  },
+  {
+   "pool_id": "0xa1253fb4e17765dac00823e33df82ed8d7675b98277ddbb6af821582dfb3b6d9",
+   "version": "v4",
+   "fee_bps": 100.0,
+   "token0": {
+    "address": "0x3600000000000000000000000000000000000000",
+    "symbol": "USDC",
+    "decimals": 6,
+    "impersonating": null
+   },
+   "token1": {
+    "address": "0x39dc09d50e1d2b887f5b702098f2d416bb6cc378",
+    "symbol": "DAISUGI",
+    "decimals": 18,
+    "impersonating": null
+   },
+   "volume_usd": 599.59,
+   "swaps": 109,
+   "mean_interval_s": 14.0,
+   "depth": "dust",
+   "reason": "turned over $600, below $5,000",
+   "price_usd": 2.485972736489036e-06,
    "cex_market": null,
    "flags": 3
   },
@@ -2760,142 +4782,142 @@
     "decimals": 6,
     "impersonating": null
    },
-   "volume_usd": 245.28,
+   "volume_usd": 593.11,
+   "swaps": 47,
+   "mean_interval_s": 479.1,
+   "depth": "dust",
+   "reason": "turned over $593, below $5,000",
+   "price_usd": 3.744879926119398e-05,
+   "cex_market": null,
+   "flags": 3
+  },
+  {
+   "pool_id": "0x73b51e7f52a6489b88cda37c15deadf98307327059d22f352e343d3af368ed00",
+   "version": "v4",
+   "fee_bps": 83886.08,
+   "token0": {
+    "address": "0x3600000000000000000000000000000000000000",
+    "symbol": "USDC",
+    "decimals": 6,
+    "impersonating": null
+   },
+   "token1": {
+    "address": "0xe6f6b2f66023b449c0e6e597b7dc752239ba407a",
+    "symbol": "CHILL CAT",
+    "decimals": 18,
+    "impersonating": null
+   },
+   "volume_usd": 590.06,
+   "swaps": 11,
+   "mean_interval_s": 2375.5,
+   "depth": "dust",
+   "reason": "turned over $590, below $5,000",
+   "price_usd": 2.4907541361268453e-06,
+   "cex_market": null,
+   "flags": 3
+  },
+  {
+   "pool_id": "0xeec1a164a9d7a1f632d7d5114ac354e87fe340de1003ffd778457a722c3790e1",
+   "version": "v4",
+   "fee_bps": 83886.08,
+   "token0": {
+    "address": "0x3600000000000000000000000000000000000000",
+    "symbol": "USDC",
+    "decimals": 6,
+    "impersonating": null
+   },
+   "token1": {
+    "address": "0x6b8d19c792d0f887ea10fd71dfde1871523cd89c",
+    "symbol": "NURVA",
+    "decimals": 18,
+    "impersonating": null
+   },
+   "volume_usd": 583.39,
+   "swaps": 15,
+   "mean_interval_s": 149.6,
+   "depth": "dust",
+   "reason": "turned over $583, below $5,000",
+   "price_usd": 2.4807440585052083e-06,
+   "cex_market": null,
+   "flags": 3
+  },
+  {
+   "pool_id": "0xef6fa269cd29877b88a990eb996c87306da54354bfbdb4ceec9c64160e0088ce",
+   "version": "v4",
+   "fee_bps": 83886.08,
+   "token0": {
+    "address": "0x3600000000000000000000000000000000000000",
+    "symbol": "USDC",
+    "decimals": 6,
+    "impersonating": null
+   },
+   "token1": {
+    "address": "0x7a9123241a6a09e8f09c1c0bf7a9e169e4d8bf20",
+    "symbol": "CATCHME",
+    "decimals": 18,
+    "impersonating": null
+   },
+   "volume_usd": 578.67,
+   "swaps": 33,
+   "mean_interval_s": 118.8,
+   "depth": "dust",
+   "reason": "turned over $579, below $5,000",
+   "price_usd": 2.4807440585052083e-06,
+   "cex_market": null,
+   "flags": 3
+  },
+  {
+   "pool_id": "0x48aeeb75a8827fe0ae15078f6f9a84c04287dd1b6993362ff4166978dd526c9a",
+   "version": "v4",
+   "fee_bps": 100.0,
+   "token0": {
+    "address": "0x17731a11bc6614482a9267529fa9a0eb720d4708",
+    "symbol": "LUNYA",
+    "decimals": 18,
+    "impersonating": null
+   },
+   "token1": {
+    "address": "0x3600000000000000000000000000000000000000",
+    "symbol": "USDC",
+    "decimals": 6,
+    "impersonating": null
+   },
+   "volume_usd": 573.22,
+   "swaps": 1,
+   "mean_interval_s": null,
+   "depth": "dust",
+   "reason": "fewer than two trades in the window",
+   "price_usd": 3.411909727982069e-06,
+   "cex_market": null,
+   "flags": 3
+  },
+  {
+   "pool_id": "0xb8f3fa8fdea09bd96c74a2ea791fa51dc47552e61bafbf091442e7927f2e62b5",
+   "version": "v4",
+   "fee_bps": 0.0,
+   "token0": {
+    "address": "0x3600000000000000000000000000000000000000",
+    "symbol": "USDC",
+    "decimals": 6,
+    "impersonating": null
+   },
+   "token1": {
+    "address": "0x92bc59b005ea6a57e804af8233b8a2b2704d19d8",
+    "symbol": "tr!pl",
+    "decimals": 18,
+    "impersonating": null
+   },
+   "volume_usd": 569.2,
    "swaps": 22,
-   "mean_interval_s": 320.4,
+   "mean_interval_s": 1110.0,
    "depth": "dust",
-   "reason": "turned over $245, below $5,000",
-   "price_usd": 3.256211070949032e-05,
+   "reason": "turned over $569, below $5,000",
+   "price_usd": 8.695830011908444e-06,
    "cex_market": null,
    "flags": 3
   },
   {
-   "pool_id": "0x29e87ae33f00ecdd3f28947ae7473734d7276ab474a3c6cf97fbdc273a6720f0",
-   "version": "v4",
-   "fee_bps": 0.0,
-   "token0": {
-    "address": "0x3600000000000000000000000000000000000000",
-    "symbol": "USDC",
-    "decimals": 6,
-    "impersonating": null
-   },
-   "token1": {
-    "address": "0xacd1d9dea3415821b9cb6eda39776b1ee10a6001",
-    "symbol": "CB180",
-    "decimals": 18,
-    "impersonating": null
-   },
-   "volume_usd": 245.02,
-   "swaps": 7,
-   "mean_interval_s": 336.5,
-   "depth": "dust",
-   "reason": "turned over $245, below $5,000",
-   "price_usd": 4.791114215821022e-06,
-   "cex_market": null,
-   "flags": 3
-  },
-  {
-   "pool_id": "0x2ea1adac39e68e236931f1ee43100df531cc1e3cc106e04904b4126df56187ee",
-   "version": "v4",
-   "fee_bps": 300.0,
-   "token0": {
-    "address": "0x3600000000000000000000000000000000000000",
-    "symbol": "USDC",
-    "decimals": 6,
-    "impersonating": null
-   },
-   "token1": {
-    "address": "0x41358defd0dedc90528b3f1835715e907b686e6a",
-    "symbol": "DUKE",
-    "decimals": 18,
-    "impersonating": null
-   },
-   "volume_usd": 243.31,
-   "swaps": 24,
-   "mean_interval_s": 316.0,
-   "depth": "dust",
-   "reason": "turned over $243, below $5,000",
-   "price_usd": 0.0012129231406914293,
-   "cex_market": null,
-   "flags": 3
-  },
-  {
-   "pool_id": "0x7842ad53a36a68095944293293dc9061e7498911720f396729f933ec65966d42",
-   "version": "v4",
-   "fee_bps": 1000.0,
-   "token0": {
-    "address": "0x3600000000000000000000000000000000000000",
-    "symbol": "USDC",
-    "decimals": 6,
-    "impersonating": null
-   },
-   "token1": {
-    "address": "0x643098f125e765081fec0b67384bfe5ca498f24a",
-    "symbol": "AKARII",
-    "decimals": 18,
-    "impersonating": null
-   },
-   "volume_usd": 217.53,
-   "swaps": 8,
-   "mean_interval_s": 738.2,
-   "depth": "dust",
-   "reason": "turned over $218, below $5,000",
-   "price_usd": 79.31590435859601,
-   "cex_market": null,
-   "flags": 3
-  },
-  {
-   "pool_id": "0x663ef606f49e1e09e61587d2ecad7d82c3e7a2007b9c1c0003305a6af8313bb6",
-   "version": "v4",
-   "fee_bps": 390.0,
-   "token0": {
-    "address": "0x12ce1f970722ca6e08364b60099b3d25c09b5434",
-    "symbol": "ARCX10",
-    "decimals": 18,
-    "impersonating": null
-   },
-   "token1": {
-    "address": "0x3600000000000000000000000000000000000000",
-    "symbol": "USDC",
-    "decimals": 6,
-    "impersonating": null
-   },
-   "volume_usd": 216.71,
-   "swaps": 13,
-   "mean_interval_s": 333.1,
-   "depth": "dust",
-   "reason": "turned over $217, below $5,000",
-   "price_usd": 0.0004976495567157118,
-   "cex_market": null,
-   "flags": 3
-  },
-  {
-   "pool_id": "0x373bf238ed2b9bbded9d0fc69cd0f3997dd45ee3b9577df5b7f015472a49b21b",
-   "version": "v4",
-   "fee_bps": 400.0,
-   "token0": {
-    "address": "0x3600000000000000000000000000000000000000",
-    "symbol": "USDC",
-    "decimals": 6,
-    "impersonating": null
-   },
-   "token1": {
-    "address": "0xb67f50fde86e09b5da963c4251cbd4788b151ed5",
-    "symbol": "USDC",
-    "decimals": 18,
-    "impersonating": "USDC"
-   },
-   "volume_usd": 215.72,
-   "swaps": 14,
-   "mean_interval_s": 437.9,
-   "depth": "dust",
-   "reason": "turned over $216, below $5,000",
-   "price_usd": 0.00026397890085773265,
-   "cex_market": null,
-   "flags": 19
-  },
-  {
-   "pool_id": "0x338409093d8d05c90fa0bf83febe83fd114d64d8f88595487efc9b69fa997dba",
+   "pool_id": "0x7212de2dcae60644ab74c5fb489aef57df2bae0552f98f4ef29ca83eb8324235",
    "version": "v4",
    "fee_bps": 100.0,
    "token0": {
@@ -2905,47 +4927,22 @@
     "impersonating": null
    },
    "token1": {
-    "address": "0x6d4d59bf535fe13990780984d6bca4dc3f804f9c",
-    "symbol": "BOA",
+    "address": "0xcc0fd3c211fa84b584b15a769459017b2646fb2f",
+    "symbol": "AKPAY",
     "decimals": 18,
     "impersonating": null
    },
-   "volume_usd": 212.37,
-   "swaps": 5,
-   "mean_interval_s": 167.7,
+   "volume_usd": 555.92,
+   "swaps": 20,
+   "mean_interval_s": 1239.1,
    "depth": "dust",
-   "reason": "turned over $212, below $5,000",
-   "price_usd": 8.18429942061456e-06,
+   "reason": "turned over $556, below $5,000",
+   "price_usd": 1.3012241738136256e-05,
    "cex_market": null,
    "flags": 3
   },
   {
-   "pool_id": "0xf94c727dd3d6318477f1eccc50a2e838654c03f9c974c4e33ad2ce515f8efd41",
-   "version": "v4",
-   "fee_bps": 0.0,
-   "token0": {
-    "address": "0x25b2f893ec15808dbdc542938a4a091ece7aec44",
-    "symbol": "BOZO",
-    "decimals": 18,
-    "impersonating": null
-   },
-   "token1": {
-    "address": "0x3600000000000000000000000000000000000000",
-    "symbol": "USDC",
-    "decimals": 6,
-    "impersonating": null
-   },
-   "volume_usd": 201.82,
-   "swaps": 4,
-   "mean_interval_s": 2056.6,
-   "depth": "dust",
-   "reason": "turned over $202, below $5,000",
-   "price_usd": 1.3108106757346016e-05,
-   "cex_market": null,
-   "flags": 3
-  },
-  {
-   "pool_id": "0x682998111473665eef0dcebf54eb4735d6a3bb27e084529634379e92d4ad4517",
+   "pool_id": "0x1201d03bacbe8a9afd55d58b6ba52b21983268d6168612c091a07f9a31f05789",
    "version": "v4",
    "fee_bps": 100.0,
    "token0": {
@@ -2955,42 +4952,17 @@
     "impersonating": null
    },
    "token1": {
-    "address": "0x833e845b08fbc6dfc9b94504123bc6b747c121cc",
-    "symbol": "ARCCAT",
+    "address": "0xbdbb76db770cc99dcf3fa31c42c171b9584d6a10",
+    "symbol": "CINU",
     "decimals": 18,
     "impersonating": null
    },
-   "volume_usd": 199.62,
-   "swaps": 2,
-   "mean_interval_s": 68.8,
+   "volume_usd": 550.45,
+   "swaps": 11,
+   "mean_interval_s": 1788.8,
    "depth": "dust",
-   "reason": "turned over $200, below $5,000",
-   "price_usd": 6.9283908039311715e-06,
-   "cex_market": null,
-   "flags": 3
-  },
-  {
-   "pool_id": "0xc82afebd94728fa7814806ea40f6588771d52d0d",
-   "version": "v3",
-   "fee_bps": 100.0,
-   "token0": {
-    "address": "0x30c1e1e4fa914eb326e23aff563b39d4dd1c4c48",
-    "symbol": "PI",
-    "decimals": 18,
-    "impersonating": null
-   },
-   "token1": {
-    "address": "0x3600000000000000000000000000000000000000",
-    "symbol": "USDC",
-    "decimals": 6,
-    "impersonating": null
-   },
-   "volume_usd": 191.06,
-   "swaps": 37,
-   "mean_interval_s": 61.9,
-   "depth": "dust",
-   "reason": "turned over $191, below $5,000",
-   "price_usd": 6.291049525678824e-06,
+   "reason": "turned over $550, below $5,000",
+   "price_usd": 1.884851026012318e-05,
    "cex_market": null,
    "flags": 3
   },
@@ -3010,19 +4982,19 @@
     "decimals": 18,
     "impersonating": null
    },
-   "volume_usd": 186.88,
-   "swaps": 15,
-   "mean_interval_s": 461.2,
+   "volume_usd": 545.07,
+   "swaps": 5,
+   "mean_interval_s": 2174.1,
    "depth": "dust",
-   "reason": "turned over $187, below $5,000",
-   "price_usd": 2.6494469228347045e-05,
+   "reason": "turned over $545, below $5,000",
+   "price_usd": 2.6025158201365672e-05,
    "cex_market": null,
    "flags": 3
   },
   {
-   "pool_id": "0x2dfe6915c47bc5afb83b9c95d97a4278b946972004e614ddba7c4e177bc4855b",
+   "pool_id": "0x718a991e17569a99b2941fb60d1a4840a60d200e68debcfa2b70f03567ac9f06",
    "version": "v4",
-   "fee_bps": 315.9,
+   "fee_bps": 99.0,
    "token0": {
     "address": "0x3600000000000000000000000000000000000000",
     "symbol": "USDC",
@@ -3030,19 +5002,44 @@
     "impersonating": null
    },
    "token1": {
-    "address": "0x8e98a62a995a50eca9979bfa016f91bf36a8f9d9",
-    "symbol": "USDC",
+    "address": "0xbc43ce8dec648ea298c4275559b81d6261c90b67",
+    "symbol": "TOLLY",
     "decimals": 18,
-    "impersonating": "USDC"
+    "impersonating": null
    },
-   "volume_usd": 172.6,
-   "swaps": 26,
-   "mean_interval_s": 240.7,
+   "volume_usd": 544.47,
+   "swaps": 82,
+   "mean_interval_s": 264.8,
    "depth": "dust",
-   "reason": "turned over $173, below $5,000",
-   "price_usd": 0.003111525838455896,
+   "reason": "turned over $544, below $5,000",
+   "price_usd": 0.006398229639865818,
    "cex_market": null,
-   "flags": 19
+   "flags": 3
+  },
+  {
+   "pool_id": "0x345fe60835ea2dbd3ed52b0c5cdc6c3af6596170",
+   "version": "v3",
+   "fee_bps": 10.0,
+   "token0": {
+    "address": "0x3600000000000000000000000000000000000000",
+    "symbol": "USDC",
+    "decimals": 6,
+    "impersonating": null
+   },
+   "token1": {
+    "address": "0xece5ca8bf9220718e5727754026757512212cb3c",
+    "symbol": "ARGUS",
+    "decimals": 18,
+    "impersonating": null
+   },
+   "volume_usd": 524.47,
+   "swaps": 87,
+   "mean_interval_s": 255.9,
+   "depth": "dust",
+   "reason": "turned over $524, below $5,000",
+   "price_usd": 0.018331124068680538,
+   "cex_market": null,
+   "flags": 3
   }
  ]
 }
