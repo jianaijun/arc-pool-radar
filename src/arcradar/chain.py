@@ -66,5 +66,10 @@ V3_SWAP_TOPIC: Final[str] = "0xc42079f94a6350d7e6235f29174924f928cc2ac818eb64fed
 V4_SWAP_TOPIC: Final[str] = "0x40e9cecb9f5f1f1c5b9c97dec2917b7ee92e57ba5563708daca94dd84ad7112f"
 V4_INITIALIZE_TOPIC: Final[str] = "0xdd466e674ea557f56295e2d0218a125ea4b4f0f6f3307b95f85e6110838d6438"
 
+#: This project's own `PoolRegistry`, deployed 2026-09-25 in block 22,628,099 by tx
+#: 0x2baab02c9aae3d84ca26d86d7307fb35df5cb93442f94611d9d9329f32c9ef5a. Read back after deploy:
+#: 2,354 bytes of code, `publisher()` equal to the deployer.
+POOL_REGISTRY: Final[str] = "0xdCb56839F4E4eA80B15499F298E02a858254Bb48"
+
 #: The node refuses a wider range, with or without an address filter (verified 2026-09-20).
 MAX_LOG_RANGE: Final[int] = 5_000

@@ -25,8 +25,8 @@
   "impostor_pools": 5
  },
  "registry": {
-  "address": null,
-  "census_block": null
+  "address": "0xdCb56839F4E4eA80B15499F298E02a858254Bb48",
+  "census_block": 22538972
  },
  "impostors": [
   {

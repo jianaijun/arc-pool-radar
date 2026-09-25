@@ -36,7 +36,7 @@ from typing import Any
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "src"))
 
-from arcradar import abi, chain, sizing, tokens, v4
+from arcradar import abi, chain, keccak, sizing, tokens, v4
 from arcradar.rpc import ArcRpc
 
 # ⚠️ Line-buffered on purpose. This run takes minutes against a rate-limited RPC, and with the
@@ -96,6 +96,12 @@ def _v3_pairs(rpc: ArcRpc, pools: list[str]) -> dict[str, v4.Pair]:
             continue
         out[pool] = v4.Pair(pool_id=pool, currency0=token0, currency1=token1, fee=fee)
     return out
+
+
+def registry_census_block(rpc: ArcRpc) -> int | None:
+    """The census block the deployed registry currently holds; None if it has never been published to."""
+    word = int(rpc.eth_call(chain.POOL_REGISTRY, "0x" + keccak.selector("censusBlock()").hex()), 16)
+    return word or None
 
 
 def main() -> int:
@@ -268,7 +274,9 @@ def main() -> int:
             "with_cex_leg": sum(1 for r in rows if r["cex_market"]),
             "impostor_pools": sum(1 for r in rows if r["flags"] & FLAG_SYMBOL_IMPOSTOR),
         },
-        "registry": {"address": None, "census_block": None},
+        # ⚠️ `census_block` is what the REGISTRY says, read now, not this snapshot's head: the two
+        # differ until someone publishes this snapshot, and the page shows both.
+        "registry": {"address": chain.POOL_REGISTRY, "census_block": registry_census_block(rpc)},
         "impostors": impostors,
         "pools": rows,
     }

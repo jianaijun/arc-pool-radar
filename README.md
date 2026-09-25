@@ -79,20 +79,37 @@ function isTradeable(bytes32 poolId) external view returns (bool);
 function hasImpostorSymbol(bytes32 poolId) external view returns (bool);
 ```
 
+A v4 pool is keyed by its `PoolId`; a v3 pool, which has no `PoolId`, by its address left-padded to
+32 bytes.
+
 ⚠️ **Absence is not a verdict.** An unknown pool returns `flags == 0`, which means *unjudged*, never
 *safe*. `isTradeable` enforces that distinction so a caller cannot forget it.
 
 | | |
 |---|---|
-| Registry | *(deployed address goes here)* |
+| Registry | [`0xdCb56839F4E4eA80B15499F298E02a858254Bb48`](https://explorer.arc.io/address/0xdCb56839F4E4eA80B15499F298E02a858254Bb48) |
 | Live page | https://jianaijun.github.io/arc-pool-radar/ |
 | Chain | Arc mainnet, id **5042** |
+| Deployed | block 22,628,099, [tx `0x2baab02c…ef5a`](https://explorer.arc.io/tx/0x2baab02c9aae3d84ca26d86d7307fb35df5cb93442f94611d9d9329f32c9ef5a) |
+| Published | 109 pools from the census at block 22,538,972, [tx `0x00c2c955…a682`](https://explorer.arc.io/tx/0x00c2c9551dbe23db4851f43e615e3f5acb56a58f6b62b0698e9e4415d1eea682) |
 
 ---
 
 ## What it costs to run
 
-Derived from gas constants, not estimated by feel:
+**What it actually cost**, from the two receipts:
+
+| | gas used | paid |
+|---|---|---|
+| deploy `PoolRegistry` | 584,767 | 0.011754 USDC |
+| publish 109 pools, one transaction | 5,336,196 | 0.107830 USDC |
+| **total** | | **0.119584 USDC** |
+
+That is 48,956 gas a pool including the transaction's own overhead; the model below says 46,718 for
+the storage alone, **4.8% under**. The model was written before either number existed, and is kept
+as it was so the comparison stays honest.
+
+Before deployment, the cost was derived from gas constants rather than estimated by feel:
 
 ```
 $ python scripts/estimate_registry_cost.py
@@ -110,7 +127,7 @@ one pool, refresh                    12,518 gas   $  0.0003
            every pool ever initialised      898  8,405,648,270       $177.90        $47.96
 ```
 
-⭐ That last row is the design decision, priced. Publishing all 179,521 pools in that row costs **$177.90** for a
+⭐ That last row is the design decision, priced. Publishing all 179,521 pools the chain had then costs **$177.90** for a
 registry in which almost every entry would say "dust, ignore". Only the size-gated subset goes on
 chain; `published` and `total` are both exposed so a caller sees the difference rather than
 mistaking an absent pool for a judged one.
@@ -124,10 +141,10 @@ constants apply.
   budget of 900,000 that was **52% too high** — outside the ±20% band that budget claimed for
   itself, and wrong on the safe side. A budget that over-states is a budget that quietly stops
   being checked, which is why it was replaced the hour a compiler was available.
-- **Per pool: still a model.** Measuring it needs a *deployed* registry, and estimating before then
-  is worse than not estimating: a call to an address with no code does not fail, it returns
-  base-plus-calldata and silently omits every storage write. `prepare_tx.py publish` refuses to run
-  until the address has bytecode, and prints measured beside modelled once it does.
+- **Per pool: modelled, then measured 4.8% higher** (above). Measuring it needed a *deployed*
+  registry, and estimating before then is worse than not estimating: a call to an address with no
+  code does not fail, it returns base-plus-calldata and silently omits every storage write.
+  `prepare_tx.py publish` refuses to run until the address has bytecode.
 
 ---
 
@@ -159,13 +176,25 @@ signing, and no order flow anywhere in this repository.
 ```bash
 python scripts/install_solc.py                                  # pinned 0.8.37, SHA-256 verified
 python scripts/prepare_tx.py deploy  --from 0xYourAddress
-# sign out/deploy_tx.json in your own wallet, broadcast it, note the address
+python scripts/wallet_page.py out/deploy_tx.json               # -> out/sign.html
+# open out/sign.html over http(s) in the browser that holds your wallet; approve there
 python scripts/prepare_tx.py publish --from 0xYourAddress --registry 0xDeployed
+python scripts/wallet_page.py out/publish_*_tx.json
 ```
 
 📛 **Nothing in this repository signs or sends a transaction.** `prepare_tx.py` compiles, asks Arc
 what the call costs, writes a complete unsigned transaction to `out/`, and stops. There is no
 `--yes` and no private-key argument, because the safe version of those does not exist.
+`wallet_page.py` hands those files to the wallet extension in your browser and nothing else; the
+wallet's own confirmation is where they are signed or refused. What the page adds is the checks a
+JSON file cannot make: the connected account and chain must match, the account's nonce must equal
+the prepared one (which is what stops a reload from deploying a second registry), and afterwards it
+reads the registry back rather than trusting the receipt's status.
+
+⚠️ A wallet that lives only in a phone app needs the page over **https**: a mobile DApp browser
+injected nothing into the same page served over plain http on the LAN. This deployment was signed
+from a phone with the page served through `tailscale serve`, reachable only from the owner's own
+devices.
 
 ⭐ The compiler is pinned to a version **and a SHA-256 written into the source**, and mismatching
 bytes are discarded rather than quarantined. "It came from the official domain over HTTPS" is not a
@@ -194,6 +223,7 @@ perfectly good digest that is never the one Ethereum means.
 | `src/arcradar/solidity.py` | drives `solc`, and ABI-encodes the one call this makes |
 | `scripts/build_snapshot.py` | the census that produces the page's data |
 | `scripts/prepare_tx.py` | builds unsigned transactions; signs nothing |
+| `scripts/wallet_page.py` | a local page that hands those to your wallet, with the checks around it |
 | `scripts/selftest.py` | hashes and calldata, checked without a chain |
 | `docs/index.html` | the page; one file, no build, no dependencies |
 
