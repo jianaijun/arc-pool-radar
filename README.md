@@ -91,6 +91,7 @@ A v4 pool is keyed by its `PoolId`; a v3 pool, which has no `PoolId`, by its add
 | Live page | https://jianaijun.github.io/arc-pool-radar/ |
 | Chain | Arc mainnet, id **5042** |
 | Deployed | block 22,628,099, [tx `0x2baab02c…ef5a`](https://explorer.arc.io/tx/0x2baab02c9aae3d84ca26d86d7307fb35df5cb93442f94611d9d9329f32c9ef5a) |
+| Source | verified, **exact match** (creation and runtime), on [Sourcify](https://repo.sourcify.dev/5042/0xdCb56839F4E4eA80B15499F298E02a858254Bb48) |
 | Published | 109 pools from the census at block 22,538,972, [tx `0x00c2c955…a682`](https://explorer.arc.io/tx/0x00c2c9551dbe23db4851f43e615e3f5acb56a58f6b62b0698e9e4415d1eea682) |
 
 ---
